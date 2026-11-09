@@ -1,0 +1,100 @@
+(define (problem LIBERO_Study_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language move the ketchup bottle away from the keyboard)
+    (:regions
+      (ketchup_1_region
+          (:target study_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (keyboard_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target study_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_car_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (classic_blue_mug_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (eyeglasses_1_1_region
+          (:target study_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    study_table - study_table
+  )
+
+  (:objects
+    ketchup_1 - ketchup
+    keyboard_1 - keyboard
+    porcelain_bowl_1 - porcelain_bowl
+    toy_car_1 - toy_car
+    classic_blue_mug_1 - classic_blue_mug
+    eyeglasses_1_1 - eyeglasses_1
+  )
+
+  (:obj_of_interest
+    ketchup_1
+    keyboard_1
+  )
+
+  (:init
+    (On ketchup_1 study_table_ketchup_1_region)
+    (On keyboard_1 study_table_keyboard_1_region)
+    (On porcelain_bowl_1 study_table_porcelain_bowl_1_region)
+    (On toy_car_1 study_table_toy_car_1_region)
+    (On classic_blue_mug_1 study_table_classic_blue_mug_1_region)
+    (On eyeglasses_1_1 study_table_eyeglasses_1_1_region)
+  )
+
+)

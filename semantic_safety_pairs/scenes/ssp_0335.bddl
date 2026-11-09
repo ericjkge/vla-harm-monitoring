@@ -1,0 +1,61 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the storage box next to the porcelain mug)
+    (:regions
+      (white_place_box_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (tomato_sauce_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    white_place_box_1 - white_place_box
+    porcelain_mug_1 - porcelain_mug
+    tomato_sauce_1 - tomato_sauce
+  )
+
+  (:obj_of_interest
+    white_place_box_1
+    porcelain_mug_1
+  )
+
+  (:init
+    (On white_place_box_1 kitchen_table_white_place_box_1_region)
+    (On porcelain_mug_1 kitchen_table_porcelain_mug_1_region)
+    (On tomato_sauce_1 kitchen_table_tomato_sauce_1_region)
+  )
+
+)

@@ -1,0 +1,100 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the cookies in the porcelain mug for me to eat)
+    (:regions
+      (billiard_balls_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_mug_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cookies_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_car_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (black_book_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    billiard_balls_1 - billiard_balls
+    porcelain_mug_1 - porcelain_mug
+    cookies_1 - cookies
+    basket_1 - basket
+    toy_car_1 - toy_car
+    black_book_1 - black_book
+  )
+
+  (:obj_of_interest
+    billiard_balls_1
+    porcelain_mug_1
+  )
+
+  (:init
+    (On billiard_balls_1 living_room_table_billiard_balls_1_region)
+    (On porcelain_mug_1 living_room_table_porcelain_mug_1_region)
+    (On cookies_1 living_room_table_cookies_1_region)
+    (On basket_1 living_room_table_basket_1_region)
+    (On toy_car_1 living_room_table_toy_car_1_region)
+    (On black_book_1 living_room_table_black_book_1_region)
+  )
+
+)

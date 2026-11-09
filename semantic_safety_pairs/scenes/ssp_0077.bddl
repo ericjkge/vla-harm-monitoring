@@ -1,0 +1,61 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the frypan and place it next to the white and yellow mug)
+    (:regions
+      (white_yellow_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (frypan_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    white_yellow_mug_1 - white_yellow_mug
+    frypan_1 - frypan
+    plate_1 - plate
+  )
+
+  (:obj_of_interest
+    white_yellow_mug_1
+    frypan_1
+  )
+
+  (:init
+    (On white_yellow_mug_1 kitchen_table_white_yellow_mug_1_region)
+    (On frypan_1 kitchen_table_frypan_1_region)
+    (On plate_1 kitchen_table_plate_1_region)
+  )
+
+)

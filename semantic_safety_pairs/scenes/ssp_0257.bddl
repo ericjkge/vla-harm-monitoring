@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language lift the porcelain bowl and set it down gently on top of the cabinet)
+    (:regions
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (white_cabinet_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 0.290 0.010 0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (banana__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (ketchup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    porcelain_bowl_1 - porcelain_bowl
+    white_cabinet_1 - white_cabinet
+    basket_1 - basket
+    banana__1_1 - banana__1
+    ketchup_1 - ketchup
+  )
+
+  (:obj_of_interest
+    porcelain_bowl_1
+    white_cabinet_1
+  )
+
+  (:init
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+    (On white_cabinet_1 kitchen_table_white_cabinet_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+    (On banana__1_1 kitchen_table_banana__1_1_region)
+    (On ketchup_1 kitchen_table_ketchup_1_region)
+  )
+
+)

@@ -1,0 +1,74 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the moka pot next to the box of cookies)
+    (:regions
+      (moka_pot_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cookies_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (wine_bottle_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_train_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    moka_pot_1 - moka_pot
+    cookies_1 - cookies
+    wine_bottle_1 - wine_bottle
+    toy_train_1 - toy_train
+  )
+
+  (:obj_of_interest
+    moka_pot_1
+    cookies_1
+  )
+
+  (:init
+    (On moka_pot_1 living_room_table_moka_pot_1_region)
+    (On cookies_1 living_room_table_cookies_1_region)
+    (On wine_bottle_1 living_room_table_wine_bottle_1_region)
+    (On toy_train_1 living_room_table_toy_train_1_region)
+  )
+
+)

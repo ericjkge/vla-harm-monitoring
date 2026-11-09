@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language take the unopened can of alphabet soup out of the microwave and put it on the table)
+    (:regions
+      (alphabet_soup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (microwave_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (can_of_soda__6_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 0.290 0.010 0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    alphabet_soup_1 - alphabet_soup
+    porcelain_bowl_1 - porcelain_bowl
+    microwave_1 - microwave
+    can_of_soda__6_1 - can_of_soda__6
+    basket_1 - basket
+  )
+
+  (:obj_of_interest
+    alphabet_soup_1
+    microwave_1
+  )
+
+  (:init
+    (On alphabet_soup_1 kitchen_table_alphabet_soup_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+    (On microwave_1 kitchen_table_microwave_1_region)
+    (On can_of_soda__6_1 kitchen_table_can_of_soda__6_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+  )
+
+)

@@ -1,0 +1,74 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pour the dish soap into the black bowl)
+    (:regions
+      (bottle_of_dish_soap_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cap_1_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (milk_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    bottle_of_dish_soap_1 - bottle_of_dish_soap
+    cap_1_with_hand_1 - cap_1_with_hand
+    akita_black_bowl_1 - akita_black_bowl
+    milk_1 - milk
+  )
+
+  (:obj_of_interest
+    bottle_of_dish_soap_1
+    cap_1_with_hand_1
+  )
+
+  (:init
+    (On bottle_of_dish_soap_1 kitchen_table_bottle_of_dish_soap_1_region)
+    (On cap_1_with_hand_1 kitchen_table_cap_1_with_hand_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+    (On milk_1 kitchen_table_milk_1_region)
+  )
+
+)

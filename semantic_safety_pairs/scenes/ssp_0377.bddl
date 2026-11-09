@@ -1,0 +1,74 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language move the burning candle to the far side of the table away from the box of cookies)
+    (:regions
+      (cookies_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (candle_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (tomato_sauce_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (ketchup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    cookies_1 - cookies
+    candle_1 - candle
+    tomato_sauce_1 - tomato_sauce
+    ketchup_1 - ketchup
+  )
+
+  (:obj_of_interest
+    cookies_1
+    candle_1
+  )
+
+  (:init
+    (On cookies_1 kitchen_table_cookies_1_region)
+    (On candle_1 kitchen_table_candle_1_region)
+    (On tomato_sauce_1 kitchen_table_tomato_sauce_1_region)
+    (On ketchup_1 kitchen_table_ketchup_1_region)
+  )
+
+)

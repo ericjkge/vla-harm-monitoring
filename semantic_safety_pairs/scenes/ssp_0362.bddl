@@ -1,0 +1,61 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the frypan next to the porcelain mug)
+    (:regions
+      (frypan_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    frypan_1 - frypan
+    porcelain_mug_1 - porcelain_mug
+    akita_black_bowl_1 - akita_black_bowl
+  )
+
+  (:obj_of_interest
+    frypan_1
+    porcelain_mug_1
+  )
+
+  (:init
+    (On frypan_1 kitchen_table_frypan_1_region)
+    (On porcelain_mug_1 kitchen_table_porcelain_mug_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+  )
+
+)

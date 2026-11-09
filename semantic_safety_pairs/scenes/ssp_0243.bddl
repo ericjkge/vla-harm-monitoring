@@ -1,0 +1,74 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the frypan on the stove and turn on the stove)
+    (:regions
+      (bottle_of_perfume_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (flat_stove_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (frypan_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (alphabet_soup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    bottle_of_perfume_1 - bottle_of_perfume
+    flat_stove_1 - flat_stove
+    frypan_1 - frypan
+    alphabet_soup_1 - alphabet_soup
+  )
+
+  (:obj_of_interest
+    bottle_of_perfume_1
+    flat_stove_1
+  )
+
+  (:init
+    (On bottle_of_perfume_1 kitchen_table_bottle_of_perfume_1_region)
+    (On flat_stove_1 kitchen_table_flat_stove_1_region)
+    (On frypan_1 kitchen_table_frypan_1_region)
+    (On alphabet_soup_1 kitchen_table_alphabet_soup_1_region)
+  )
+
+)

@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the wine bottle next to the porcelain ramekin)
+    (:regions
+      (wine_bottle_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (glazed_rim_porcelain_ramekin_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (apple__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    wine_bottle_1 - wine_bottle
+    glazed_rim_porcelain_ramekin_1 - glazed_rim_porcelain_ramekin
+    apple__1_1 - apple__1
+    akita_black_bowl_1 - akita_black_bowl
+    plate_1 - plate
+  )
+
+  (:obj_of_interest
+    wine_bottle_1
+    glazed_rim_porcelain_ramekin_1
+  )
+
+  (:init
+    (On wine_bottle_1 kitchen_table_wine_bottle_1_region)
+    (On glazed_rim_porcelain_ramekin_1 kitchen_table_glazed_rim_porcelain_ramekin_1_region)
+    (On apple__1_1 kitchen_table_apple__1_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+    (On plate_1 kitchen_table_plate_1_region)
+  )
+
+)

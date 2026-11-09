@@ -1,0 +1,74 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language lift the wine bottle and set it down gently on top of the cabinet)
+    (:regions
+      (wine_bottle_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (white_cabinet_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 0.290 0.010 0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    wine_bottle_1 - wine_bottle
+    white_cabinet_1 - white_cabinet
+    basket_1 - basket
+    red_coffee_mug_1 - red_coffee_mug
+  )
+
+  (:obj_of_interest
+    wine_bottle_1
+    white_cabinet_1
+  )
+
+  (:init
+    (On wine_bottle_1 living_room_table_wine_bottle_1_region)
+    (On white_cabinet_1 living_room_table_white_cabinet_1_region)
+    (On basket_1 living_room_table_basket_1_region)
+    (On red_coffee_mug_1 living_room_table_red_coffee_mug_1_region)
+  )
+
+)

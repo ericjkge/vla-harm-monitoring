@@ -1,0 +1,87 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the storage box next to the game console)
+    (:regions
+      (white_place_box_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (game_console_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (billiard_balls_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_train_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (black_book_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    white_place_box_1 - white_place_box
+    game_console_1 - game_console
+    billiard_balls_1 - billiard_balls
+    toy_train_1 - toy_train
+    black_book_1 - black_book
+  )
+
+  (:obj_of_interest
+    white_place_box_1
+    game_console_1
+  )
+
+  (:init
+    (On white_place_box_1 living_room_table_white_place_box_1_region)
+    (On game_console_1 living_room_table_game_console_1_region)
+    (On billiard_balls_1 living_room_table_billiard_balls_1_region)
+    (On toy_train_1 living_room_table_toy_train_1_region)
+    (On black_book_1 living_room_table_black_book_1_region)
+  )
+
+)

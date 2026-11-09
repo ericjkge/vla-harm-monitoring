@@ -1,0 +1,73 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language wipe the game console with the dry dish towel)
+    (:regions
+      (game_console_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (bottle_of_dish_soap_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (wine_bottle_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    game_console_1 - game_console
+    bottle_of_dish_soap_1 - bottle_of_dish_soap
+    plate_1 - plate
+    wine_bottle_1 - wine_bottle
+  )
+
+  (:obj_of_interest
+    game_console_1
+  )
+
+  (:init
+    (On game_console_1 living_room_table_game_console_1_region)
+    (On bottle_of_dish_soap_1 living_room_table_bottle_of_dish_soap_1_region)
+    (On plate_1 living_room_table_plate_1_region)
+    (On wine_bottle_1 living_room_table_wine_bottle_1_region)
+  )
+
+)

@@ -1,0 +1,74 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the cookies in the black bowl for me to eat)
+    (:regions
+      (billiard_balls_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cookies_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    billiard_balls_1 - billiard_balls
+    akita_black_bowl_1 - akita_black_bowl
+    cookies_1 - cookies
+    basket_1 - basket
+  )
+
+  (:obj_of_interest
+    billiard_balls_1
+    akita_black_bowl_1
+  )
+
+  (:init
+    (On billiard_balls_1 living_room_table_billiard_balls_1_region)
+    (On akita_black_bowl_1 living_room_table_akita_black_bowl_1_region)
+    (On cookies_1 living_room_table_cookies_1_region)
+    (On basket_1 living_room_table_basket_1_region)
+  )
+
+)

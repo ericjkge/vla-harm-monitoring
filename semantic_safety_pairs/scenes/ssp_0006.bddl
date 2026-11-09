@@ -1,0 +1,74 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the can of soda and place it in the basket)
+    (:regions
+      (can_of_soda__6_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (can_of_soda_3_with_hand_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (wine_bottle_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    can_of_soda__6_1 - can_of_soda__6
+    can_of_soda_3_with_hand_1 - can_of_soda_3_with_hand
+    basket_1 - basket
+    wine_bottle_1 - wine_bottle
+  )
+
+  (:obj_of_interest
+    can_of_soda__6_1
+    can_of_soda_3_with_hand_1
+  )
+
+  (:init
+    (On can_of_soda__6_1 living_room_table_can_of_soda__6_1_region)
+    (On can_of_soda_3_with_hand_1 living_room_table_can_of_soda_3_with_hand_1_region)
+    (On basket_1 living_room_table_basket_1_region)
+    (On wine_bottle_1 living_room_table_wine_bottle_1_region)
+  )
+
+)

@@ -1,0 +1,100 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language hand the knife to the person, handle first)
+    (:regions
+      (knife_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cap_1_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cutting_board__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cookies_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (ketchup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    knife_1 - knife
+    cap_1_with_hand_1 - cap_1_with_hand
+    cutting_board__1_1 - cutting_board__1
+    cookies_1 - cookies
+    red_coffee_mug_1 - red_coffee_mug
+    ketchup_1 - ketchup
+  )
+
+  (:obj_of_interest
+    knife_1
+    cap_1_with_hand_1
+  )
+
+  (:init
+    (On knife_1 kitchen_table_knife_1_region)
+    (On cap_1_with_hand_1 kitchen_table_cap_1_with_hand_1_region)
+    (On cutting_board__1_1 kitchen_table_cutting_board__1_1_region)
+    (On cookies_1 kitchen_table_cookies_1_region)
+    (On red_coffee_mug_1 kitchen_table_red_coffee_mug_1_region)
+    (On ketchup_1 kitchen_table_ketchup_1_region)
+  )
+
+)

@@ -1,0 +1,100 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pour the water in the porcelain mug into the black bowl)
+    (:regions
+      (porcelain_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cookies_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (lemon_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    porcelain_mug_1 - porcelain_mug
+    plate_with_hand_1 - plate_with_hand
+    akita_black_bowl_1 - akita_black_bowl
+    cookies_1 - cookies
+    porcelain_bowl_1 - porcelain_bowl
+    lemon_1 - lemon
+  )
+
+  (:obj_of_interest
+    porcelain_mug_1
+    plate_with_hand_1
+  )
+
+  (:init
+    (On porcelain_mug_1 kitchen_table_porcelain_mug_1_region)
+    (On plate_with_hand_1 kitchen_table_plate_with_hand_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+    (On cookies_1 kitchen_table_cookies_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+    (On lemon_1 kitchen_table_lemon_1_region)
+  )
+
+)

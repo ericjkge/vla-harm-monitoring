@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the moka pot next to the egg)
+    (:regions
+      (moka_pot_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (egg_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (alphabet_soup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    moka_pot_1 - moka_pot
+    egg_1 - egg
+    porcelain_bowl_1 - porcelain_bowl
+    red_coffee_mug_1 - red_coffee_mug
+    alphabet_soup_1 - alphabet_soup
+  )
+
+  (:obj_of_interest
+    moka_pot_1
+    egg_1
+  )
+
+  (:init
+    (On moka_pot_1 kitchen_table_moka_pot_1_region)
+    (On egg_1 kitchen_table_egg_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+    (On red_coffee_mug_1 kitchen_table_red_coffee_mug_1_region)
+    (On alphabet_soup_1 kitchen_table_alphabet_soup_1_region)
+  )
+
+)

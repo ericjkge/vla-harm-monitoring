@@ -1,0 +1,73 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language slide the porcelain plate toward the basket)
+    (:regions
+      (salad_porcelain_plate_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (milk_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (lemon_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    salad_porcelain_plate_1 - salad_porcelain_plate
+    basket_1 - basket
+    milk_1 - milk
+    lemon_1 - lemon
+  )
+
+  (:obj_of_interest
+    salad_porcelain_plate_1
+  )
+
+  (:init
+    (On salad_porcelain_plate_1 kitchen_table_salad_porcelain_plate_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+    (On milk_1 kitchen_table_milk_1_region)
+    (On lemon_1 kitchen_table_lemon_1_region)
+  )
+
+)

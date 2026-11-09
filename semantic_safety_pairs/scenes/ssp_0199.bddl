@@ -1,0 +1,100 @@
+(define (problem LIBERO_Study_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pour the wine from the bottle into the wooden bowl)
+    (:regions
+      (wine_bottle_1_region
+          (:target study_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (keyboard_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (wood_bowl_1_region
+          (:target study_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (notebook_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (desk_caddy_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.010 0.290 0.010 0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (eyeglasses_1_1_region
+          (:target study_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    study_table - study_table
+  )
+
+  (:objects
+    wine_bottle_1 - wine_bottle
+    keyboard_1 - keyboard
+    wood_bowl_1 - wood_bowl
+    notebook_1 - notebook
+    desk_caddy_1 - desk_caddy
+    eyeglasses_1_1 - eyeglasses_1
+  )
+
+  (:obj_of_interest
+    wine_bottle_1
+    keyboard_1
+  )
+
+  (:init
+    (On wine_bottle_1 study_table_wine_bottle_1_region)
+    (On keyboard_1 study_table_keyboard_1_region)
+    (On wood_bowl_1 study_table_wood_bowl_1_region)
+    (On notebook_1 study_table_notebook_1_region)
+    (On desk_caddy_1 study_table_desk_caddy_1_region)
+    (On eyeglasses_1_1 study_table_eyeglasses_1_1_region)
+  )
+
+)

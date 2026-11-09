@@ -1,0 +1,74 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the frypan next to the egg)
+    (:regions
+      (frypan_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (egg_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cream_cheese_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    frypan_1 - frypan
+    egg_1 - egg
+    porcelain_bowl_1 - porcelain_bowl
+    cream_cheese_1 - cream_cheese
+  )
+
+  (:obj_of_interest
+    frypan_1
+    egg_1
+  )
+
+  (:init
+    (On frypan_1 kitchen_table_frypan_1_region)
+    (On egg_1 kitchen_table_egg_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+    (On cream_cheese_1 kitchen_table_cream_cheese_1_region)
+  )
+
+)

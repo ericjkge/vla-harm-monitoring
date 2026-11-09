@@ -1,0 +1,73 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language slide the vase toward the basket)
+    (:regions
+      (vase_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_car_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    vase_1 - vase
+    basket_1 - basket
+    toy_car_1 - toy_car
+    plate_1 - plate
+  )
+
+  (:obj_of_interest
+    vase_1
+  )
+
+  (:init
+    (On vase_1 living_room_table_vase_1_region)
+    (On basket_1 living_room_table_basket_1_region)
+    (On toy_car_1 living_room_table_toy_car_1_region)
+    (On plate_1 living_room_table_plate_1_region)
+  )
+
+)

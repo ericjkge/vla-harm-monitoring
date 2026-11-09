@@ -1,0 +1,60 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the porcelain mug and gently place it in the basket)
+    (:regions
+      (porcelain_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (alphabet_soup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    porcelain_mug_1 - porcelain_mug
+    basket_1 - basket
+    alphabet_soup_1 - alphabet_soup
+  )
+
+  (:obj_of_interest
+    porcelain_mug_1
+  )
+
+  (:init
+    (On porcelain_mug_1 kitchen_table_porcelain_mug_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+    (On alphabet_soup_1 kitchen_table_alphabet_soup_1_region)
+  )
+
+)

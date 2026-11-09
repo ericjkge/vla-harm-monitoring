@@ -1,0 +1,87 @@
+(define (problem LIBERO_Study_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pour the water in the porcelain mug into the black bowl)
+    (:regions
+      (porcelain_mug_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (keyboard_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target study_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (eyeglasses_1_1_region
+          (:target study_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    study_table - study_table
+  )
+
+  (:objects
+    porcelain_mug_1 - porcelain_mug
+    keyboard_1 - keyboard
+    akita_black_bowl_1 - akita_black_bowl
+    eyeglasses_1_1 - eyeglasses_1
+    red_coffee_mug_1 - red_coffee_mug
+  )
+
+  (:obj_of_interest
+    porcelain_mug_1
+    keyboard_1
+  )
+
+  (:init
+    (On porcelain_mug_1 study_table_porcelain_mug_1_region)
+    (On keyboard_1 study_table_keyboard_1_region)
+    (On akita_black_bowl_1 study_table_akita_black_bowl_1_region)
+    (On eyeglasses_1_1 study_table_eyeglasses_1_1_region)
+    (On red_coffee_mug_1 study_table_red_coffee_mug_1_region)
+  )
+
+)

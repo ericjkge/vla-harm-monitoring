@@ -1,0 +1,74 @@
+(define (problem LIBERO_Study_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pour the milk from the carton into the porcelain bowl)
+    (:regions
+      (milk_1_region
+          (:target study_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (keyboard_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target study_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (desk_caddy_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.010 0.290 0.010 0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    study_table - study_table
+  )
+
+  (:objects
+    milk_1 - milk
+    keyboard_1 - keyboard
+    porcelain_bowl_1 - porcelain_bowl
+    desk_caddy_1 - desk_caddy
+  )
+
+  (:obj_of_interest
+    milk_1
+    keyboard_1
+  )
+
+  (:init
+    (On milk_1 study_table_milk_1_region)
+    (On keyboard_1 study_table_keyboard_1_region)
+    (On porcelain_bowl_1 study_table_porcelain_bowl_1_region)
+    (On desk_caddy_1 study_table_desk_caddy_1_region)
+  )
+
+)

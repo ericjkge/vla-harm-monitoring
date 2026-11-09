@@ -12,7 +12,15 @@ Each pair shares a scene and target object(s); only the instruction's intent dif
 | `pairs.jsonl` / `pairs.csv` | 500 generated pairs (seed 0) |
 | `pairs_libero_ssr_heldout.txt` | The 15 LIBERO-Safety Semantic Safety Reasoning (SSR) instructions, held out from training |
 | `libero_ssr_matched_pairs.jsonl` | A hand-written safe counterpart for each of the 15 SSR tasks, on the same scene |
-| `ssr_pilot_colab.ipynb` | Colab notebook: render the 15 SSR scenes, run OpenVLA on safe+unsafe prompts, check linear separability |
+| `ssr_pilot_colab.ipynb` | Colab notebook (T4-tested): render the 15 SSR scenes, run OpenVLA on safe+unsafe prompts, probe; phase-2 cells 10-11 run the generated pairs |
+| `ssr_scene_objects.json` | Object list of each of the 15 SSR scenes (from their BDDL files) |
+| `match_pairs_to_scenes.py` | Assigns generated pairs to SSR scenes whose objects they mention; derives template keys and a same-verb flag |
+| `ssr_scene_pairs.jsonl` | 96 generated pairs matched to the 15 scenes (24 strictly grounded, 72 targets-only) |
+| `make_scene_bddls.py` | Writes one LIBERO BDDL scene per pair with exactly the objects it names |
+| `scenes/` | 500 scene files (`<pair_id>.bddl`), ready to render with `OffScreenRenderEnv` |
+| `scene_index.jsonl` | pair -> scene file, plus template keys and same-verb flag |
+| `sim_object_registry.json` | The 1,420 object type names the simulator accepts (all 61 we use are in it) |
+| `results/` | Pilot outputs: `ssr_pilot_records.pkl` (30 x 33 layers x 4096 last-token activations), `ssr_pilot_probes.png` |
 
 ## Pair schema (`pairs.jsonl`)
 
@@ -55,6 +63,34 @@ to test.
 - Category balance is uneven (human_injury largest). Adjust `--max_per_category` or add templates.
 - Several L2 items are only unsafe by context (e.g. "the banana fell on the floor");
   decide whether the VLA is even expected to parse that.
+
+## Pilot result (2026-11-08, OpenVLA-7B LIBERO-10 finetune, 4-bit on a T4)
+
+On the 15 SSR tasks with a hand-written safe twin each, a difference-of-means probe evaluated
+leave-one-pair-out orders the held-out unsafe prompt above its safe twin in 13-15 of 15 pairs at
+every layer from 2 to 30 (15/15 at several layers). It still works on the pairs where the unsafe
+prompt is the longer one, so it is not reading prompt length. Plain logistic regression found
+nothing at n=30 in 4096-d, so probe method matters at this scale. Closed-loop rollouts were not run:
+free Colab cannot hold the simulator and the model at once.
+
+## Phase 2 (ready to run): verb-vs-harm test
+
+`ssr_scene_pairs.jsonl` puts 96 generated pairs onto the already-rendered scenes. Notebook cells
+10-11 extract their activations and run three checks: leave-one-template-out, the same-verb subset
+(e.g. "put X next to Y" vs "put X on top of Y"), and train-on-generated / test-on-benchmark with
+the test scene's pairs held out. If the same-verb subset separates, the direction is about harm,
+not verb identity. Only 24 pairs are strictly grounded in the image; the rest mention one absent
+object. Rendering more scenes from `pairs.jsonl` is the way to grow this.
+
+## Phase 3 (ready to run): all 500 pairs on their own scenes
+
+Every pair now has a scene file with exactly the objects its instructions name, so the
+absent-object confound of phase 2 is gone. Notebook cells 12-14: render all 500 scenes with no
+model loaded (~1 h on free Colab, resumable), then run the model on the saved frames (~25 min),
+then evaluate leave-one-template-out, the same-verb subset, per-category and per-tier accuracy,
+and train-on-500 / test-on-15-benchmark. Scene layout is deterministic: large fixtures at the
+benchmark authors' side-slot coordinates, everything else on a central grid; all objects start on
+the table.
 
 ## Suggested next steps
 

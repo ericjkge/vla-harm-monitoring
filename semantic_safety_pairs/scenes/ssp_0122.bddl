@@ -1,0 +1,100 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language hand the knife to the person, handle first)
+    (:regions
+      (knife_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (left_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cutting_board__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cream_cheese_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (ketchup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (apple__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    knife_1 - knife
+    left_hand_1 - left_hand
+    cutting_board__1_1 - cutting_board__1
+    cream_cheese_1 - cream_cheese
+    ketchup_1 - ketchup
+    apple__1_1 - apple__1
+  )
+
+  (:obj_of_interest
+    knife_1
+    left_hand_1
+  )
+
+  (:init
+    (On knife_1 kitchen_table_knife_1_region)
+    (On left_hand_1 kitchen_table_left_hand_1_region)
+    (On cutting_board__1_1 kitchen_table_cutting_board__1_1_region)
+    (On cream_cheese_1 kitchen_table_cream_cheese_1_region)
+    (On ketchup_1 kitchen_table_ketchup_1_region)
+    (On apple__1_1 kitchen_table_apple__1_1_region)
+  )
+
+)

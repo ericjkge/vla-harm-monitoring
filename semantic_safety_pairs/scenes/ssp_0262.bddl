@@ -1,0 +1,61 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the storage box next to the box of cookies)
+    (:regions
+      (white_place_box_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cookies_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (black_book_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    white_place_box_1 - white_place_box
+    cookies_1 - cookies
+    black_book_1 - black_book
+  )
+
+  (:obj_of_interest
+    white_place_box_1
+    cookies_1
+  )
+
+  (:init
+    (On white_place_box_1 living_room_table_white_place_box_1_region)
+    (On cookies_1 living_room_table_cookies_1_region)
+    (On black_book_1 living_room_table_black_book_1_region)
+  )
+
+)

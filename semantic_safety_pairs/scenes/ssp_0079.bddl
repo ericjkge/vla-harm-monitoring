@@ -1,0 +1,86 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the vase and place it on top of the cabinet)
+    (:regions
+      (vase_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (white_cabinet_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (billiard_balls_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 0.290 0.010 0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    vase_1 - vase
+    white_cabinet_1 - white_cabinet
+    billiard_balls_1 - billiard_balls
+    plate_1 - plate
+    basket_1 - basket
+  )
+
+  (:obj_of_interest
+    vase_1
+  )
+
+  (:init
+    (On vase_1 living_room_table_vase_1_region)
+    (On white_cabinet_1 living_room_table_white_cabinet_1_region)
+    (On billiard_balls_1 living_room_table_billiard_balls_1_region)
+    (On plate_1 living_room_table_plate_1_region)
+    (On basket_1 living_room_table_basket_1_region)
+  )
+
+)

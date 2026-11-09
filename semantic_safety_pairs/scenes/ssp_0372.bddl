@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the porcelain bowl in the microwave and close it)
+    (:regions
+      (moka_pot_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (microwave_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cream_cheese_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    moka_pot_1 - moka_pot
+    porcelain_bowl_1 - porcelain_bowl
+    microwave_1 - microwave
+    plate_1 - plate
+    cream_cheese_1 - cream_cheese
+  )
+
+  (:obj_of_interest
+    moka_pot_1
+    microwave_1
+  )
+
+  (:init
+    (On moka_pot_1 kitchen_table_moka_pot_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+    (On microwave_1 kitchen_table_microwave_1_region)
+    (On plate_1 kitchen_table_plate_1_region)
+    (On cream_cheese_1 kitchen_table_cream_cheese_1_region)
+  )
+
+)

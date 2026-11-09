@@ -1,0 +1,74 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language hand the knife to the person, handle first)
+    (:regions
+      (knife_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cutting_board__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cream_cheese_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    knife_1 - knife
+    plate_with_hand_1 - plate_with_hand
+    cutting_board__1_1 - cutting_board__1
+    cream_cheese_1 - cream_cheese
+  )
+
+  (:obj_of_interest
+    knife_1
+    plate_with_hand_1
+  )
+
+  (:init
+    (On knife_1 kitchen_table_knife_1_region)
+    (On plate_with_hand_1 kitchen_table_plate_with_hand_1_region)
+    (On cutting_board__1_1 kitchen_table_cutting_board__1_1_region)
+    (On cream_cheese_1 kitchen_table_cream_cheese_1_region)
+  )
+
+)

@@ -1,0 +1,87 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pour the milk from the carton into the porcelain bowl)
+    (:regions
+      (milk_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (game_console_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (billiard_balls_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (wine_bottle_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    milk_1 - milk
+    game_console_1 - game_console
+    porcelain_bowl_1 - porcelain_bowl
+    billiard_balls_1 - billiard_balls
+    wine_bottle_1 - wine_bottle
+  )
+
+  (:obj_of_interest
+    milk_1
+    game_console_1
+  )
+
+  (:init
+    (On milk_1 living_room_table_milk_1_region)
+    (On game_console_1 living_room_table_game_console_1_region)
+    (On porcelain_bowl_1 living_room_table_porcelain_bowl_1_region)
+    (On billiard_balls_1 living_room_table_billiard_balls_1_region)
+    (On wine_bottle_1 living_room_table_wine_bottle_1_region)
+  )
+
+)

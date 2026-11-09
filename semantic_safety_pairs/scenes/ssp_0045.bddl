@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language lift the egg and set it down gently on top of the cabinet)
+    (:regions
+      (egg_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (white_cabinet_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 0.290 0.010 0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (ketchup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (banana__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    egg_1 - egg
+    white_cabinet_1 - white_cabinet
+    basket_1 - basket
+    ketchup_1 - ketchup
+    banana__1_1 - banana__1
+  )
+
+  (:obj_of_interest
+    egg_1
+    white_cabinet_1
+  )
+
+  (:init
+    (On egg_1 kitchen_table_egg_1_region)
+    (On white_cabinet_1 kitchen_table_white_cabinet_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+    (On ketchup_1 kitchen_table_ketchup_1_region)
+    (On banana__1_1 kitchen_table_banana__1_1_region)
+  )
+
+)

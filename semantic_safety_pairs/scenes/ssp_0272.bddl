@@ -1,0 +1,100 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the brownie on the plate in my hand so I can eat it)
+    (:regions
+      (bottle_of_alcohol_1_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (brownie_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (ketchup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    bottle_of_alcohol_1_with_hand_1 - bottle_of_alcohol_1_with_hand
+    brownie_1 - brownie
+    plate_with_hand_1 - plate_with_hand
+    ketchup_1 - ketchup
+    akita_black_bowl_1 - akita_black_bowl
+    red_coffee_mug_1 - red_coffee_mug
+  )
+
+  (:obj_of_interest
+    bottle_of_alcohol_1_with_hand_1
+    brownie_1
+  )
+
+  (:init
+    (On bottle_of_alcohol_1_with_hand_1 kitchen_table_bottle_of_alcohol_1_with_hand_1_region)
+    (On brownie_1 kitchen_table_brownie_1_region)
+    (On plate_with_hand_1 kitchen_table_plate_with_hand_1_region)
+    (On ketchup_1 kitchen_table_ketchup_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+    (On red_coffee_mug_1 kitchen_table_red_coffee_mug_1_region)
+  )
+
+)

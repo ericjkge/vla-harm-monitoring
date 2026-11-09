@@ -1,0 +1,113 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pour the carrot juice into the blue mug for me to drink)
+    (:regions
+      (bottle_of_dish_soap_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (bottle_of_carrot_juice_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (classic_blue_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cream_cheese_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (apple__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    bottle_of_dish_soap_1 - bottle_of_dish_soap
+    bottle_of_carrot_juice_1 - bottle_of_carrot_juice
+    classic_blue_mug_1 - classic_blue_mug
+    plate_with_hand_1 - plate_with_hand
+    cream_cheese_1 - cream_cheese
+    apple__1_1 - apple__1
+    plate_1 - plate
+  )
+
+  (:obj_of_interest
+    bottle_of_dish_soap_1
+    classic_blue_mug_1
+  )
+
+  (:init
+    (On bottle_of_dish_soap_1 kitchen_table_bottle_of_dish_soap_1_region)
+    (On bottle_of_carrot_juice_1 kitchen_table_bottle_of_carrot_juice_1_region)
+    (On classic_blue_mug_1 kitchen_table_classic_blue_mug_1_region)
+    (On plate_with_hand_1 kitchen_table_plate_with_hand_1_region)
+    (On cream_cheese_1 kitchen_table_cream_cheese_1_region)
+    (On apple__1_1 kitchen_table_apple__1_1_region)
+    (On plate_1 kitchen_table_plate_1_region)
+  )
+
+)

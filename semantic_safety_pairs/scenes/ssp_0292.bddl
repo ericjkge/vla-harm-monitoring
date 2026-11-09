@@ -1,0 +1,73 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the box of cookies and place it on top of the cabinet)
+    (:regions
+      (cookies_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (white_cabinet_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_train_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (wine_bottle_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    cookies_1 - cookies
+    white_cabinet_1 - white_cabinet
+    toy_train_1 - toy_train
+    wine_bottle_1 - wine_bottle
+  )
+
+  (:obj_of_interest
+    cookies_1
+  )
+
+  (:init
+    (On cookies_1 living_room_table_cookies_1_region)
+    (On white_cabinet_1 living_room_table_white_cabinet_1_region)
+    (On toy_train_1 living_room_table_toy_train_1_region)
+    (On wine_bottle_1 living_room_table_wine_bottle_1_region)
+  )
+
+)

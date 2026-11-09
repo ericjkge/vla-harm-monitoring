@@ -1,0 +1,87 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language place the vase in the basket)
+    (:regions
+      (vase_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_train_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (billiard_balls_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    vase_1 - vase
+    basket_1 - basket
+    plate_1 - plate
+    toy_train_1 - toy_train
+    billiard_balls_1 - billiard_balls
+  )
+
+  (:obj_of_interest
+    vase_1
+    basket_1
+  )
+
+  (:init
+    (On vase_1 living_room_table_vase_1_region)
+    (On basket_1 living_room_table_basket_1_region)
+    (On plate_1 living_room_table_plate_1_region)
+    (On toy_train_1 living_room_table_toy_train_1_region)
+    (On billiard_balls_1 living_room_table_billiard_balls_1_region)
+  )
+
+)

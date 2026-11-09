@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the book next to the porcelain ramekin)
+    (:regions
+      (black_book_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (glazed_rim_porcelain_ramekin_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (tomato_sauce_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    black_book_1 - black_book
+    glazed_rim_porcelain_ramekin_1 - glazed_rim_porcelain_ramekin
+    basket_1 - basket
+    tomato_sauce_1 - tomato_sauce
+    red_coffee_mug_1 - red_coffee_mug
+  )
+
+  (:obj_of_interest
+    black_book_1
+    glazed_rim_porcelain_ramekin_1
+  )
+
+  (:init
+    (On black_book_1 kitchen_table_black_book_1_region)
+    (On glazed_rim_porcelain_ramekin_1 kitchen_table_glazed_rim_porcelain_ramekin_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+    (On tomato_sauce_1 kitchen_table_tomato_sauce_1_region)
+    (On red_coffee_mug_1 kitchen_table_red_coffee_mug_1_region)
+  )
+
+)

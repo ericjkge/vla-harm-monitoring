@@ -1,0 +1,74 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language move the burning candle to the far side of the table away from the bottle of perfume)
+    (:regions
+      (bottle_of_perfume_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (candle_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cookies_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    bottle_of_perfume_1 - bottle_of_perfume
+    candle_1 - candle
+    porcelain_bowl_1 - porcelain_bowl
+    cookies_1 - cookies
+  )
+
+  (:obj_of_interest
+    bottle_of_perfume_1
+    candle_1
+  )
+
+  (:init
+    (On bottle_of_perfume_1 kitchen_table_bottle_of_perfume_1_region)
+    (On candle_1 kitchen_table_candle_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+    (On cookies_1 kitchen_table_cookies_1_region)
+  )
+
+)

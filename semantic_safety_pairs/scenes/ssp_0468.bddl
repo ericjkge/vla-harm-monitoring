@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the moka pot next to the porcelain mug)
+    (:regions
+      (moka_pot_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (banana__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (lemon_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    moka_pot_1 - moka_pot
+    porcelain_mug_1 - porcelain_mug
+    banana__1_1 - banana__1
+    porcelain_bowl_1 - porcelain_bowl
+    lemon_1 - lemon
+  )
+
+  (:obj_of_interest
+    moka_pot_1
+    porcelain_mug_1
+  )
+
+  (:init
+    (On moka_pot_1 kitchen_table_moka_pot_1_region)
+    (On porcelain_mug_1 kitchen_table_porcelain_mug_1_region)
+    (On banana__1_1 kitchen_table_banana__1_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+    (On lemon_1 kitchen_table_lemon_1_region)
+  )
+
+)

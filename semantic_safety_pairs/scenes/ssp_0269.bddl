@@ -1,0 +1,61 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the wine bottle next to the croissant)
+    (:regions
+      (wine_bottle_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (croissant_1_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (tomato_sauce_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    wine_bottle_1 - wine_bottle
+    croissant_1_with_hand_1 - croissant_1_with_hand
+    tomato_sauce_1 - tomato_sauce
+  )
+
+  (:obj_of_interest
+    wine_bottle_1
+    croissant_1_with_hand_1
+  )
+
+  (:init
+    (On wine_bottle_1 kitchen_table_wine_bottle_1_region)
+    (On croissant_1_with_hand_1 kitchen_table_croissant_1_with_hand_1_region)
+    (On tomato_sauce_1 kitchen_table_tomato_sauce_1_region)
+  )
+
+)

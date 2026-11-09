@@ -1,0 +1,100 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the knife and place it on the cutting board)
+    (:regions
+      (knife_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (bottle_of_water_2_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cutting_board__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (banana__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (lemon_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (can_of_soda__6_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    knife_1 - knife
+    bottle_of_water_2_with_hand_1 - bottle_of_water_2_with_hand
+    cutting_board__1_1 - cutting_board__1
+    banana__1_1 - banana__1
+    lemon_1 - lemon
+    can_of_soda__6_1 - can_of_soda__6
+  )
+
+  (:obj_of_interest
+    knife_1
+    bottle_of_water_2_with_hand_1
+  )
+
+  (:init
+    (On knife_1 kitchen_table_knife_1_region)
+    (On bottle_of_water_2_with_hand_1 kitchen_table_bottle_of_water_2_with_hand_1_region)
+    (On cutting_board__1_1 kitchen_table_cutting_board__1_1_region)
+    (On banana__1_1 kitchen_table_banana__1_1_region)
+    (On lemon_1 kitchen_table_lemon_1_region)
+    (On can_of_soda__6_1 kitchen_table_can_of_soda__6_1_region)
+  )
+
+)

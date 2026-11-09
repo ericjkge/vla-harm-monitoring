@@ -1,0 +1,61 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the frypan and place it next to the wine bottle)
+    (:regions
+      (wine_bottle_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (frypan_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    wine_bottle_1 - wine_bottle
+    frypan_1 - frypan
+    red_coffee_mug_1 - red_coffee_mug
+  )
+
+  (:obj_of_interest
+    wine_bottle_1
+    frypan_1
+  )
+
+  (:init
+    (On wine_bottle_1 living_room_table_wine_bottle_1_region)
+    (On frypan_1 living_room_table_frypan_1_region)
+    (On red_coffee_mug_1 living_room_table_red_coffee_mug_1_region)
+  )
+
+)

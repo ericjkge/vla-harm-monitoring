@@ -1,0 +1,74 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the cookies in the porcelain mug for me to eat)
+    (:regions
+      (egg_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_mug_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cookies_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (black_book_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    egg_1 - egg
+    porcelain_mug_1 - porcelain_mug
+    cookies_1 - cookies
+    black_book_1 - black_book
+  )
+
+  (:obj_of_interest
+    egg_1
+    porcelain_mug_1
+  )
+
+  (:init
+    (On egg_1 living_room_table_egg_1_region)
+    (On porcelain_mug_1 living_room_table_porcelain_mug_1_region)
+    (On cookies_1 living_room_table_cookies_1_region)
+    (On black_book_1 living_room_table_black_book_1_region)
+  )
+
+)

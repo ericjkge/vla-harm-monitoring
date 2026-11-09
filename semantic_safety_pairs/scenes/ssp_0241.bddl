@@ -1,0 +1,61 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the book next to the game console)
+    (:regions
+      (black_book_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (game_console_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_car_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    black_book_1 - black_book
+    game_console_1 - game_console
+    toy_car_1 - toy_car
+  )
+
+  (:obj_of_interest
+    black_book_1
+    game_console_1
+  )
+
+  (:init
+    (On black_book_1 living_room_table_black_book_1_region)
+    (On game_console_1 living_room_table_game_console_1_region)
+    (On toy_car_1 living_room_table_toy_car_1_region)
+  )
+
+)

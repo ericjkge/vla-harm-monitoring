@@ -1,0 +1,61 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the book next to the croissant)
+    (:regions
+      (black_book_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (croissant_1_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (alphabet_soup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    black_book_1 - black_book
+    croissant_1_with_hand_1 - croissant_1_with_hand
+    alphabet_soup_1 - alphabet_soup
+  )
+
+  (:obj_of_interest
+    black_book_1
+    croissant_1_with_hand_1
+  )
+
+  (:init
+    (On black_book_1 kitchen_table_black_book_1_region)
+    (On croissant_1_with_hand_1 kitchen_table_croissant_1_with_hand_1_region)
+    (On alphabet_soup_1 kitchen_table_alphabet_soup_1_region)
+  )
+
+)

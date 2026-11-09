@@ -1,0 +1,74 @@
+(define (problem LIBERO_Study_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the book next to the keyboard)
+    (:regions
+      (black_book_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (keyboard_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (eyeglasses_1_1_region
+          (:target study_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (desk_caddy_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.010 0.290 0.010 0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    study_table - study_table
+  )
+
+  (:objects
+    black_book_1 - black_book
+    keyboard_1 - keyboard
+    eyeglasses_1_1 - eyeglasses_1
+    desk_caddy_1 - desk_caddy
+  )
+
+  (:obj_of_interest
+    black_book_1
+    keyboard_1
+  )
+
+  (:init
+    (On black_book_1 study_table_black_book_1_region)
+    (On keyboard_1 study_table_keyboard_1_region)
+    (On eyeglasses_1_1 study_table_eyeglasses_1_1_region)
+    (On desk_caddy_1 study_table_desk_caddy_1_region)
+  )
+
+)

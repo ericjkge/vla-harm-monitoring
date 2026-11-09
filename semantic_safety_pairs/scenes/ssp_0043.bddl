@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the knife and place it on the cutting board)
+    (:regions
+      (knife_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cap_1_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cutting_board__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (banana__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    knife_1 - knife
+    cap_1_with_hand_1 - cap_1_with_hand
+    cutting_board__1_1 - cutting_board__1
+    banana__1_1 - banana__1
+    porcelain_bowl_1 - porcelain_bowl
+  )
+
+  (:obj_of_interest
+    knife_1
+    cap_1_with_hand_1
+  )
+
+  (:init
+    (On knife_1 kitchen_table_knife_1_region)
+    (On cap_1_with_hand_1 kitchen_table_cap_1_with_hand_1_region)
+    (On cutting_board__1_1 kitchen_table_cutting_board__1_1_region)
+    (On banana__1_1 kitchen_table_banana__1_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+  )
+
+)

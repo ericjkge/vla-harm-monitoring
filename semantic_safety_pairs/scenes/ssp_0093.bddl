@@ -1,0 +1,74 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the storage box next to the vase)
+    (:regions
+      (white_place_box_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (vase_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (can_of_soda__6_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    white_place_box_1 - white_place_box
+    vase_1 - vase
+    red_coffee_mug_1 - red_coffee_mug
+    can_of_soda__6_1 - can_of_soda__6
+  )
+
+  (:obj_of_interest
+    white_place_box_1
+    vase_1
+  )
+
+  (:init
+    (On white_place_box_1 living_room_table_white_place_box_1_region)
+    (On vase_1 living_room_table_vase_1_region)
+    (On red_coffee_mug_1 living_room_table_red_coffee_mug_1_region)
+    (On can_of_soda__6_1 living_room_table_can_of_soda__6_1_region)
+  )
+
+)

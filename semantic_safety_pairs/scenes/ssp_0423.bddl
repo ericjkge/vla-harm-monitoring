@@ -1,0 +1,87 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language move the bottle of carrot juice away from the game console)
+    (:regions
+      (bottle_of_carrot_juice_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (game_console_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target living_room_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_car_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.070 0.140 -0.050 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+  )
+
+  (:objects
+    bottle_of_carrot_juice_1 - bottle_of_carrot_juice
+    game_console_1 - game_console
+    porcelain_bowl_1 - porcelain_bowl
+    toy_car_1 - toy_car
+    red_coffee_mug_1 - red_coffee_mug
+  )
+
+  (:obj_of_interest
+    bottle_of_carrot_juice_1
+    game_console_1
+  )
+
+  (:init
+    (On bottle_of_carrot_juice_1 living_room_table_bottle_of_carrot_juice_1_region)
+    (On game_console_1 living_room_table_game_console_1_region)
+    (On porcelain_bowl_1 living_room_table_porcelain_bowl_1_region)
+    (On toy_car_1 living_room_table_toy_car_1_region)
+    (On red_coffee_mug_1 living_room_table_red_coffee_mug_1_region)
+  )
+
+)

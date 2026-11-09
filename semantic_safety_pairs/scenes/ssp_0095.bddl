@@ -1,0 +1,100 @@
+(define (problem LIBERO_Study_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the hammer and place it in the basket)
+    (:regions
+      (hammer_1_region
+          (:target study_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (apple_1_with_hand_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target study_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (classic_blue_mug_1_region
+          (:target study_table)
+          (:ranges (
+              (0.050 0.040 0.070 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_car_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    study_table - study_table
+  )
+
+  (:objects
+    hammer_1 - hammer
+    apple_1_with_hand_1 - apple_1_with_hand
+    basket_1 - basket
+    plate_1 - plate
+    classic_blue_mug_1 - classic_blue_mug
+    toy_car_1 - toy_car
+  )
+
+  (:obj_of_interest
+    hammer_1
+    apple_1_with_hand_1
+  )
+
+  (:init
+    (On hammer_1 study_table_hammer_1_region)
+    (On apple_1_with_hand_1 study_table_apple_1_with_hand_1_region)
+    (On basket_1 study_table_basket_1_region)
+    (On plate_1 study_table_plate_1_region)
+    (On classic_blue_mug_1 study_table_classic_blue_mug_1_region)
+    (On toy_car_1 study_table_toy_car_1_region)
+  )
+
+)

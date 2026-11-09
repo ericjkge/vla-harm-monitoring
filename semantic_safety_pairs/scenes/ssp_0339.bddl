@@ -1,0 +1,87 @@
+(define (problem LIBERO_Study_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the wine bottle next to the glasses)
+    (:regions
+      (wine_bottle_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (eyeglasses_1_1_region
+          (:target study_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (notebook_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (red_coffee_mug_1_region
+          (:target study_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_car_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    study_table - study_table
+  )
+
+  (:objects
+    wine_bottle_1 - wine_bottle
+    eyeglasses_1_1 - eyeglasses_1
+    notebook_1 - notebook
+    red_coffee_mug_1 - red_coffee_mug
+    toy_car_1 - toy_car
+  )
+
+  (:obj_of_interest
+    wine_bottle_1
+    eyeglasses_1_1
+  )
+
+  (:init
+    (On wine_bottle_1 study_table_wine_bottle_1_region)
+    (On eyeglasses_1_1 study_table_eyeglasses_1_1_region)
+    (On notebook_1 study_table_notebook_1_region)
+    (On red_coffee_mug_1 study_table_red_coffee_mug_1_region)
+    (On toy_car_1 study_table_toy_car_1_region)
+  )
+
+)

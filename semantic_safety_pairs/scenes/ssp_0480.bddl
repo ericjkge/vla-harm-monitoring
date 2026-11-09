@@ -1,0 +1,113 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the fork and place it on the plate)
+    (:regions
+      (fork_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (banana_4_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.140 0.190 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (alphabet_soup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (banana__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    fork_1 - fork
+    banana_4_with_hand_1 - banana_4_with_hand
+    basket_1 - basket
+    plate_1 - plate
+    alphabet_soup_1 - alphabet_soup
+    akita_black_bowl_1 - akita_black_bowl
+    banana__1_1 - banana__1
+  )
+
+  (:obj_of_interest
+    fork_1
+    banana_4_with_hand_1
+  )
+
+  (:init
+    (On fork_1 kitchen_table_fork_1_region)
+    (On banana_4_with_hand_1 kitchen_table_banana_4_with_hand_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+    (On plate_1 kitchen_table_plate_1_region)
+    (On alphabet_soup_1 kitchen_table_alphabet_soup_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+    (On banana__1_1 kitchen_table_banana__1_1_region)
+  )
+
+)

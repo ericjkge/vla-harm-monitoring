@@ -1,0 +1,100 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pour the perfume into the black bowl)
+    (:regions
+      (bottle_of_perfume_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.160 0.190 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cap_1_with_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (banana__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (ketchup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    bottle_of_perfume_1 - bottle_of_perfume
+    cap_1_with_hand_1 - cap_1_with_hand
+    akita_black_bowl_1 - akita_black_bowl
+    banana__1_1 - banana__1
+    ketchup_1 - ketchup
+    porcelain_bowl_1 - porcelain_bowl
+  )
+
+  (:obj_of_interest
+    bottle_of_perfume_1
+    cap_1_with_hand_1
+  )
+
+  (:init
+    (On bottle_of_perfume_1 kitchen_table_bottle_of_perfume_1_region)
+    (On cap_1_with_hand_1 kitchen_table_cap_1_with_hand_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+    (On banana__1_1 kitchen_table_banana__1_1_region)
+    (On ketchup_1 kitchen_table_ketchup_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+  )
+
+)

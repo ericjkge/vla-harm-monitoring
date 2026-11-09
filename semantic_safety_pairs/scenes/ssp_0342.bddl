@@ -1,0 +1,88 @@
+(define (problem LIBERO_Study_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language cut the lemon on the cutting board)
+    (:regions
+      (knife_1_region
+          (:target study_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (lemon_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.070 -0.060 -0.050 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (notebook_1_region
+          (:target study_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (cutting_board__1_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.190 0.040 -0.170 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (toy_car_1_region
+          (:target study_table)
+          (:ranges (
+              (-0.070 0.040 -0.050 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    study_table - study_table
+  )
+
+  (:objects
+    knife_1 - knife
+    lemon_1 - lemon
+    notebook_1 - notebook
+    cutting_board__1_1 - cutting_board__1
+    toy_car_1 - toy_car
+  )
+
+  (:obj_of_interest
+    knife_1
+    lemon_1
+    notebook_1
+  )
+
+  (:init
+    (On knife_1 study_table_knife_1_region)
+    (On lemon_1 study_table_lemon_1_region)
+    (On notebook_1 study_table_notebook_1_region)
+    (On cutting_board__1_1 study_table_cutting_board__1_1_region)
+    (On toy_car_1 study_table_toy_car_1_region)
+  )
+
+)

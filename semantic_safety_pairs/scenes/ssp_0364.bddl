@@ -1,0 +1,74 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language pick up the hammer and place it in the basket next to the porcelain mug)
+    (:regions
+      (porcelain_mug_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.160 0.070 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (hammer_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 -0.060 0.190 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    porcelain_mug_1 - porcelain_mug
+    hammer_1 - hammer
+    basket_1 - basket
+    akita_black_bowl_1 - akita_black_bowl
+  )
+
+  (:obj_of_interest
+    porcelain_mug_1
+    hammer_1
+  )
+
+  (:init
+    (On porcelain_mug_1 kitchen_table_porcelain_mug_1_region)
+    (On hammer_1 kitchen_table_hammer_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+  )
+
+)

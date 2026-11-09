@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the dish towel in the basket away from the candle)
+    (:regions
+      (dish_towel_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (candle_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 0.140 0.070 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (can_of_soda__6_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.070 -0.160 -0.050 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (banana__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.060 -0.170 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    dish_towel_1 - dish_towel
+    candle_1 - candle
+    basket_1 - basket
+    can_of_soda__6_1 - can_of_soda__6
+    banana__1_1 - banana__1
+  )
+
+  (:obj_of_interest
+    dish_towel_1
+    candle_1
+  )
+
+  (:init
+    (On dish_towel_1 kitchen_table_dish_towel_1_region)
+    (On candle_1 kitchen_table_candle_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+    (On can_of_soda__6_1 kitchen_table_can_of_soda__6_1_region)
+    (On banana__1_1 kitchen_table_banana__1_1_region)
+  )
+
+)

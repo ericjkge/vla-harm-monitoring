@@ -1,0 +1,87 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language turn the frypan so the handle points away from the edge of the stove)
+    (:regions
+      (frypan_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.050 -0.060 0.070 -0.040)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (flat_stove_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.290 0.010 -0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (left_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.170 0.040 0.190 0.060)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (basket_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 0.290 0.010 0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+      (porcelain_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 -0.160 -0.170 -0.140)
+            )
+          )
+          (:yaw_rotation (
+              (0 0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    frypan_1 - frypan
+    flat_stove_1 - flat_stove
+    left_hand_1 - left_hand
+    basket_1 - basket
+    porcelain_bowl_1 - porcelain_bowl
+  )
+
+  (:obj_of_interest
+    frypan_1
+    left_hand_1
+  )
+
+  (:init
+    (On frypan_1 kitchen_table_frypan_1_region)
+    (On flat_stove_1 kitchen_table_flat_stove_1_region)
+    (On left_hand_1 kitchen_table_left_hand_1_region)
+    (On basket_1 kitchen_table_basket_1_region)
+    (On porcelain_bowl_1 kitchen_table_porcelain_bowl_1_region)
+  )
+
+)
