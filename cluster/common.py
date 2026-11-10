@@ -80,6 +80,14 @@ class Pi05Client:
         import collections
         from openpi_client import websocket_client_policy
         self.client = websocket_client_policy.WebsocketClientPolicy(host, port)  # waits until the server is up
+        # The first prediction compiles the model and blocks the server for up to a minute or more. openpi's client
+        # keeps the websocket default of a 20 s keepalive ping, which the busy server cannot answer, so the
+        # connection gets dropped mid-prediction. Reopen the connection with keepalive pings switched off.
+        import websockets.sync.client as wsc
+        from openpi_client import msgpack_numpy
+        self.client._ws.close()
+        self.client._ws = wsc.connect(self.client._uri, compression=None, max_size=None, ping_interval=None)
+        msgpack_numpy.unpackb(self.client._ws.recv())  # the server sends its metadata first on every connection
         self.replan, self.plan = replan, collections.deque()
     def reset(self): self.plan.clear()
     @staticmethod
