@@ -1,6 +1,7 @@
 """Shared helpers for the cluster scripts: environment creation, model loading, prompt format."""
 import os, json, numpy as np
 os.environ.setdefault("MUJOCO_GL", "egl"); os.environ.setdefault("PYOPENGL_PLATFORM", "egl")
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")  # silences a fork warning from the video writer
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SSP = os.path.join(REPO, "semantic_safety_pairs")
 ROOT = os.environ.get("VLA_HARM_ROOT", os.path.expanduser("~/vla-harm"))

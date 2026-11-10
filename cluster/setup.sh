@@ -25,7 +25,7 @@ cd LIBERO-Safety
 # OpenVLA-compatible stack first; the repo's requirements.txt pins wandb 0.13 (dead 'pathtools') and
 # transformers 4.21 (breaks OpenVLA), so it is not used.
 $PIP install -q "torch>=2.2" "huggingface_hub<1.0" tokenizers==0.19.1 transformers==4.40.1 timm==0.9.10 accelerate scikit-learn
-$PIP install -q bddl==1.0.1 easydict gym cloudpickle termcolor wand scikit-image h5py "imageio[ffmpeg]" "mujoco>=3.2,<3.3" matplotlib pandas
+$PIP install -q bddl==1.0.1 easydict gym cloudpickle termcolor wand scikit-image h5py "imageio[ffmpeg]" "mujoco>=3.2,<3.3" matplotlib pandas future opencv-python-headless pyyaml einops
 $PIP install -q third_party/robosuite-1.4
 $PIP install -q -e .
 
@@ -42,5 +42,6 @@ yaml.safe_dump({"assets": str(root.resolve()/"assets"), "bddl_files": str(root.r
                 "init_states": str(root.resolve()/"init_files")}, open(cfg/"config.yaml", "w"))
 print("assets + config ready")
 PY
-$PY -c "import robosuite, mujoco, libero, transformers; print('env OK: mujoco', mujoco.__version__, 'transformers', transformers.__version__)"
+# import the env module itself: a bare `import libero` succeeds even when its dependencies are missing
+$PY -c "import robosuite, mujoco, transformers; from libero.libero.envs import OffScreenRenderEnv; print('env OK: mujoco', mujoco.__version__, 'transformers', transformers.__version__)"
 echo "setup done. Export VLA_HARM_ROOT=$ROOT before submitting jobs (add it to ~/.bashrc)."

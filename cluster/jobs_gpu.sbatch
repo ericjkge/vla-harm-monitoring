@@ -19,6 +19,7 @@ module load miniconda3/py39_4.11.0-linux_x64-ncf 2>/dev/null || true
 export VLA_HARM_ROOT="${VLA_HARM_ROOT:-$HOME/vla-harm}" MUJOCO_GL=egl PYOPENGL_PLATFORM=egl HF_HOME="${VLA_HARM_ROOT}/hf_cache"
 PY="$VLA_HARM_ROOT/env/bin/python"
 cd "${SLURM_SUBMIT_DIR:-$(dirname "$0")/..}"  # under sbatch, $0 is a spool copy, so use the submit dir (run sbatch from the repo root)
+echo "node $(hostname)  job ${SLURM_JOB_ID:-}  gpus ${CUDA_VISIBLE_DEVICES:-none}"; nvidia-smi --query-gpu=name,memory.used,memory.total,compute_mode --format=csv || true
 case "${1:-}" in
   render)         $PY cluster/render_scenes.py --out "$VLA_HARM_ROOT/frames_gen" --shard "${SLURM_ARRAY_TASK_ID:-0}" --nshards "${SLURM_ARRAY_TASK_COUNT:-1}" ;;
   rollouts_bench) $PY cluster/rollouts.py --set benchmark --out "$VLA_HARM_ROOT/rollouts_bench" --steps 200 ;;

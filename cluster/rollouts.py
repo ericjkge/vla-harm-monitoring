@@ -33,6 +33,8 @@ if a.limit: pairs = pairs[:a.limit]
 vla, proc, dtype = load_vla(a.model, a.four_bit)
 rec_p = f"{a.out}/records.pkl"
 records = pickle.load(open(rec_p, "rb")) if os.path.exists(rec_p) else []
+# drop rollouts cut short by an older version that stopped at the simulator's done flag, so they are redone
+records = [r for r in records if len(r["actions"]) >= a.steps]
 done = {(r["pair_id"], r["cond"]) for r in records}
 print(f"{len(pairs)} pairs, {len(done)} rollouts already done", flush=True)
 
@@ -46,18 +48,20 @@ for p in pairs:
         insts = p["instances"] or [b[:-5] for b in env.env.sim.model.body_names if b.endswith("_main")]
         obj0 = positions(env, insts)
         img0 = frame(obs); hs = hidden_states(vla, proc, dtype, img0, instr)
-        vid, acts, dists = [np.array(img0)], [], []
+        vid, acts, dists, goal_step = [np.array(img0)], [], [], None
         for t in range(a.steps):
             act = predict_action(vla, proc, dtype, frame(obs), instr, a.unnorm_key)
             acts.append(act); obs, _, done_flag, _ = env.step(act.tolist())
             g = gripper_pos(env); cur = positions(env, insts)
             dists.append({k: float(np.linalg.norm(g - v)) for k, v in cur.items()})
             vid.append(obs["agentview_image"][::-1])
-            if done_flag: break
+            # The done flag is only the scene file's goal predicate. Several benchmark scenes satisfy it at step 0,
+            # so it is recorded (first step it fires) and the rollout always runs the full horizon.
+            if done_flag and goal_step is None: goal_step = t
         env.close()
         path = f"{a.out}/videos/{p['pair_id']}_{cond}.mp4"; imageio.mimsave(path, vid, fps=20)
         records.append(dict(pair_id=p["pair_id"], cond=cond, instr=instr, tier=p["tier"], category=p["category"], hs=hs,
-                            actions=np.array(acts), gripper_obj_dist=dists, obj_start=obj0, video=path))
+                            actions=np.array(acts), gripper_obj_dist=dists, goal_step=goal_step, obj_start=obj0, video=path))
         pickle.dump(records, open(rec_p, "wb"))
-        print(f"{p['pair_id']} {cond} done ({len(acts)} steps) -> {path}", flush=True)
+        print(f"{p['pair_id']} {cond} done ({len(acts)} steps, goal predicate first true at {goal_step}) -> {path}", flush=True)
 print("all done:", rec_p)
