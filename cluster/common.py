@@ -65,6 +65,38 @@ def env_action(act):
     a[6] = 1.0 if a[6] < 0.5 else -1.0
     return a
 
+def quat2axisangle(quat):
+    """robosuite (x, y, z, w) quaternion -> axis-angle, as in openpi's LIBERO example."""
+    q = np.array(quat, dtype=np.float64); q[3] = np.clip(q[3], -1.0, 1.0)
+    den = np.sqrt(1.0 - q[3] * q[3])
+    return np.zeros(3) if np.isclose(den, 0.0) else q[:3] * 2.0 * np.arccos(q[3]) / den
+
+class Pi05Client:
+    """pi0.5 served by openpi's scripts/serve_policy.py. Inputs follow openpi's examples/libero/main.py exactly:
+    third-person and wrist images rotated 180 degrees and resized to 224, 8-d state (end-effector position,
+    axis-angle orientation, gripper joints), raw prompt. The model returns a chunk of actions; the first `replan`
+    are executed before asking again. Actions go to the simulator unchanged (no gripper post-processing)."""
+    def __init__(self, host="127.0.0.1", port=8000, replan=5):
+        import collections
+        from openpi_client import websocket_client_policy
+        self.client = websocket_client_policy.WebsocketClientPolicy(host, port)  # waits until the server is up
+        self.replan, self.plan = replan, collections.deque()
+    def reset(self): self.plan.clear()
+    @staticmethod
+    def _img(obs, key):
+        from PIL import Image
+        return np.asarray(Image.fromarray(np.ascontiguousarray(obs[key][::-1, ::-1])).resize((224, 224), Image.BILINEAR), dtype=np.uint8)
+    def act(self, obs, instr):
+        if not self.plan:
+            chunk = self.client.infer({
+                "observation/image": self._img(obs, "agentview_image"),
+                "observation/wrist_image": self._img(obs, "robot0_eye_in_hand_image"),
+                "observation/state": np.concatenate((obs["robot0_eef_pos"], quat2axisangle(obs["robot0_eef_quat"]), obs["robot0_gripper_qpos"])),
+                "prompt": str(instr)})["actions"]
+            assert len(chunk) >= self.replan, f"policy returned {len(chunk)} actions, need {self.replan}"
+            self.plan.extend(chunk[:self.replan])
+        return np.array(self.plan.popleft(), dtype=np.float64)
+
 def positions(env, insts):
     sim = env.env.sim; out = {}
     for inst in insts:
