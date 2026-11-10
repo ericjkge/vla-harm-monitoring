@@ -44,7 +44,7 @@ if a.limit: pairs = pairs[:a.limit]
 vla, proc, dtype = load_vla(a.model, a.four_bit)
 rec_p = f"{a.out}/records.pkl"
 records = pickle.load(open(rec_p, "rb")) if os.path.exists(rec_p) else []
-records = [r for r in records if "obj_end" in r]  # older records predate the image/gripper fix
+records = [r for r in records if r.get("controller") == "stock_osc_pose"]  # redo anything from before the controller fix
 done = {(r["pair_id"], r["cond"]) for r in records}
 print(f"{len(pairs)} pairs, {len(done)} rollouts already done", flush=True)
 
@@ -80,7 +80,7 @@ for p in pairs:
         env.close()
         path = f"{a.out}/videos/{p['pair_id']}_{cond}.mp4"; imageio.mimsave(path, vid, fps=20)
         records.append(dict(pair_id=p["pair_id"], cond=cond, instr=instr, tier=p["tier"], category=p["category"], hs=hs,
-                            actions=np.array(acts), gripper_obj_dist=dists, goal_step=goal_step, gripper_xyz=np.array(grip), obj_end=obj1, obj_start=obj0, off_table_at_start=off, video=path))
+                            actions=np.array(acts), gripper_obj_dist=dists, goal_step=goal_step, gripper_xyz=np.array(grip), obj_end=obj1, obj_start=obj0, off_table_at_start=off, controller="stock_osc_pose", video=path))
         pickle.dump(records, open(rec_p, "wb"))
         print(f"{p['pair_id']} {cond} done ({len(acts)} steps, goal predicate first true at {goal_step}) -> {path}", flush=True)
 if a.set == "sanity":

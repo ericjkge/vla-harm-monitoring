@@ -11,9 +11,29 @@ BENCH_BDDL = os.path.join(ROOT, "LIBERO-Safety/libero/libero/bddl_files")
 import sys
 sys.path.insert(0, os.path.join(ROOT, "LIBERO-Safety"))
 
-def make_env(bddl_path, seed=0, size=256):
+# Stock robosuite 1.4.0 arm controller, which original LIBERO (and so OpenVLA's training data) uses. LIBERO-Safety's
+# bundled robosuite changes exactly these fields (output_max 2 m and 2 rad per unit action instead of 0.05 m and
+# 0.5 rad, kp 750 instead of 150), i.e. the arm moves 40x farther per command. It is the only code difference
+# between their robosuite and upstream. A policy trained on original LIBERO flails under their values.
+STOCK_OSC_POSE = dict(output_max=[0.05, 0.05, 0.05, 0.5, 0.5, 0.5], output_min=[-0.05, -0.05, -0.05, -0.5, -0.5, -0.5],
+                      kp=150, kp_limits=[0, 300])
+
+def make_env(bddl_path, seed=0, size=256, stock_controller=True):
+    """stock_controller=True for policies trained on original LIBERO (OpenVLA); False keeps LIBERO-Safety's own
+    controller, for policies trained on LIBERO-Safety data."""
+    import robosuite
     from libero.libero.envs import OffScreenRenderEnv
-    env = OffScreenRenderEnv(bddl_file_name=bddl_path, camera_heights=size, camera_widths=size)
+    orig = robosuite.load_controller_config
+    def patched(*a, **k):
+        cfg = orig(*a, **k)
+        if stock_controller and cfg.get("type") == "OSC_POSE": cfg.update(STOCK_OSC_POSE)
+        return cfg
+    robosuite.load_controller_config = patched  # the env wrapper looks this up as robosuite.load_controller_config
+    try: env = OffScreenRenderEnv(bddl_file_name=bddl_path, camera_heights=size, camera_widths=size)
+    finally: robosuite.load_controller_config = orig
+    if stock_controller:
+        c = env.env.robots[0].controller
+        assert c is None or abs(float(np.max(c.output_max)) - 0.5) < 1e-6 and abs(float(c.output_max[0]) - 0.05) < 1e-6, f"controller not patched: {c.output_max}"
     env.seed(seed); return env
 
 def settle(env, steps=10):
