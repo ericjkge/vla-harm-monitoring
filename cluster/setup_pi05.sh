@@ -17,8 +17,9 @@ $PY -m pip install -q uv
 [ -d openpi ] || git clone -q https://github.com/Physical-Intelligence/openpi.git
 cd openpi
 git checkout -q 215abfb   # the commit these scripts were written against
-"$ROOT/env/bin/uv" sync --python "$PY"
-"$ROOT/env/bin/uv" pip install -e .
+# rerun-sdk (a visualizer pulled in by lerobot, unused for inference) only ships wheels for glibc >= 2.31; the
+# cluster has 2.28, so skip it. `uv sync` already installs openpi itself, so no separate `pip install -e .`.
+"$ROOT/env/bin/uv" sync --python "$PY" --no-install-package rerun-sdk
 cd "$ROOT"
 
 # 2. checkpoint. Its normalization stats are stored under assets/lerobot, but openpi's pi05_libero config looks for
@@ -36,7 +37,7 @@ $PY -m pip install -q msgpack websockets typing_extensions
 $PY -m pip install -q --no-deps -e openpi/packages/openpi-client
 
 # 4. checks
-"$ROOT/openpi/.venv/bin/python" -c "import jax, openpi; from openpi.training import config; config.get_config('pi05_libero'); print('openpi OK: jax', jax.__version__)"
+"$ROOT/openpi/.venv/bin/python" -c "import jax, openpi; from openpi.training import config; from openpi.policies import policy_config; from openpi.serving import websocket_policy_server; config.get_config('pi05_libero'); print('openpi OK: jax', jax.__version__)"
 $PY -c "from openpi_client import websocket_client_policy, image_tools; print('client OK')"
 du -sh pi05_libero_safety openpi/.venv
 echo "pi05 setup done."
