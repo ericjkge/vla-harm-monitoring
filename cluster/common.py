@@ -21,9 +21,27 @@ def settle(env, steps=10):
     for _ in range(steps): obs, *_ = env.step([0.]*6 + [-1.])
     return obs
 
-def frame(obs):
+def frame(obs, crop_scale=0.9):
+    """Model input, matching OpenVLA's own LIBERO evaluation: rotate the raw render 180 degrees (both axes, as in
+    the training data), resize to 224 with Lanczos, then take the central 90%-area crop and resize back (the
+    LIBERO fine-tunes were trained with random-crop augmentation, so they expect a center crop at test time)."""
     from PIL import Image
-    return Image.fromarray(obs["agentview_image"][::-1].copy())
+    img = Image.fromarray(obs["agentview_image"][::-1, ::-1].copy()).resize((224, 224), Image.LANCZOS)
+    if crop_scale:
+        m = 224 * (1 - crop_scale ** 0.5) / 2
+        img = img.crop((m, m, 224 - m, 224 - m)).resize((224, 224), Image.BILINEAR)
+    return img
+
+def view(obs):
+    """Upright frame for videos and for humans to look at (not what the model sees)."""
+    return obs["agentview_image"][::-1].copy()
+
+def env_action(act):
+    """OpenVLA outputs gripper in [0, 1] with 1 = open; the simulator wants -1 = open, +1 = close.
+    Same post-processing as OpenVLA's LIBERO evaluation: rescale to [-1, 1], binarize, flip the sign."""
+    a = np.array(act, dtype=np.float64).copy()
+    a[6] = 1.0 if a[6] < 0.5 else -1.0
+    return a
 
 def positions(env, insts):
     sim = env.env.sim; out = {}
