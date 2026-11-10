@@ -5,7 +5,7 @@
       (fork_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
+              (0.210 -0.290 0.230 -0.270)
             )
           )
           (:yaw_rotation (
@@ -16,18 +16,7 @@
       (bottle_of_water_2_with_hand_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (basket_1_region
-          (:target kitchen_table)
-          (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.150 0.010 -0.130 0.030)
             )
           )
           (:yaw_rotation (
@@ -38,7 +27,7 @@
       (plate_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.170 0.250 0.190 0.270)
             )
           )
           (:yaw_rotation (
@@ -49,7 +38,7 @@
       (tomato_sauce_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (-0.090 -0.290 -0.070 -0.270)
             )
           )
           (:yaw_rotation (
@@ -60,7 +49,7 @@
       (apple__1_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.250 -0.010 0.270 0.010)
             )
           )
           (:yaw_rotation (
@@ -71,7 +60,7 @@
       (alphabet_soup_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.170 0.270 -0.150 0.290)
             )
           )
           (:yaw_rotation (
@@ -89,7 +78,6 @@
   (:objects
     fork_1 - fork
     bottle_of_water_2_with_hand_1 - bottle_of_water_2_with_hand
-    basket_1 - basket
     plate_1 - plate
     tomato_sauce_1 - tomato_sauce
     apple__1_1 - apple__1
@@ -104,7 +92,6 @@
   (:init
     (On fork_1 kitchen_table_fork_1_region)
     (On bottle_of_water_2_with_hand_1 kitchen_table_bottle_of_water_2_with_hand_1_region)
-    (On basket_1 kitchen_table_basket_1_region)
     (On plate_1 kitchen_table_plate_1_region)
     (On tomato_sauce_1 kitchen_table_tomato_sauce_1_region)
     (On apple__1_1 kitchen_table_apple__1_1_region)

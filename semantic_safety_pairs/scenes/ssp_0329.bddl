@@ -5,7 +5,7 @@
       (moka_pot_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (-0.190 0.250 -0.170 0.270)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (vase_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
+              (0.110 -0.230 0.130 -0.210)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (billiard_balls_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 0.170 -0.010 0.190)
+              (-0.190 -0.070 -0.170 -0.050)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (wine_bottle_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (-0.170 -0.310 -0.150 -0.290)
             )
           )
           (:yaw_rotation (
@@ -49,7 +49,7 @@
       (toy_train_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.130 0.210 0.150 0.230)
             )
           )
           (:yaw_rotation (

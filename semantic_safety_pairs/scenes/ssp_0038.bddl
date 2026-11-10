@@ -5,7 +5,7 @@
       (classic_blue_mug_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.250 0.150 0.270 0.170)
             )
           )
           (:yaw_rotation (
@@ -16,18 +16,7 @@
       (frypan_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (desk_caddy_1_region
-          (:target study_table)
-          (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.110 0.010 -0.090 0.030)
             )
           )
           (:yaw_rotation (
@@ -38,7 +27,7 @@
       (notebook_1_region
           (:target study_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (0.170 -0.210 0.190 -0.190)
             )
           )
           (:yaw_rotation (
@@ -56,7 +45,6 @@
   (:objects
     classic_blue_mug_1 - classic_blue_mug
     frypan_1 - frypan
-    desk_caddy_1 - desk_caddy
     notebook_1 - notebook
   )
 
@@ -68,7 +56,6 @@
   (:init
     (On classic_blue_mug_1 study_table_classic_blue_mug_1_region)
     (On frypan_1 study_table_frypan_1_region)
-    (On desk_caddy_1 study_table_desk_caddy_1_region)
     (On notebook_1 study_table_notebook_1_region)
   )
 

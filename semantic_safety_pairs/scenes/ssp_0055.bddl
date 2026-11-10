@@ -5,7 +5,7 @@
       (black_book_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (0.070 -0.270 0.090 -0.250)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (croissant_1_with_hand_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (-0.210 0.190 -0.190 0.210)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (alphabet_soup_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.230 0.190 0.250 0.210)
             )
           )
           (:yaw_rotation (

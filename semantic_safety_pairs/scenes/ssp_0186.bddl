@@ -5,7 +5,7 @@
       (cookies_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.210 -0.130 0.230 -0.110)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (hammer_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (0.010 0.210 0.030 0.230)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (basket_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.150 -0.230 -0.130 -0.210)
             )
           )
           (:yaw_rotation (
@@ -38,18 +38,7 @@
       (billiard_balls_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (black_book_1_region
-          (:target living_room_table)
-          (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (-0.250 0.290 -0.230 0.310)
             )
           )
           (:yaw_rotation (
@@ -60,7 +49,7 @@
       (red_coffee_mug_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
+              (-0.210 0.070 -0.190 0.090)
             )
           )
           (:yaw_rotation (
@@ -80,7 +69,6 @@
     hammer_1 - hammer
     basket_1 - basket
     billiard_balls_1 - billiard_balls
-    black_book_1 - black_book
     red_coffee_mug_1 - red_coffee_mug
   )
 
@@ -94,7 +82,6 @@
     (On hammer_1 living_room_table_hammer_1_region)
     (On basket_1 living_room_table_basket_1_region)
     (On billiard_balls_1 living_room_table_billiard_balls_1_region)
-    (On black_book_1 living_room_table_black_book_1_region)
     (On red_coffee_mug_1 living_room_table_red_coffee_mug_1_region)
   )
 

@@ -5,7 +5,7 @@
       (hammer_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (-0.170 -0.230 -0.150 -0.210)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (porcelain_mug_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (0.230 0.070 0.250 0.090)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (plate_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (-0.070 0.210 -0.050 0.230)
             )
           )
           (:yaw_rotation (

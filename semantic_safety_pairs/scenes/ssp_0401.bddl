@@ -5,7 +5,7 @@
       (knife_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.150 -0.270 0.170 -0.250)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (apple_1_with_hand_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 0.170 -0.010 0.190)
+              (0.210 0.050 0.230 0.070)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (cutting_board__1_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (-0.130 0.110 -0.110 0.130)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (milk_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (-0.190 -0.270 -0.170 -0.250)
             )
           )
           (:yaw_rotation (

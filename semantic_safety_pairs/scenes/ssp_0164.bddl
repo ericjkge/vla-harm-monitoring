@@ -5,7 +5,7 @@
       (can_of_soda__6_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.130 0.310 -0.110 0.330)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (keyboard_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.150 -0.210 -0.130 -0.190)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (akita_black_bowl_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (0.190 -0.270 0.210 -0.250)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (black_book_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (0.170 0.110 0.190 0.130)
             )
           )
           (:yaw_rotation (
@@ -49,7 +49,7 @@
       (classic_blue_mug_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (-0.210 0.090 -0.190 0.110)
             )
           )
           (:yaw_rotation (

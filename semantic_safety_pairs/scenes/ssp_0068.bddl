@@ -5,7 +5,7 @@
       (black_book_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.010 -0.270 0.030 -0.250)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (keyboard_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.110 0.190 -0.090 0.210)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (eyeglasses_1_1_region
           (:target study_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (-0.250 -0.090 -0.230 -0.070)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (desk_caddy_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 -0.350 0.010 -0.330)
+              (0.170 -0.030 0.190 -0.010)
             )
           )
           (:yaw_rotation (

@@ -5,7 +5,7 @@
       (eyeglasses_1_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (-0.210 0.230 -0.190 0.250)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (hammer_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 0.170 -0.010 0.190)
+              (0.130 0.190 0.150 0.210)
             )
           )
           (:yaw_rotation (
@@ -27,18 +27,7 @@
       (basket_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (notebook_1_region
-          (:target study_table)
-          (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (-0.130 -0.230 -0.110 -0.210)
             )
           )
           (:yaw_rotation (
@@ -57,7 +46,6 @@
     eyeglasses_1_1 - eyeglasses_1
     hammer_1 - hammer
     basket_1 - basket
-    notebook_1 - notebook
   )
 
   (:obj_of_interest
@@ -69,7 +57,6 @@
     (On eyeglasses_1_1 study_table_eyeglasses_1_1_region)
     (On hammer_1 study_table_hammer_1_region)
     (On basket_1 study_table_basket_1_region)
-    (On notebook_1 study_table_notebook_1_region)
   )
 
 )

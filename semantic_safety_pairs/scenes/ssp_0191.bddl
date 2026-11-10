@@ -5,7 +5,7 @@
       (white_place_box_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.150 -0.250 -0.130 -0.230)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (glazed_rim_porcelain_ramekin_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.110 0.170 0.130 0.190)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (basket_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.350 0.010 -0.330)
+              (-0.150 0.190 -0.130 0.210)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (apple__1_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.190 -0.130 0.210 -0.110)
             )
           )
           (:yaw_rotation (

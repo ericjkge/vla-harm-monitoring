@@ -5,7 +5,7 @@
       (porcelain_mug_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (-0.010 -0.310 0.010 -0.290)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (white_cabinet_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.110 0.190 -0.090 0.210)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (basket_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.350 0.010 -0.330)
+              (0.130 -0.090 0.150 -0.070)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (lemon_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (-0.250 -0.270 -0.230 -0.250)
             )
           )
           (:yaw_rotation (
@@ -49,7 +49,7 @@
       (akita_black_bowl_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.230 0.230 0.250 0.250)
             )
           )
           (:yaw_rotation (

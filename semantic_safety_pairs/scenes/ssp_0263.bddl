@@ -5,7 +5,7 @@
       (hammer_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.130 0.130 -0.110 0.150)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (cookies_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (0.050 -0.250 0.070 -0.230)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (toy_train_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (0.190 0.050 0.210 0.070)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (toy_car_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (-0.230 -0.230 -0.210 -0.210)
             )
           )
           (:yaw_rotation (

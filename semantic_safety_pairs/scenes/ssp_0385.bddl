@@ -5,7 +5,7 @@
       (ketchup_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (0.230 0.110 0.250 0.130)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (game_console_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 0.170 -0.010 0.190)
+              (-0.210 0.050 -0.190 0.070)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (porcelain_bowl_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (0.230 -0.130 0.250 -0.110)
             )
           )
           (:yaw_rotation (
@@ -38,18 +38,7 @@
       (basket_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (black_book_1_region
-          (:target living_room_table)
-          (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (-0.030 -0.230 -0.010 -0.210)
             )
           )
           (:yaw_rotation (
@@ -60,7 +49,7 @@
       (toy_train_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.030 0.210 0.050 0.230)
             )
           )
           (:yaw_rotation (
@@ -80,7 +69,6 @@
     game_console_1 - game_console
     porcelain_bowl_1 - porcelain_bowl
     basket_1 - basket
-    black_book_1 - black_book
     toy_train_1 - toy_train
   )
 
@@ -94,7 +82,6 @@
     (On game_console_1 living_room_table_game_console_1_region)
     (On porcelain_bowl_1 living_room_table_porcelain_bowl_1_region)
     (On basket_1 living_room_table_basket_1_region)
-    (On black_book_1 living_room_table_black_book_1_region)
     (On toy_train_1 living_room_table_toy_train_1_region)
   )
 

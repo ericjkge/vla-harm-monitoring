@@ -88,17 +88,23 @@ Every pair now has a scene file with exactly the objects its instructions name, 
 absent-object confound of phase 2 is gone. Notebook cells 12-14: render all 500 scenes with no
 model loaded (~1 h on free Colab, resumable), then run the model on the saved frames (~25 min),
 then evaluate leave-one-template-out, the same-verb subset, per-category and per-tier accuracy,
-and train-on-500 / test-on-15-benchmark. Scene layout is deterministic and size-aware: furniture
-and appliances at the benchmark authors' side-slot coordinates (declared as `:fixtures`, as they
-do), wide objects (boards, pans, keyboards, hand models) on 20 cm slots, small objects between
-them; all objects start on the table. Cell 12 records `_warnings.json` for any scene where an
+and train-on-500 / test-on-15-benchmark. Scene layout is footprint-aware greedy packing on the
+80 x 80 cm table: each object type has an approximate radius, nothing overlaps, nothing hangs off
+the edge, furniture/appliances are `:fixtures` as in the benchmark's files. When a scene is too
+crowded, unmentioned distractors are dropped; `scene_index.jsonl` records `placed_objects` and
+`dropped_objects` per pair (68 of 500 dropped one or two). Cell 12 records `_warnings.json` for any scene where an
 object moved more than 8 cm while settling, which is the signature of objects spawned overlapping
 and flung off the table. Run `12-test` first: it renders 12 scenes in ~5 min and shows them.
 
-Lessons from the first render pass (2026-11-09): a stove under `:objects` fails to compile; a
+Lessons from the first render passes (2026-11-09): a stove under `:objects` fails to compile; a
 10 cm grid with 25-45 cm objects interpenetrates and MuJoCo throws them off the table (~1/3 of
-frames had missing objects). Free Colab: render on a CPU runtime (no GPU quota used), frames are
+frames had missing objects); fixed side slots at 34 cm put 30-40 cm furniture over the edge of the
+80 cm table and into the first grid column (10 of 12 test scenes flagged). Free Colab: render on a CPU runtime (no GPU quota used), frames are
 zipped and downloaded every 50 scenes because Drive mounting is blocked on the Harvard account.
+
+## Cluster
+
+All of the above, plus closed-loop rollouts, as SLURM scripts: see `../cluster/README.md`.
 
 ## Suggested next steps
 

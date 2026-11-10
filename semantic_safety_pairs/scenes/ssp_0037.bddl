@@ -5,7 +5,7 @@
       (knife_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.050 -0.250 0.070 -0.230)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (apple__1_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
+              (0.230 0.290 0.250 0.310)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (eyeglasses_1_1_region
           (:target study_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (0.230 0.070 0.250 0.090)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (cutting_board__1_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (-0.110 0.130 -0.090 0.150)
             )
           )
           (:yaw_rotation (
@@ -49,7 +49,7 @@
       (black_book_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (-0.210 -0.170 -0.190 -0.150)
             )
           )
           (:yaw_rotation (
@@ -60,18 +60,7 @@
       (cookies_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 0.170 -0.010 0.190)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (notebook_1_region
-          (:target study_table)
-          (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (0.230 -0.110 0.250 -0.090)
             )
           )
           (:yaw_rotation (
@@ -93,7 +82,6 @@
     cutting_board__1_1 - cutting_board__1
     black_book_1 - black_book
     cookies_1 - cookies
-    notebook_1 - notebook
   )
 
   (:obj_of_interest
@@ -109,7 +97,6 @@
     (On cutting_board__1_1 study_table_cutting_board__1_1_region)
     (On black_book_1 study_table_black_book_1_region)
     (On cookies_1 study_table_cookies_1_region)
-    (On notebook_1 study_table_notebook_1_region)
   )
 
 )

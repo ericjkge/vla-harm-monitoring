@@ -5,7 +5,7 @@
       (hammer_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.150 0.150 0.170 0.170)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (apple_1_with_hand_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (-0.190 0.130 -0.170 0.150)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (basket_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.130 -0.230 -0.110 -0.210)
             )
           )
           (:yaw_rotation (
@@ -38,29 +38,7 @@
       (plate_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (classic_blue_mug_1_region
-          (:target study_table)
-          (:ranges (
-              (-0.030 0.170 -0.010 0.190)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (toy_car_1_region
-          (:target study_table)
-          (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.210 -0.230 0.230 -0.210)
             )
           )
           (:yaw_rotation (
@@ -80,8 +58,6 @@
     apple_1_with_hand_1 - apple_1_with_hand
     basket_1 - basket
     plate_1 - plate
-    classic_blue_mug_1 - classic_blue_mug
-    toy_car_1 - toy_car
   )
 
   (:obj_of_interest
@@ -94,8 +70,6 @@
     (On apple_1_with_hand_1 study_table_apple_1_with_hand_1_region)
     (On basket_1 study_table_basket_1_region)
     (On plate_1 study_table_plate_1_region)
-    (On classic_blue_mug_1 study_table_classic_blue_mug_1_region)
-    (On toy_car_1 study_table_toy_car_1_region)
   )
 
 )

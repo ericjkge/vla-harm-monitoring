@@ -5,7 +5,7 @@
       (white_place_box_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.170 0.230 -0.150 0.250)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (croissant_1_with_hand_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 0.170 -0.010 0.190)
+              (0.210 -0.110 0.230 -0.090)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (cream_cheese_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.190 -0.230 -0.170 -0.210)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (banana__1_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (0.230 0.170 0.250 0.190)
             )
           )
           (:yaw_rotation (

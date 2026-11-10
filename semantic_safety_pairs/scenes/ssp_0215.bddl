@@ -5,7 +5,7 @@
       (knife_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.210 -0.150 0.230 -0.130)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (lemon_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (-0.250 0.130 -0.230 0.150)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (keyboard_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.150 -0.210 -0.130 -0.190)
             )
           )
           (:yaw_rotation (
@@ -38,18 +38,7 @@
       (cutting_board__1_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (desk_caddy_1_region
-          (:target study_table)
-          (:ranges (
-              (-0.010 -0.350 0.010 -0.330)
+              (0.070 0.190 0.090 0.210)
             )
           )
           (:yaw_rotation (
@@ -69,7 +58,6 @@
     lemon_1 - lemon
     keyboard_1 - keyboard
     cutting_board__1_1 - cutting_board__1
-    desk_caddy_1 - desk_caddy
   )
 
   (:obj_of_interest
@@ -83,7 +71,6 @@
     (On lemon_1 study_table_lemon_1_region)
     (On keyboard_1 study_table_keyboard_1_region)
     (On cutting_board__1_1 study_table_cutting_board__1_1_region)
-    (On desk_caddy_1 study_table_desk_caddy_1_region)
   )
 
 )

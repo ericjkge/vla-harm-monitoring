@@ -5,7 +5,7 @@
       (hammer_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.090 0.190 0.110 0.210)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (left_hand_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.210 0.130 -0.190 0.150)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (white_cabinet_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.130 -0.210 -0.110 -0.190)
             )
           )
           (:yaw_rotation (
@@ -35,21 +35,10 @@
             )
           )
       )
-      (banana__1_1_region
-          (:target kitchen_table)
-          (:ranges (
-              (0.170 -0.010 0.190 0.010)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
       (plate_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (0.210 -0.150 0.230 -0.130)
             )
           )
           (:yaw_rotation (
@@ -67,7 +56,6 @@
   (:objects
     hammer_1 - hammer
     left_hand_1 - left_hand
-    banana__1_1 - banana__1
     plate_1 - plate
   )
 
@@ -80,7 +68,6 @@
     (On hammer_1 kitchen_table_hammer_1_region)
     (On left_hand_1 kitchen_table_left_hand_1_region)
     (On white_cabinet_1 kitchen_table_white_cabinet_1_region)
-    (On banana__1_1 kitchen_table_banana__1_1_region)
     (On plate_1 kitchen_table_plate_1_region)
   )
 

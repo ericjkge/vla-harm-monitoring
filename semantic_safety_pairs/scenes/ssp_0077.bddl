@@ -5,7 +5,7 @@
       (white_yellow_mug_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (0.250 0.170 0.270 0.190)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (frypan_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
+              (-0.090 -0.030 -0.070 -0.010)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (plate_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (0.170 -0.270 0.190 -0.250)
             )
           )
           (:yaw_rotation (

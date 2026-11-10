@@ -5,7 +5,7 @@
       (knife_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (0.210 0.150 0.230 0.170)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (white_cabinet_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.150 -0.210 -0.130 -0.190)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (akita_black_bowl_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
+              (0.230 -0.270 0.250 -0.250)
             )
           )
           (:yaw_rotation (

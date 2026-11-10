@@ -5,7 +5,7 @@
       (bottle_of_perfume_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 0.170 -0.010 0.190)
+              (0.250 -0.050 0.270 -0.030)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (akita_black_bowl_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (-0.010 0.250 0.010 0.270)
             )
           )
           (:yaw_rotation (
@@ -27,18 +27,7 @@
       (microwave_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (basket_1_region
-          (:target kitchen_table)
-          (:ranges (
-              (-0.010 -0.350 0.010 -0.330)
+              (-0.090 -0.190 -0.070 -0.170)
             )
           )
           (:yaw_rotation (
@@ -56,7 +45,6 @@
   (:objects
     bottle_of_perfume_1 - bottle_of_perfume
     akita_black_bowl_1 - akita_black_bowl
-    basket_1 - basket
   )
 
   (:obj_of_interest
@@ -68,7 +56,6 @@
     (On bottle_of_perfume_1 kitchen_table_bottle_of_perfume_1_region)
     (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
     (On microwave_1 kitchen_table_microwave_1_region)
-    (On basket_1 kitchen_table_basket_1_region)
   )
 
 )

@@ -5,7 +5,7 @@
       (bottle_of_dish_soap_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.170 0.090 0.190 0.110)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (cap_1_with_hand_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (-0.190 0.170 -0.170 0.190)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (akita_black_bowl_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (-0.030 -0.270 -0.010 -0.250)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (milk_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (0.190 -0.110 0.210 -0.090)
             )
           )
           (:yaw_rotation (

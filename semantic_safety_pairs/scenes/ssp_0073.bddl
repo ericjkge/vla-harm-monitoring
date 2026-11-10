@@ -5,7 +5,7 @@
       (hammer_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.170 -0.050 -0.150 -0.030)
             )
           )
           (:yaw_rotation (
@@ -16,18 +16,7 @@
       (plate_with_hand_1_region
           (:target study_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (basket_1_region
-          (:target study_table)
-          (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (0.170 0.190 0.190 0.210)
             )
           )
           (:yaw_rotation (
@@ -38,7 +27,7 @@
       (plate_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 0.170 -0.010 0.190)
+              (0.130 -0.270 0.150 -0.250)
             )
           )
           (:yaw_rotation (
@@ -49,7 +38,7 @@
       (cookies_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (-0.230 0.250 -0.210 0.270)
             )
           )
           (:yaw_rotation (
@@ -67,7 +56,6 @@
   (:objects
     hammer_1 - hammer
     plate_with_hand_1 - plate_with_hand
-    basket_1 - basket
     plate_1 - plate
     cookies_1 - cookies
   )
@@ -80,7 +68,6 @@
   (:init
     (On hammer_1 study_table_hammer_1_region)
     (On plate_with_hand_1 study_table_plate_with_hand_1_region)
-    (On basket_1 study_table_basket_1_region)
     (On plate_1 study_table_plate_1_region)
     (On cookies_1 study_table_cookies_1_region)
   )

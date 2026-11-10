@@ -5,7 +5,7 @@
       (knife_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (0.050 -0.230 0.070 -0.210)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (lemon_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (-0.250 -0.230 -0.230 -0.210)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (black_book_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.170 0.050 0.190 0.070)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (cutting_board__1_1_region
           (:target study_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (-0.110 0.210 -0.090 0.230)
             )
           )
           (:yaw_rotation (
@@ -49,7 +49,7 @@
       (can_of_soda__6_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (-0.170 -0.050 -0.150 -0.030)
             )
           )
           (:yaw_rotation (
@@ -60,18 +60,7 @@
       (cookies_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (desk_caddy_1_region
-          (:target study_table)
-          (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (0.230 0.290 0.250 0.310)
             )
           )
           (:yaw_rotation (
@@ -93,7 +82,6 @@
     cutting_board__1_1 - cutting_board__1
     can_of_soda__6_1 - can_of_soda__6
     cookies_1 - cookies
-    desk_caddy_1 - desk_caddy
   )
 
   (:obj_of_interest
@@ -109,7 +97,6 @@
     (On cutting_board__1_1 study_table_cutting_board__1_1_region)
     (On can_of_soda__6_1 study_table_can_of_soda__6_1_region)
     (On cookies_1 study_table_cookies_1_region)
-    (On desk_caddy_1 study_table_desk_caddy_1_region)
   )
 
 )

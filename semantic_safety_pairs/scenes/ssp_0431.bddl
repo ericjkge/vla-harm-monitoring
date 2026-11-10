@@ -5,7 +5,7 @@
       (toy_train_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.170 0.230 0.190 0.250)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (white_cabinet_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.130 -0.210 -0.110 -0.190)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (toy_car_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (0.250 -0.210 0.270 -0.190)
             )
           )
           (:yaw_rotation (

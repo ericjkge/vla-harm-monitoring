@@ -5,7 +5,7 @@
       (frypan_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.130 -0.230 -0.110 -0.210)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (croissant_1_with_hand_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (-0.130 0.250 -0.110 0.270)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (tomato_sauce_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.250 -0.270 0.270 -0.250)
             )
           )
           (:yaw_rotation (

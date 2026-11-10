@@ -5,7 +5,7 @@
       (scissors_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.190 0.070 0.210 0.090)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (banana_4_with_hand_1_region
           (:target study_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (-0.190 -0.070 -0.170 -0.050)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (desk_caddy_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.190 0.230 -0.170 0.250)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (black_book_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (0.150 -0.250 0.170 -0.230)
             )
           )
           (:yaw_rotation (

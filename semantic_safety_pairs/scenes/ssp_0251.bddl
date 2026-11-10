@@ -5,7 +5,7 @@
       (knife_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (0.030 -0.250 0.050 -0.230)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (wooden_cabinet_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.130 0.190 -0.110 0.210)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (tomato_sauce_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.230 0.090 0.250 0.110)
             )
           )
           (:yaw_rotation (

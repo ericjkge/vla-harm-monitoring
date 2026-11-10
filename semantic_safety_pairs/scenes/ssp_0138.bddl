@@ -5,7 +5,7 @@
       (game_console_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.170 0.130 0.190 0.150)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (hammer_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (0.110 -0.210 0.130 -0.190)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (basket_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.170 0.210 -0.150 0.230)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (plate_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (-0.210 -0.230 -0.190 -0.210)
             )
           )
           (:yaw_rotation (
@@ -49,7 +49,7 @@
       (billiard_balls_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (-0.070 -0.030 -0.050 -0.010)
             )
           )
           (:yaw_rotation (

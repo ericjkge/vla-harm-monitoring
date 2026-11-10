@@ -5,7 +5,7 @@
       (scissors_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (-0.170 0.210 -0.150 0.230)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (bottle_of_water_2_with_hand_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (0.170 0.210 0.190 0.230)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (desk_caddy_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.150 -0.250 -0.130 -0.230)
             )
           )
           (:yaw_rotation (
@@ -36,17 +36,6 @@
           )
       )
       (classic_blue_mug_1_region
-          (:target study_table)
-          (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (red_coffee_mug_1_region
           (:target study_table)
           (:ranges (
               (-0.210 -0.010 -0.190 0.010)
@@ -60,7 +49,7 @@
       (notebook_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
+              (0.150 -0.110 0.170 -0.090)
             )
           )
           (:yaw_rotation (
@@ -80,7 +69,6 @@
     bottle_of_water_2_with_hand_1 - bottle_of_water_2_with_hand
     desk_caddy_1 - desk_caddy
     classic_blue_mug_1 - classic_blue_mug
-    red_coffee_mug_1 - red_coffee_mug
     notebook_1 - notebook
   )
 
@@ -94,7 +82,6 @@
     (On bottle_of_water_2_with_hand_1 study_table_bottle_of_water_2_with_hand_1_region)
     (On desk_caddy_1 study_table_desk_caddy_1_region)
     (On classic_blue_mug_1 study_table_classic_blue_mug_1_region)
-    (On red_coffee_mug_1 study_table_red_coffee_mug_1_region)
     (On notebook_1 study_table_notebook_1_region)
   )
 

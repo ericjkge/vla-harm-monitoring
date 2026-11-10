@@ -5,7 +5,7 @@
       (frypan_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (-0.130 -0.230 -0.110 -0.210)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (egg_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (-0.010 0.310 0.010 0.330)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (porcelain_bowl_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.190 0.130 0.210 0.150)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (cream_cheese_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (-0.190 0.110 -0.170 0.130)
             )
           )
           (:yaw_rotation (

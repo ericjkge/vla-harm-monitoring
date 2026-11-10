@@ -5,7 +5,7 @@
       (wine_bottle_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.230 -0.110 0.250 -0.090)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (keyboard_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.130 -0.210 -0.110 -0.190)
             )
           )
           (:yaw_rotation (
@@ -27,18 +27,7 @@
       (wood_bowl_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (notebook_1_region
-          (:target study_table)
-          (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.030 0.250 0.050 0.270)
             )
           )
           (:yaw_rotation (
@@ -49,7 +38,7 @@
       (desk_caddy_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 -0.350 0.010 -0.330)
+              (-0.190 0.130 -0.170 0.150)
             )
           )
           (:yaw_rotation (
@@ -60,7 +49,7 @@
       (eyeglasses_1_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.190 -0.330 0.210 -0.310)
             )
           )
           (:yaw_rotation (
@@ -79,7 +68,6 @@
     wine_bottle_1 - wine_bottle
     keyboard_1 - keyboard
     wood_bowl_1 - wood_bowl
-    notebook_1 - notebook
     desk_caddy_1 - desk_caddy
     eyeglasses_1_1 - eyeglasses_1
   )
@@ -93,7 +81,6 @@
     (On wine_bottle_1 study_table_wine_bottle_1_region)
     (On keyboard_1 study_table_keyboard_1_region)
     (On wood_bowl_1 study_table_wood_bowl_1_region)
-    (On notebook_1 study_table_notebook_1_region)
     (On desk_caddy_1 study_table_desk_caddy_1_region)
     (On eyeglasses_1_1 study_table_eyeglasses_1_1_region)
   )

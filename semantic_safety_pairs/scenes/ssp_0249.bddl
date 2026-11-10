@@ -5,7 +5,7 @@
       (moka_pot_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (-0.210 -0.170 -0.190 -0.150)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (eyeglasses_1_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.050 0.270 -0.030 0.290)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (can_of_soda__6_1_region
           (:target study_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (0.250 0.030 0.270 0.050)
             )
           )
           (:yaw_rotation (

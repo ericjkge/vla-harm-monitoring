@@ -5,7 +5,7 @@
       (eyeglasses_1_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (-0.170 0.310 -0.150 0.330)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (white_cabinet_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.130 -0.210 -0.110 -0.190)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (basket_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 -0.350 0.010 -0.330)
+              (0.090 0.210 0.110 0.230)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (red_coffee_mug_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.190 -0.190 -0.170)
+              (0.210 -0.090 0.230 -0.070)
             )
           )
           (:yaw_rotation (
@@ -49,7 +49,7 @@
       (classic_blue_mug_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.230 0.090 -0.210 0.110)
             )
           )
           (:yaw_rotation (

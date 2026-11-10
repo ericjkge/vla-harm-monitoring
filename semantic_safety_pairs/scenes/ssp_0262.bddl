@@ -5,7 +5,7 @@
       (white_place_box_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.170 -0.250 -0.150 -0.230)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (cookies_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (-0.110 0.250 -0.090 0.270)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (black_book_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
+              (0.210 0.130 0.230 0.150)
             )
           )
           (:yaw_rotation (

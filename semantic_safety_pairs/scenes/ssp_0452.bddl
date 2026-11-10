@@ -5,7 +5,7 @@
       (porcelain_mug_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.190 -0.250 0.210 -0.230)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (plate_with_hand_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
+              (0.190 0.130 0.210 0.150)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (basket_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.150 -0.230 -0.130 -0.210)
             )
           )
           (:yaw_rotation (
@@ -38,18 +38,7 @@
       (plate_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.010 0.190 0.010)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (toy_train_1_region
-          (:target living_room_table)
-          (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (-0.190 0.130 -0.170 0.150)
             )
           )
           (:yaw_rotation (
@@ -69,7 +58,6 @@
     plate_with_hand_1 - plate_with_hand
     basket_1 - basket
     plate_1 - plate
-    toy_train_1 - toy_train
   )
 
   (:obj_of_interest
@@ -82,7 +70,6 @@
     (On plate_with_hand_1 living_room_table_plate_with_hand_1_region)
     (On basket_1 living_room_table_basket_1_region)
     (On plate_1 living_room_table_plate_1_region)
-    (On toy_train_1 living_room_table_toy_train_1_region)
   )
 
 )

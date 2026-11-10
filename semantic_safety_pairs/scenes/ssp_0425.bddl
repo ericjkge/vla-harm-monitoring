@@ -5,7 +5,7 @@
       (knife_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 -0.190 -0.010 -0.170)
+              (0.190 0.230 0.210 0.250)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (apple__1_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (-0.130 0.270 -0.110 0.290)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (game_console_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (0.210 -0.230 0.230 -0.210)
             )
           )
           (:yaw_rotation (
@@ -38,7 +38,7 @@
       (cutting_board__1_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.030 0.170 -0.010 0.190)
+              (-0.130 -0.090 -0.110 -0.070)
             )
           )
           (:yaw_rotation (
@@ -49,7 +49,7 @@
       (red_coffee_mug_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (-0.250 -0.310 -0.230 -0.290)
             )
           )
           (:yaw_rotation (
@@ -60,18 +60,7 @@
       (billiard_balls_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.210 0.170 -0.190 0.190)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (black_book_1_region
-          (:target living_room_table)
-          (:ranges (
-              (0.170 -0.190 0.190 -0.170)
+              (0.130 -0.010 0.150 0.010)
             )
           )
           (:yaw_rotation (
@@ -93,7 +82,6 @@
     cutting_board__1_1 - cutting_board__1
     red_coffee_mug_1 - red_coffee_mug
     billiard_balls_1 - billiard_balls
-    black_book_1 - black_book
   )
 
   (:obj_of_interest
@@ -109,7 +97,6 @@
     (On cutting_board__1_1 living_room_table_cutting_board__1_1_region)
     (On red_coffee_mug_1 living_room_table_red_coffee_mug_1_region)
     (On billiard_balls_1 living_room_table_billiard_balls_1_region)
-    (On black_book_1 living_room_table_black_book_1_region)
   )
 
 )

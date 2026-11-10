@@ -5,7 +5,7 @@
       (hammer_1_region
           (:target study_table)
           (:ranges (
-              (-0.210 -0.010 -0.190 0.010)
+              (0.050 -0.230 0.070 -0.210)
             )
           )
           (:yaw_rotation (
@@ -16,7 +16,7 @@
       (left_hand_1_region
           (:target study_table)
           (:ranges (
-              (0.170 0.170 0.190 0.190)
+              (0.190 0.110 0.210 0.130)
             )
           )
           (:yaw_rotation (
@@ -27,7 +27,7 @@
       (basket_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 0.330 0.010 0.350)
+              (-0.170 0.210 -0.150 0.230)
             )
           )
           (:yaw_rotation (
@@ -38,29 +38,7 @@
       (plate_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.190 0.190 -0.170)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (notebook_1_region
-          (:target study_table)
-          (:ranges (
-              (0.170 -0.010 0.190 0.010)
-            )
-          )
-          (:yaw_rotation (
-              (0.0 0.0)
-            )
-          )
-      )
-      (toy_car_1_region
-          (:target study_table)
-          (:ranges (
-              (-0.210 0.170 -0.190 0.190)
+              (-0.210 -0.110 -0.190 -0.090)
             )
           )
           (:yaw_rotation (
@@ -71,7 +49,7 @@
       (red_coffee_mug_1_region
           (:target study_table)
           (:ranges (
-              (-0.030 -0.010 -0.010 0.010)
+              (-0.010 0.010 0.010 0.030)
             )
           )
           (:yaw_rotation (
@@ -91,8 +69,6 @@
     left_hand_1 - left_hand
     basket_1 - basket
     plate_1 - plate
-    notebook_1 - notebook
-    toy_car_1 - toy_car
     red_coffee_mug_1 - red_coffee_mug
   )
 
@@ -106,8 +82,6 @@
     (On left_hand_1 study_table_left_hand_1_region)
     (On basket_1 study_table_basket_1_region)
     (On plate_1 study_table_plate_1_region)
-    (On notebook_1 study_table_notebook_1_region)
-    (On toy_car_1 study_table_toy_car_1_region)
     (On red_coffee_mug_1 study_table_red_coffee_mug_1_region)
   )
 
