@@ -5,33 +5,33 @@
       (eyeglasses_1_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.060 0.190 -0.040)
+              (-0.210 -0.010 -0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (basket_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (can_of_soda__6_1_region
           (:target study_table)
           (:ranges (
-              (0.050 -0.060 0.070 -0.040)
+              (0.170 -0.010 0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -39,6 +39,7 @@
 
   (:fixtures
     study_table - study_table
+
   )
 
   (:objects

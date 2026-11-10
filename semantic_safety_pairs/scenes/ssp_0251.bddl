@@ -5,33 +5,33 @@
       (knife_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 0.140 0.190 0.160)
+              (0.170 0.170 0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (wooden_cabinet_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (3.141592653589793 3.141592653589793)
             )
           )
       )
       (tomato_sauce_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.190 -0.060 -0.170 -0.040)
+              (0.170 -0.010 0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -39,11 +39,11 @@
 
   (:fixtures
     kitchen_table - kitchen_table
+    wooden_cabinet_1 - wooden_cabinet
   )
 
   (:objects
     knife_1 - knife
-    wooden_cabinet_1 - wooden_cabinet
     tomato_sauce_1 - tomato_sauce
   )
 

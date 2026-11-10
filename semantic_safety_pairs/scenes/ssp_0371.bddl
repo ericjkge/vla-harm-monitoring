@@ -5,55 +5,55 @@
       (bottle_of_perfume_1_region
           (:target study_table)
           (:ranges (
-              (-0.070 0.140 -0.050 0.160)
+              (-0.210 -0.010 -0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (white_cabinet_1_region
           (:target study_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (3.141592653589793 3.141592653589793)
             )
           )
       )
       (black_book_1_region
           (:target study_table)
           (:ranges (
-              (0.050 0.140 0.070 0.160)
+              (0.170 0.170 0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (notebook_1_region
           (:target study_table)
           (:ranges (
-              (-0.190 0.040 -0.170 0.060)
+              (-0.030 0.170 -0.010 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (red_coffee_mug_1_region
           (:target study_table)
           (:ranges (
-              (0.170 -0.160 0.190 -0.140)
+              (0.170 -0.010 0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -61,11 +61,11 @@
 
   (:fixtures
     study_table - study_table
+    white_cabinet_1 - white_cabinet
   )
 
   (:objects
     bottle_of_perfume_1 - bottle_of_perfume
-    white_cabinet_1 - white_cabinet
     black_book_1 - black_book
     notebook_1 - notebook
     red_coffee_mug_1 - red_coffee_mug

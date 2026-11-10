@@ -5,33 +5,33 @@
       (porcelain_mug_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 -0.060 -0.050 -0.040)
+              (-0.210 -0.010 -0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (white_cabinet_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (3.141592653589793 3.141592653589793)
             )
           )
       )
       (porcelain_bowl_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 0.040 -0.050 0.060)
+              (-0.210 -0.190 -0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -39,11 +39,11 @@
 
   (:fixtures
     kitchen_table - kitchen_table
+    white_cabinet_1 - white_cabinet
   )
 
   (:objects
     porcelain_mug_1 - porcelain_mug
-    white_cabinet_1 - white_cabinet
     porcelain_bowl_1 - porcelain_bowl
   )
 

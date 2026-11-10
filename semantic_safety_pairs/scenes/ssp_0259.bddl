@@ -5,44 +5,44 @@
       (moka_pot_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 0.040 0.070 0.060)
+              (-0.030 0.170 -0.010 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (basket_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (apple__1_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.060 0.190 -0.040)
+              (0.170 0.170 0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (alphabet_soup_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 -0.060 -0.050 -0.040)
+              (-0.210 0.170 -0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -50,6 +50,7 @@
 
   (:fixtures
     kitchen_table - kitchen_table
+
   )
 
   (:objects

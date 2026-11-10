@@ -5,44 +5,44 @@
       (fork_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 0.040 0.070 0.060)
+              (0.170 0.170 0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (porcelain_mug_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 -0.160 -0.050 -0.140)
+              (-0.210 -0.190 -0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (microwave_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (lemon_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.190 -0.060 -0.170 -0.040)
+              (-0.030 -0.010 -0.010 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -50,12 +50,12 @@
 
   (:fixtures
     kitchen_table - kitchen_table
+    microwave_1 - microwave
   )
 
   (:objects
     fork_1 - fork
     porcelain_mug_1 - porcelain_mug
-    microwave_1 - microwave
     lemon_1 - lemon
   )
 

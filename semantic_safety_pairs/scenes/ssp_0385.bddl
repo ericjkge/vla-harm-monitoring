@@ -5,66 +5,66 @@
       (ketchup_1_region
           (:target living_room_table)
           (:ranges (
-              (0.050 0.140 0.070 0.160)
+              (0.170 0.170 0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (game_console_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.070 -0.060 -0.050 -0.040)
+              (-0.030 0.170 -0.010 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (porcelain_bowl_1_region
           (:target living_room_table)
           (:ranges (
-              (0.050 -0.060 0.070 -0.040)
+              (-0.210 -0.190 -0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (basket_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (black_book_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.190 -0.060 -0.170 -0.040)
+              (-0.210 0.170 -0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (toy_train_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 0.140 0.190 0.160)
+              (0.170 -0.190 0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -72,6 +72,7 @@
 
   (:fixtures
     living_room_table - living_room_table
+
   )
 
   (:objects

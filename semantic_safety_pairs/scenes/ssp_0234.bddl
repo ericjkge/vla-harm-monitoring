@@ -5,55 +5,55 @@
       (can_of_soda__6_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.190 -0.060 -0.170 -0.040)
+              (0.170 -0.010 0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (porcelain_bowl_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 -0.160 0.190 -0.140)
+              (-0.210 0.170 -0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (microwave_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (tomato_sauce_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.170 0.040 0.190 0.060)
+              (0.170 0.170 0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (cream_cheese_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 0.140 0.070 0.160)
+              (-0.030 -0.190 -0.010 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -61,12 +61,12 @@
 
   (:fixtures
     kitchen_table - kitchen_table
+    microwave_1 - microwave
   )
 
   (:objects
     can_of_soda__6_1 - can_of_soda__6
     porcelain_bowl_1 - porcelain_bowl
-    microwave_1 - microwave
     tomato_sauce_1 - tomato_sauce
     cream_cheese_1 - cream_cheese
   )

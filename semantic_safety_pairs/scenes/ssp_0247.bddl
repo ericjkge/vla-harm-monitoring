@@ -5,55 +5,55 @@
       (hammer_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 0.140 0.070 0.160)
+              (-0.030 -0.010 -0.010 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (flat_stove_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.420 0.200 -0.400 0.220)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (frypan_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 -0.160 0.070 -0.140)
+              (0.170 -0.010 0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (banana__1_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 0.040 -0.050 0.060)
+              (-0.210 0.170 -0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (can_of_soda__6_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 -0.160 -0.050 -0.140)
+              (-0.210 -0.190 -0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -61,11 +61,11 @@
 
   (:fixtures
     kitchen_table - kitchen_table
+    flat_stove_1 - flat_stove
   )
 
   (:objects
     hammer_1 - hammer
-    flat_stove_1 - flat_stove
     frypan_1 - frypan
     banana__1_1 - banana__1
     can_of_soda__6_1 - can_of_soda__6

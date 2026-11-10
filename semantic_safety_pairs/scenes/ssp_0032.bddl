@@ -5,66 +5,66 @@
       (bottle_of_carrot_juice_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 0.040 0.070 0.060)
+              (-0.030 -0.010 -0.010 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (porcelain_mug_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.190 -0.060 -0.170 -0.040)
+              (-0.030 0.170 -0.010 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (flat_stove_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.420 0.200 -0.400 0.220)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (red_coffee_mug_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 0.040 -0.050 0.060)
+              (0.170 -0.190 0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (cream_cheese_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 -0.060 -0.050 -0.040)
+              (-0.210 -0.010 -0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (ketchup_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 0.140 0.070 0.160)
+              (-0.210 -0.190 -0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -72,12 +72,12 @@
 
   (:fixtures
     kitchen_table - kitchen_table
+    flat_stove_1 - flat_stove
   )
 
   (:objects
     bottle_of_carrot_juice_1 - bottle_of_carrot_juice
     porcelain_mug_1 - porcelain_mug
-    flat_stove_1 - flat_stove
     red_coffee_mug_1 - red_coffee_mug
     cream_cheese_1 - cream_cheese
     ketchup_1 - ketchup

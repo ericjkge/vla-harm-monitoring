@@ -1,3 +1,5 @@
 .DS_Store
 __pycache__/
 *.pyc
+semantic_safety_pairs/frames_chunks_v1_bad_layout/
+semantic_safety_pairs/frames_gen/

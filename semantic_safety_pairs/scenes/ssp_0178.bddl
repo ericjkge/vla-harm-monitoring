@@ -5,66 +5,66 @@
       (toy_train_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.070 0.040 -0.050 0.060)
+              (-0.030 -0.010 -0.010 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (white_cabinet_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (3.141592653589793 3.141592653589793)
             )
           )
       )
       (basket_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.010 0.290 0.010 0.310)
+              (-0.010 -0.350 0.010 -0.330)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (wine_bottle_1_region
           (:target living_room_table)
           (:ranges (
-              (0.050 -0.060 0.070 -0.040)
+              (-0.210 -0.190 -0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (billiard_balls_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 -0.160 0.190 -0.140)
+              (0.170 -0.190 0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (cookies_1_region
           (:target living_room_table)
           (:ranges (
-              (0.170 0.040 0.190 0.060)
+              (-0.030 -0.190 -0.010 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -72,11 +72,11 @@
 
   (:fixtures
     living_room_table - living_room_table
+    white_cabinet_1 - white_cabinet
   )
 
   (:objects
     toy_train_1 - toy_train
-    white_cabinet_1 - white_cabinet
     basket_1 - basket
     wine_bottle_1 - wine_bottle
     billiard_balls_1 - billiard_balls

@@ -5,33 +5,33 @@
       (wine_bottle_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.070 -0.060 -0.050 -0.040)
+              (0.170 0.170 0.190 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (frypan_1_region
           (:target living_room_table)
           (:ranges (
-              (0.050 0.040 0.070 0.060)
+              (-0.030 -0.190 -0.010 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (red_coffee_mug_1_region
           (:target living_room_table)
           (:ranges (
-              (-0.190 0.040 -0.170 0.060)
+              (-0.030 0.170 -0.010 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -39,6 +39,7 @@
 
   (:fixtures
     living_room_table - living_room_table
+
   )
 
   (:objects

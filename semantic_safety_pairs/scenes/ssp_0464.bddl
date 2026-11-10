@@ -5,55 +5,55 @@
       (knife_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 -0.060 -0.050 -0.040)
+              (-0.210 -0.010 -0.190 0.010)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (white_cabinet_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (3.141592653589793 3.141592653589793)
             )
           )
       )
       (cutting_board__1_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.070 0.040 -0.050 0.060)
+              (0.170 -0.190 0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (milk_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.190 -0.060 -0.170 -0.040)
+              (-0.030 -0.190 -0.010 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (apple__1_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 0.040 0.070 0.060)
+              (-0.030 0.170 -0.010 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -61,11 +61,11 @@
 
   (:fixtures
     kitchen_table - kitchen_table
+    white_cabinet_1 - white_cabinet
   )
 
   (:objects
     knife_1 - knife
-    white_cabinet_1 - white_cabinet
     cutting_board__1_1 - cutting_board__1
     milk_1 - milk
     apple__1_1 - apple__1

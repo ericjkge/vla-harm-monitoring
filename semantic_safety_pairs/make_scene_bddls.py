@@ -17,15 +17,26 @@ from generate_pairs import NAME
 PROBLEM = {"kitchen_table": "LIBERO_Kitchen_Tabletop_Manipulation",
            "living_room_table": "LIBERO_Living_Room_Tabletop_Manipulation",
            "study_table": "LIBERO_Study_Tabletop_Manipulation"}
-# side slots for large objects: (x, y) centres taken from the benchmark's own files
-BIG_SLOTS = [(0.00, -0.28), (0.00, 0.30), (-0.40, 0.20), (-0.40, -0.15), (0.25, -0.28)]
+# Layout, sized from the benchmark authors' own placements (table ~ x in [-0.45, 0.35], y in [-0.4, 0.4]).
+# Large furniture/appliances take side slots; wide flat objects (boards, pans, keyboards, hands) take
+# 20 cm-spaced slots; small objects (cans, fruit, mugs) fill 10 cm-spaced slots between them.
+# Objects spawned closer than their footprint interpenetrate and MuJoCo flings them off the table.
+SIDE_SLOTS = [(0.00, 0.34), (0.00, -0.34), (-0.30, 0.34), (-0.30, -0.34), (0.26, 0.34), (0.26, -0.34)]
+STOVE_SLOT = (-0.41, 0.21)
 BIG = {"wooden_cabinet", "white_cabinet", "microwave", "flat_stove", "basket", "desk_caddy",
        "wine_rack", "white_place_box", "keyboard"}
-# central grid for everything else
-GRID = [(x, y) for x in (-0.18, -0.06, 0.06, 0.18) for y in (-0.15, -0.05, 0.05, 0.15)]
-BOX = 0.01   # half-width of the placement box (2 cm box, as the authors use)
+WIDE = {"cutting_board__1", "frypan", "chefmate_8_frypan", "game_console", "plate", "salad_porcelain_plate",
+        "notebook", "black_book", "dish_towel", "hammer", "knife", "scissors", "fork", "toy_train",
+        "akita_black_bowl", "wood_bowl", "porcelain_bowl", "glazed_rim_porcelain_ramekin", "billiard_balls",
+        "left_hand", "plate_with_hand", "can_of_soda_3_with_hand", "banana_4_with_hand", "apple_1_with_hand",
+        "bottle_of_water_2_with_hand", "croissant_1_with_hand", "cap_1_with_hand", "bottle_of_alcohol_1_with_hand"}
+WIDE_SLOTS = [(x, y) for x in (0.18, -0.02, -0.20) for y in (-0.18, 0.00, 0.18)]
+SMALL_SLOTS = [(x, y) for x in (0.18, -0.02, -0.20) for y in (-0.09, 0.09)]
+# Articulated furniture/appliances go under (:fixtures), as in the benchmark's own files; a stove
+# declared under (:objects) fails to compile ("duplicate element flat_stove_1_main").
+FIXTURE = {"flat_stove", "microwave", "white_cabinet", "wooden_cabinet", "wine_rack"}
 
-def region(name, table, cx, cy, half):
+def region(name, table, cx, cy, half, yaw=0.0):
     return f"""      ({name}
           (:target {table})
           (:ranges (
@@ -33,21 +44,30 @@ def region(name, table, cx, cy, half):
             )
           )
           (:yaw_rotation (
-              (0 0)
+              ({yaw} {yaw})
             )
           )
       )"""
 
 def write_bddl(path, table, objects, targets, language, seed):
     rng = random.Random(seed)
-    big = [o for o in objects if o in BIG]; small = [o for o in objects if o not in BIG]
-    assert len(big) <= len(BIG_SLOTS) and len(small) <= len(GRID), (big, small)
-    grid = GRID[:]; rng.shuffle(grid)
-    place = {o: BIG_SLOTS[i] for i, o in enumerate(big)}
-    place.update({o: grid[i] for i, o in enumerate(small)})
+    big = [o for o in objects if o in BIG]; wide = [o for o in objects if o in WIDE]
+    small = [o for o in objects if o not in BIG and o not in WIDE]
+    place = {}
+    side = SIDE_SLOTS[:]
+    for o in big:
+        place[o] = STOVE_SLOT if o == "flat_stove" else side.pop(0)
+    wslots = WIDE_SLOTS[:]; rng.shuffle(wslots)
+    sslots = SMALL_SLOTS[:]; rng.shuffle(sslots)
+    for o in wide: place[o] = wslots.pop(0)
+    for o in small: place[o] = wslots.pop(0) if wslots else sslots.pop(0)   # prefer 20 cm spacing; tight slots only when crowded
+    assert len(place) == len(objects), objects
     inst = {o: f"{o}_1" for o in objects}
-    regs = "\n".join(region(f"{inst[o]}_region", table, *place[o], BOX if o not in BIG else 0.01) for o in objects)
-    objs = "\n".join(f"    {inst[o]} - {o}" for o in objects)
+    # cabinets and the wine rack face the robot when rotated by pi, as in the benchmark files
+    regs = "\n".join(region(f"{inst[o]}_region", table, *place[o], 0.01,
+                            yaw=3.141592653589793 if o in ("white_cabinet", "wooden_cabinet", "wine_rack") else 0.0) for o in objects)
+    fixt = "\n".join(f"    {inst[o]} - {o}" for o in objects if o in FIXTURE)
+    objs = "\n".join(f"    {inst[o]} - {o}" for o in objects if o not in FIXTURE)
     ooi = "\n".join(f"    {inst[o]}" for o in targets)
     init = "\n".join(f"    (On {inst[o]} {table}_{inst[o]}_region)" for o in objects)
     txt = f"""(define (problem {PROBLEM[table]})
@@ -59,6 +79,7 @@ def write_bddl(path, table, objects, targets, language, seed):
 
   (:fixtures
     {table} - {table}
+{fixt}
   )
 
   (:objects
@@ -96,6 +117,7 @@ if __name__ == "__main__":
             write_bddl(path, p["scene"], p["scene_objects"], p["target_objects"], p["safe_instruction"], seed=i)
             vs, vu = p["safe_instruction"].split()[0], p["unsafe_instruction"].split()[0]
             idx.write(json.dumps(dict(pair_id=p["pair_id"], bddl=path, scene=p["scene"], category=p["category"], tier=p["tier"],
+                                      instances=[f"{o}_1" for o in p["scene_objects"]],
                                       harm_target=p["harm_target"], safe_instruction=p["safe_instruction"],
                                       unsafe_instruction=p["unsafe_instruction"], template_safe=template(p["safe_instruction"]),
                                       template_unsafe=template(p["unsafe_instruction"]), verb_safe=vs, verb_unsafe=vu,

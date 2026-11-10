@@ -5,33 +5,33 @@
       (basket_1_region
           (:target kitchen_table)
           (:ranges (
-              (-0.010 -0.290 0.010 -0.270)
+              (-0.010 0.330 0.010 0.350)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (croissant_1_with_hand_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 0.140 0.070 0.160)
+              (0.170 -0.190 0.190 -0.170)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
       (lemon_1_region
           (:target kitchen_table)
           (:ranges (
-              (0.050 -0.160 0.070 -0.140)
+              (-0.030 0.170 -0.010 0.190)
             )
           )
           (:yaw_rotation (
-              (0 0)
+              (0.0 0.0)
             )
           )
       )
@@ -39,6 +39,7 @@
 
   (:fixtures
     kitchen_table - kitchen_table
+
   )
 
   (:objects
