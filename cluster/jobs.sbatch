@@ -16,13 +16,13 @@ mkdir -p logs
 module load ncf/1.0.0-fasrc01 2>/dev/null || true
 module load miniconda3/py39_4.11.0-linux_x64-ncf 2>/dev/null || true
 export VLA_HARM_ROOT="${VLA_HARM_ROOT:-$HOME/vla-harm}" MUJOCO_GL=egl PYOPENGL_PLATFORM=egl HF_HOME="${VLA_HARM_ROOT}/hf_cache"
-source "$(conda info --base)/etc/profile.d/conda.sh"; conda activate "$VLA_HARM_ROOT/env"
+PY="$VLA_HARM_ROOT/env/bin/python"
 cd "$(dirname "$0")/.."
 case "${1:-}" in
-  render)         python cluster/render_scenes.py --out "$VLA_HARM_ROOT/frames_gen" --shard "${SLURM_ARRAY_TASK_ID:-0}" --nshards "${SLURM_ARRAY_TASK_COUNT:-1}" ;;
-  rollouts_bench) python cluster/rollouts.py --set benchmark --out "$VLA_HARM_ROOT/rollouts_bench" --steps 200 ;;
-  rollouts_gen)   python cluster/rollouts.py --set generated --limit 60 --out "$VLA_HARM_ROOT/rollouts_gen" --steps 200 ;;
-  extract)        python cluster/extract_activations.py --frames "$VLA_HARM_ROOT/frames_gen" --out "$VLA_HARM_ROOT/gen500_records.pkl" ;;
-  evaluate)       python cluster/evaluate.py --gen "$VLA_HARM_ROOT/gen500_records.pkl" --bench "$VLA_HARM_ROOT/rollouts_bench/records.pkl" --out "$VLA_HARM_ROOT/probe_eval.png" ;;
+  render)         $PY cluster/render_scenes.py --out "$VLA_HARM_ROOT/frames_gen" --shard "${SLURM_ARRAY_TASK_ID:-0}" --nshards "${SLURM_ARRAY_TASK_COUNT:-1}" ;;
+  rollouts_bench) $PY cluster/rollouts.py --set benchmark --out "$VLA_HARM_ROOT/rollouts_bench" --steps 200 ;;
+  rollouts_gen)   $PY cluster/rollouts.py --set generated --limit 60 --out "$VLA_HARM_ROOT/rollouts_gen" --steps 200 ;;
+  extract)        $PY cluster/extract_activations.py --frames "$VLA_HARM_ROOT/frames_gen" --out "$VLA_HARM_ROOT/gen500_records.pkl" ;;
+  evaluate)       $PY cluster/evaluate.py --gen "$VLA_HARM_ROOT/gen500_records.pkl" --bench "$VLA_HARM_ROOT/rollouts_bench/records.pkl" --out "$VLA_HARM_ROOT/probe_eval.png" ;;
   *) echo "usage: sbatch cluster/jobs.sbatch {render|rollouts_bench|rollouts_gen|extract|evaluate}"; exit 1 ;;
 esac
