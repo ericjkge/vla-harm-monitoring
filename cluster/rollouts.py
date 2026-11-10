@@ -17,12 +17,15 @@ so "did it move toward the hand / the stove" can be scored without watching ever
 --policy pi05 runs the LIBERO-Safety pi0.5 checkpoint instead (needs openpi's policy server running; the job script
 starts it). It uses LIBERO-Safety's own arm controller, and its sanity set is LIBERO-Safety's own level-0 affordance
 and obstacle-avoidance tasks, which that checkpoint was trained on.
+
+--set skill runs semantic_safety_pairs/pi05_skill_pairs.jsonl: scenes the pi0.5 checkpoint was trained in, unchanged,
+with three instructions each: the trained one (control), a new harmless one, and a new harmful one.
 """
 import argparse, json, os, pickle, numpy as np, imageio
 from common import SSP, BENCH_BDDL, make_env, settle, frame, view, env_action, positions, load_vla, predict_action, hidden_states, load_jsonl, Pi05Client
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--set", choices=["benchmark", "generated", "sanity"], required=True)
+ap.add_argument("--set", choices=["benchmark", "generated", "sanity", "skill"], required=True)
 ap.add_argument("--out", required=True); ap.add_argument("--steps", type=int, default=200)
 ap.add_argument("--limit", type=int, default=0); ap.add_argument("--model", default="openvla/openvla-7b-finetuned-libero-10")
 ap.add_argument("--unnorm_key", default="libero_10"); ap.add_argument("--four_bit", action="store_true")
@@ -41,6 +44,11 @@ if a.set == "sanity":
         init = b.replace(BENCH_BDDL, os.path.join(os.path.dirname(BENCH_BDDL), "init_files"))[:-5] + ".pruned_init"
         if not os.path.exists(init): continue  # the repo has stray duplicates ("... copy 2.bddl") with no initial state
         pairs.append(dict(pair_id=os.path.basename(b)[:-5][:60], bddl=b, task=lang, tier="sanity", category=os.path.relpath(os.path.dirname(b), BENCH_BDDL), instances=None, init=init))
+elif a.set == "skill":
+    INIT = os.path.join(os.path.dirname(BENCH_BDDL), "init_files")
+    pairs = [dict(pair_id=r["pair_id"], bddl=os.path.join(BENCH_BDDL, r["bddl"]), trained=r["trained_instruction"], safe=r["safe_instruction"],
+                  unsafe=r["unsafe_instruction"], tier="skill", category=r["category"], instances=None,
+                  init=os.path.join(INIT, r["bddl"][:-5] + ".pruned_init")) for r in load_jsonl(os.path.join(SSP, "pi05_skill_pairs.jsonl"))]
 elif a.set == "benchmark":
     pairs = [dict(pair_id=r["task_id"], bddl=os.path.join(BENCH_BDDL, r["bddl"]), safe=r["safe_instruction"],
                   unsafe=r["unsafe_instruction"], tier=r["tier"], category=r["category"], instances=None)
@@ -61,7 +69,7 @@ print(f"{len(pairs)} pairs, {len(done)} rollouts already done", flush=True)
 def gripper_pos(env): return np.array(env.env.sim.data.site_xpos[env.env.sim.model.site_name2id("gripper0_grip_site")])
 
 for p in pairs:
-    for cond in (("task",) if a.set == "sanity" else ("safe", "unsafe")):
+    for cond in {"sanity": ("task",), "skill": ("trained", "safe", "unsafe")}.get(a.set, ("safe", "unsafe")):
         if (p["pair_id"], cond) in done: continue
         instr = p[cond]
         env = make_env(p["bddl"], stock_controller=STOCK)

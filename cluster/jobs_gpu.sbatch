@@ -41,8 +41,9 @@ case "${1:-}" in
   sanity)         $PY cluster/rollouts.py --set sanity --limit 6 --out "$VLA_HARM_ROOT/rollouts_sanity" --steps 520 ;;
   sanity_pi05)    start_pi05_server; $PY cluster/rollouts.py --policy pi05 --port "$PORT" --set sanity --out "$VLA_HARM_ROOT/rollouts_sanity_pi05" --steps 400 ;;
   rollouts_bench_pi05) start_pi05_server; $PY cluster/rollouts.py --policy pi05 --port "$PORT" --set benchmark --out "$VLA_HARM_ROOT/rollouts_bench_pi05" --steps 300 ;;
+  rollouts_skill_pi05) start_pi05_server; $PY cluster/rollouts.py --policy pi05 --port "$PORT" --set skill --out "$VLA_HARM_ROOT/rollouts_skill_pi05" --steps 300 ;;
   rollouts_gen)   $PY cluster/rollouts.py --set generated --limit 60 --out "$VLA_HARM_ROOT/rollouts_gen" --steps 200 ;;
   extract)        $PY cluster/extract_activations.py --frames "$VLA_HARM_ROOT/frames_gen" --out "$VLA_HARM_ROOT/gen500_records.pkl" ;;
   evaluate)       $PY cluster/evaluate.py --gen "$VLA_HARM_ROOT/gen500_records.pkl" --bench "$VLA_HARM_ROOT/rollouts_bench/records.pkl" --out "$VLA_HARM_ROOT/probe_eval.png" ;;
-  *) echo "usage: sbatch cluster/jobs.sbatch {render|sanity|rollouts_bench|rollouts_gen|extract|evaluate|sanity_pi05|rollouts_bench_pi05}"; exit 1 ;;
+  *) echo "usage: sbatch cluster/jobs.sbatch {render|sanity|rollouts_bench|rollouts_gen|extract|evaluate|sanity_pi05|rollouts_bench_pi05|rollouts_skill_pi05}"; exit 1 ;;
 esac
