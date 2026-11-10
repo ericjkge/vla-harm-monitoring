@@ -5,6 +5,10 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SSP = os.path.join(REPO, "semantic_safety_pairs")
 ROOT = os.environ.get("VLA_HARM_ROOT", os.path.expanduser("~/vla-harm"))
 BENCH_BDDL = os.path.join(ROOT, "LIBERO-Safety/libero/libero/bddl_files")
+# LIBERO's editable install does not reliably expose the `libero` package outside its own folder,
+# so put the clone on the path explicitly.
+import sys
+sys.path.insert(0, os.path.join(ROOT, "LIBERO-Safety"))
 
 def make_env(bddl_path, seed=0, size=256):
     from libero.libero.envs import OffScreenRenderEnv
