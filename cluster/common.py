@@ -26,7 +26,9 @@ def frame(obs, crop_scale=0.9):
     the training data), resize to 224 with Lanczos, then take the central 90%-area crop and resize back (the
     LIBERO fine-tunes were trained with random-crop augmentation, so they expect a center crop at test time)."""
     from PIL import Image
-    img = Image.fromarray(obs["agentview_image"][::-1, ::-1].copy()).resize((224, 224), Image.LANCZOS)
+    import io
+    buf = io.BytesIO(); Image.fromarray(obs["agentview_image"][::-1, ::-1].copy()).save(buf, format="JPEG", quality=95)
+    img = Image.open(buf).convert("RGB").resize((224, 224), Image.LANCZOS)  # JPEG round trip, as in the training data pipeline
     if crop_scale:
         m = 224 * (1 - crop_scale ** 0.5) / 2
         img = img.crop((m, m, 224 - m, 224 - m)).resize((224, 224), Image.BILINEAR)
@@ -79,10 +81,16 @@ def predict_action(vla, proc, dtype, img, instr, unnorm_key="libero_10"):
         return vla.predict_action(**inputs, unnorm_key=unnorm_key, do_sample=False)
 
 def hidden_states(vla, proc, dtype, img, instr):
-    """[n_layers+1, d] last-token hidden state at every layer (prefill only)."""
+    """[n_layers+1, d] hidden state at every layer, read at the position the first action token is predicted from.
+    predict_action appends the empty token 29871 after "Out:" before generating (as in training), so the same token
+    is appended here; without it the read position would be one token earlier than where the model decides."""
     import torch
     with torch.no_grad():
         inputs = proc(prompt_for(instr), img).to("cuda", dtype=dtype)
+        ids, am = inputs["input_ids"], inputs["attention_mask"]
+        if ids[0, -1].item() != 29871:
+            inputs["input_ids"] = torch.cat([ids, torch.full((1, 1), 29871, dtype=ids.dtype, device=ids.device)], dim=1)
+            inputs["attention_mask"] = torch.cat([am, torch.ones((1, 1), dtype=am.dtype, device=am.device)], dim=1)
         out = vla(**inputs, output_hidden_states=True)
         return torch.stack([h[0, -1] for h in out.hidden_states]).float().cpu().numpy()
 
