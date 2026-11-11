@@ -1,0 +1,124 @@
+(define (problem LIBERO_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the wine bottle on the keyboard)
+    (:regions
+      (plate_region
+          (:target main_table)
+          (:ranges (
+              (0.040 -0.030 0.060 -0.010)
+            )
+          )
+      )
+      (akita_black_bowl_region
+          (:target main_table)
+          (:ranges (
+              (-0.100 -0.010 -0.080 0.010)
+            )
+          )
+      )
+      (wine_bottle_region
+          (:target main_table)
+          (:ranges (
+              (-0.210 -0.060 -0.190 -0.040)
+            )
+          )
+      )
+      (cream_cheese_region
+          (:target main_table)
+          (:ranges (
+              (-0.060 0.120 -0.040 0.140)
+            )
+          )
+      )
+      (keyboard_region
+          (:target main_table)
+          (:ranges (
+              (0.010 0.260 0.030 0.280)
+            )
+          )
+      )
+      (cabinet_region
+          (:target main_table)
+          (:ranges (
+              (0.020 -0.250 0.040 -0.230)
+            )
+          )
+          (:yaw_rotation (
+              (3.141592653589793 3.141592653589793)
+            )
+          )
+      )
+      (stove_region
+          (:target main_table)
+          (:ranges (
+              (-0.420 0.200 -0.400 0.220)
+            )
+          )
+      )
+      (wine_rack_region
+          (:target main_table)
+          (:ranges (
+              (-0.270 -0.270 -0.250 -0.250)
+            )
+          )
+          (:yaw_rotation (
+              (3.141592653589793 3.141592653589793)
+            )
+          )
+      )
+      (top_region
+          (:target wooden_cabinet_1)
+      )
+      (middle_region
+          (:target wooden_cabinet_1)
+      )
+      (bottom_region
+          (:target wooden_cabinet_1)
+      )
+      (top_side
+          (:target wooden_cabinet_1)
+      )
+      (cook_region
+          (:target flat_stove_1)
+      )
+      (top_region
+          (:target wine_rack_1)
+      )
+    )
+
+  (:fixtures
+    main_table - table
+    wooden_cabinet_1 - wooden_cabinet
+    flat_stove_1 - flat_stove
+    wine_rack_1 - wine_rack
+  )
+
+  (:objects
+    plate_1 - plate
+    akita_black_bowl_1 - akita_black_bowl
+    wine_bottle_1 - wine_bottle
+    cream_cheese_1 - cream_cheese
+    keyboard_1 - keyboard
+  )
+
+  (:obj_of_interest
+    akita_black_bowl_1
+    flat_stove_1_cook_region
+  )
+
+  (:init
+    (On plate_1 main_table_plate_region)
+    (On akita_black_bowl_1 main_table_akita_black_bowl_region)
+    (On wine_bottle_1 main_table_wine_bottle_region)
+    (On cream_cheese_1 main_table_cream_cheese_region)
+    (On keyboard_1 main_table_keyboard_region)
+    (On wooden_cabinet_1 main_table_cabinet_region)
+    (On flat_stove_1 main_table_stove_region)
+    (On wine_rack_1 main_table_wine_rack_region)
+  )
+
+  (:goal
+    (And (On akita_black_bowl_1 flat_stove_1_cook_region))
+  )
+
+)

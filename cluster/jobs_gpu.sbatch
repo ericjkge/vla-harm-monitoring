@@ -46,8 +46,15 @@ case "${1:-}" in
   rollouts_skill_pi05) start_pi05_server; $PY cluster/rollouts.py --policy pi05 --port "$PORT" --set skill --out "$VLA_HARM_ROOT/rollouts_skill_pi05" --steps 300 ;;
   sanity_pi05lib) start_pi05_server "$PI05_OFFICIAL"; $PY cluster/rollouts.py --policy pi05 --controller stock --port "$PORT" --set sanity --out "$VLA_HARM_ROOT/rollouts_sanity_pi05lib" --steps 300 ;;
   rollouts_goal_pi05lib) start_pi05_server "$PI05_OFFICIAL"; $PY cluster/rollouts.py --policy pi05 --controller stock --port "$PORT" --set skill --pairs pi05lib_goal_pairs.jsonl --out "$VLA_HARM_ROOT/rollouts_goal_pi05lib" --steps 400 ;;
+  # the execution grid (trained/new scene x trained/new objects) with Physical Intelligence's pi0.5 LIBERO model.
+  # grid_check needs no model; rollouts_grid takes an optional second argument naming the scenarios to run, e.g. AB
+  grid_check)     $PY cluster/grid_check.py --out "$VLA_HARM_ROOT/grid_check" ;;
+  rollouts_grid)  G="$VLA_HARM_ROOT/rollouts_grid_${2:-ABCD}"   # one folder per scenario set, so the AB and CD jobs can run at the same time
+                  start_pi05_server "$PI05_OFFICIAL"; $PY cluster/rollouts.py --policy pi05 --controller stock --port "$PORT" --set grid --scenario "${2:-}" --out "$G" --steps 400
+                  $PY cluster/grid_summary.py --records "$G/records.pkl" ;;
+  grid_summary)   $PY cluster/grid_summary.py --records "$VLA_HARM_ROOT"/rollouts_grid_*/records.pkl --out "$VLA_HARM_ROOT/grid_results" ;;
   rollouts_gen)   $PY cluster/rollouts.py --set generated --limit 60 --out "$VLA_HARM_ROOT/rollouts_gen" --steps 200 ;;
   extract)        $PY cluster/extract_activations.py --frames "$VLA_HARM_ROOT/frames_gen" --out "$VLA_HARM_ROOT/gen500_records.pkl" ;;
   evaluate)       $PY cluster/evaluate.py --gen "$VLA_HARM_ROOT/gen500_records.pkl" --bench "$VLA_HARM_ROOT/rollouts_bench/records.pkl" --out "$VLA_HARM_ROOT/probe_eval.png" ;;
-  *) echo "usage: sbatch cluster/jobs.sbatch {render|sanity|rollouts_bench|rollouts_gen|extract|evaluate|sanity_pi05|rollouts_bench_pi05|rollouts_skill_pi05|sanity_pi05lib|rollouts_goal_pi05lib}"; exit 1 ;;
+  *) echo "usage: sbatch cluster/jobs.sbatch {render|sanity|rollouts_bench|rollouts_gen|extract|evaluate|sanity_pi05|rollouts_bench_pi05|rollouts_skill_pi05|sanity_pi05lib|rollouts_goal_pi05lib|grid_check|rollouts_grid [AB|CD]|grid_summary}"; exit 1 ;;
 esac

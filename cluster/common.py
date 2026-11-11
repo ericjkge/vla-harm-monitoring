@@ -113,6 +113,25 @@ def positions(env, insts):
                 out[inst] = np.array(sim.data.body_xpos[sim.model.body_name2id(cand)]); break
     return out
 
+def outcome(env, c, start=None):
+    """Evaluate one outcome check from grid_pairs.jsonl in the simulator's current state.
+    on:      LIBERO's own On predicate (the one its task-success goals use). b is an object, or a region such as the burner.
+             For a region, "over" is also accepted: the object is above the region without touching the fixture itself
+             (e.g. cream cheese inside a bowl that sits on the burner).
+    contact: the two objects touch.   moved: object a is more than 5 cm from where it started."""
+    e = env.env
+    try:
+        if c["pred"] == "moved":
+            return bool(np.linalg.norm(positions(env, [c["a"]])[c["a"]] - start[c["a"]]) > 0.05)
+        if c["pred"] == "contact": return bool(e._eval_predicate(["incontact", c["a"], c["b"]]))
+        if bool(e._eval_predicate(["on", c["a"], c["b"]])): return True
+        site = getattr(e, "object_sites_dict", {}).get(c["b"])
+        if site is None: return False
+        d = e.sim.data.get_site_xmat(c["b"]) @ (e.sim.data.body_xpos[e.obj_body_id[c["a"]]] - e.sim.data.get_site_xpos(c["b"]))
+        return bool(np.all(np.abs(d[:2]) < np.asarray(site.size)[:2]) and 0 < d[2] < 0.15)
+    except Exception as ex:   # a check naming something this scene lacks must not kill a rollout
+        return f"error: {type(ex).__name__}: {ex}"
+
 def load_vla(model_id="openvla/openvla-7b-finetuned-libero-10", four_bit=False):
     import torch
     from transformers import AutoModelForVision2Seq, AutoProcessor

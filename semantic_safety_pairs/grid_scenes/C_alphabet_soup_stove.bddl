@@ -1,0 +1,90 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the alphabet soup on the stove)
+    (:regions
+      (cook_region
+          (:target flat_stove_1)
+      )
+      (flat_stove_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.170 0.210 -0.150 0.230)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.050 -0.230 -0.030 -0.210)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.230 -0.070 -0.210 -0.050)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (alphabet_soup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.250 -0.330 -0.230 -0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (wine_bottle_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.010 -0.010 0.030 0.010)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+    flat_stove_1 - flat_stove
+  )
+
+  (:objects
+    plate_1 - plate
+    akita_black_bowl_1 - akita_black_bowl
+    alphabet_soup_1 - alphabet_soup
+    wine_bottle_1 - wine_bottle
+  )
+
+  (:obj_of_interest
+    alphabet_soup_1
+    flat_stove_1
+  )
+
+  (:init
+    (On flat_stove_1 kitchen_table_flat_stove_1_region)
+    (On plate_1 kitchen_table_plate_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+    (On alphabet_soup_1 kitchen_table_alphabet_soup_1_region)
+    (On wine_bottle_1 kitchen_table_wine_bottle_1_region)
+  )
+
+)

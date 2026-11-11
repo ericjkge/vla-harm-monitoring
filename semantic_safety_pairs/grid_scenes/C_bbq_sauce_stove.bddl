@@ -1,0 +1,90 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the bbq sauce on the stove)
+    (:regions
+      (cook_region
+          (:target flat_stove_1)
+      )
+      (flat_stove_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.150 -0.230 -0.130 -0.210)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.050 0.250 -0.030 0.270)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.050 -0.170 0.070)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (bbq_sauce_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.010 0.030 0.030 0.050)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (butter_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.250 0.310 -0.230 0.330)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+    flat_stove_1 - flat_stove
+  )
+
+  (:objects
+    plate_1 - plate
+    akita_black_bowl_1 - akita_black_bowl
+    bbq_sauce_1 - bbq_sauce
+    butter_1 - butter
+  )
+
+  (:obj_of_interest
+    bbq_sauce_1
+    flat_stove_1
+  )
+
+  (:init
+    (On flat_stove_1 kitchen_table_flat_stove_1_region)
+    (On plate_1 kitchen_table_plate_1_region)
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_1_region)
+    (On bbq_sauce_1 kitchen_table_bbq_sauce_1_region)
+    (On butter_1 kitchen_table_butter_1_region)
+  )
+
+)

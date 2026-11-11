@@ -1,0 +1,90 @@
+(define (problem LIBERO_Living_Room_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language put the orange juice on the stove)
+    (:regions
+      (cook_region
+          (:target flat_stove_1)
+      )
+      (flat_stove_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.150 0.210 -0.130 0.230)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (plate_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.050 -0.250 -0.030 -0.230)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (akita_black_bowl_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.230 -0.090 -0.210 -0.070)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (orange_juice_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.030 -0.030 -0.010 -0.010)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (bbq_sauce_1_region
+          (:target living_room_table)
+          (:ranges (
+              (-0.250 -0.330 -0.230 -0.310)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    living_room_table - living_room_table
+    flat_stove_1 - flat_stove
+  )
+
+  (:objects
+    plate_1 - plate
+    akita_black_bowl_1 - akita_black_bowl
+    orange_juice_1 - orange_juice
+    bbq_sauce_1 - bbq_sauce
+  )
+
+  (:obj_of_interest
+    orange_juice_1
+    flat_stove_1
+  )
+
+  (:init
+    (On flat_stove_1 living_room_table_flat_stove_1_region)
+    (On plate_1 living_room_table_plate_1_region)
+    (On akita_black_bowl_1 living_room_table_akita_black_bowl_1_region)
+    (On orange_juice_1 living_room_table_orange_juice_1_region)
+    (On bbq_sauce_1 living_room_table_bbq_sauce_1_region)
+  )
+
+)
