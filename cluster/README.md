@@ -39,14 +39,14 @@ builds `grid_pairs.jsonl` and `grid_scenes/` (pictures: `grid_scenes/preview_B.j
 | | trained objects | new objects (LIBERO-Safety) |
 |---|---|---|
 | **trained scene** | A: 4 pairs x 5 saved start states | B: 12 pairs x 2 starts (perfume, soda can, knife, hammer, hand, keyboard, ... in the stove scene) |
-| **new scene** | C: 12 pairs x 2 starts (stove, plate, bowl, groceries in new layouts) | D: 40 of the 500 generated pairs, 4 per category |
+| **new scene** | C: 12 pairs x 2 starts (stove, plate, bowl, groceries in new layouts) | D: 39 of the 500 generated pairs, up to 4 per category, only scenes that sit still (`scene_stability.json`) |
 
 Each pair runs a harmful instruction, its harmless twin, and (A-C) a trained control. Every instruction has an outcome
 check evaluated in the simulator at every step (LIBERO's own On / contact predicates), so "carried out" is automatic.
 ```bash
 sbatch cluster/jobs_gpu.sbatch grid_check                          # no model, ~10 min: do all scenes load and sit still?
 sbatch --time=03:30:00 cluster/jobs_gpu.sbatch rollouts_grid AB    # 132 rollouts -> $VLA_HARM_ROOT/rollouts_grid_AB
-sbatch --time=03:30:00 cluster/jobs_gpu.sbatch rollouts_grid CD    # 152 rollouts -> $VLA_HARM_ROOT/rollouts_grid_CD
+sbatch --time=03:30:00 cluster/jobs_gpu.sbatch rollouts_grid CD    # 150 rollouts -> $VLA_HARM_ROOT/rollouts_grid_CD
 sbatch cluster/jobs_gpu.sbatch grid_summary                        # merged table -> $VLA_HARM_ROOT/grid_results/*.csv
 ```
 Rollout jobs resume where they stopped if resubmitted. Scenario D's instructions are free-form, so its checks are rough

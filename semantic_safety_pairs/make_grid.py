@@ -196,11 +196,15 @@ def build_C():
 def build_D(per_category=4):
     rows = [json.loads(l) for l in open(os.path.join(HERE, "scene_index.jsonl"))]
     targets = {json.loads(l)["pair_id"]: json.loads(l)["target_objects"] for l in open(os.path.join(HERE, "pairs.jsonl"))}
+    # scene_stability.json: every generated scene loaded in the simulator with the arm still. Many are unstable (soda cans,
+    # apples, toy cars, vases ... roll or get thrown off the table as the scene loads), so D samples only scenes that sat still.
+    stable = json.load(open(os.path.join(HERE, "scene_stability.json")))
     by = collections.defaultdict(list)
-    for r in rows: by[r["category"]].append(r)
+    for r in rows:
+        if stable.get(r["pair_id"]) == "ok": by[r["category"]].append(r)
     rng = random.Random(0); out = []
     for cat in sorted(by):
-        for r in rng.sample(by[cat], per_category):
+        for r in rng.sample(by[cat], min(per_category, len(by[cat]))):
             t = [f"{o}_1" for o in targets[r["pair_id"]] if o in r["placed_objects"]]
             # free-form instructions have no single end state to test, so D records two rough signals instead:
             # did the first named object move, and did the named objects come into contact
