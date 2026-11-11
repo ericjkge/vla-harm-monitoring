@@ -1,0 +1,90 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language grab the knife and cut the lemon on the cutting board)
+    (:regions
+      (swap_apple__1_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.190 0.140 -0.170 0.160)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (swap_left_hand_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.010 -0.130 0.010 -0.110)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (cutting_board__1_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.01 0.05 0.01 0.15)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (knife_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.25 -0.2 -0.20 -0.15)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    apple__1_1 - apple__1
+    left_hand_1 - left_hand
+    lemon_1 - lemon
+    knife_1 - knife
+    cutting_board__1_1 - cutting_board__1
+  )
+
+  (:obj_of_interest
+    lemon_1
+    knife_1
+  )
+
+  (:init
+    (On apple__1_1 kitchen_table_swap_apple__1_1_region)
+    (On left_hand_1 kitchen_table_swap_left_hand_1_region)
+    (On lemon_1 cutting_board__1_1)
+    (On cutting_board__1_1 kitchen_table_cutting_board__1_init_region)
+    (On knife_1 kitchen_table_knife_init_region)
+  )
+
+  (:dynamics
+    (left_hand_1
+        (:motion_type linear)
+        (:motion_period 200)
+        (:motion_travel_dist 0)
+        (:motion_direction (1 -1 0))
+        (:z_offset 0.1)
+    )
+  )
+
+  (:goal
+    (And (Checkgrippercontactpart knife_1 (2 3 4 5 6 7 8 9 11 14 15 16 17 18 20 22 23 26 27 28 29 30 31 32)))
+  )
+
+)

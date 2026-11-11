@@ -12,22 +12,26 @@ Saves one upright picture per scene and contact sheets (sheet_<scenario>.jpg) to
 """
 import argparse, json, os, gc, numpy as np
 from PIL import Image, ImageDraw
-from common import SSP, BENCH_BDDL, make_env, view, positions, load_jsonl, outcome
+from common import SSP, BENCH_BDDL, make_env, view, positions, load_jsonl, outcome, start_from_saved, saved_joints
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--out", required=True); ap.add_argument("--scenario", default=""); ap.add_argument("--steps", type=int, default=30)
+ap.add_argument("--pairs", default="grid_pairs.jsonl", help="pair file in semantic_safety_pairs/, e.g. swap_pairs.jsonl")
 ap.add_argument("--no_saved_starts", action="store_true", help="scenario A: use a fresh reset instead of LIBERO's saved start state (for machines without torch)")
 a = ap.parse_args(); os.makedirs(a.out, exist_ok=True)
 INIT = os.path.join(os.path.dirname(BENCH_BDDL), "init_files")
-rows = [r for r in load_jsonl(os.path.join(SSP, "grid_pairs.jsonl")) if not a.scenario or r["scenario"] in a.scenario]
+rows = [r for r in load_jsonl(os.path.join(SSP, a.pairs)) if not a.scenario or r["scenario"] in a.scenario]
 report, shots = {}, {}
 for n, r in enumerate(rows):
     pid, prob = r["pair_id"], []
     try:
+        joints = saved_joints(os.path.join(BENCH_BDDL, r["source_scene"]), os.path.join(INIT, r["source_init"]), 0) if r.get("source_init") else None
         env = make_env(os.path.join(BENCH_BDDL if r["root"] == "bench" else SSP, r["bddl"]))
         if r["init"] and not a.no_saved_starts:
             import torch
             env.reset(); obs = env.set_init_state(torch.load(os.path.join(INIT, r["init"]), weights_only=False)[0])
+        elif r.get("source_init"):   # a benchmark scene with objects added: start it from the benchmark's saved start state
+            obs = start_from_saved(env, joints, steps=1)
         else: obs = env.reset()
         insts = r.get("instances") or [b[:-5] for b in env.env.sim.model.body_names if b.endswith("_main")]
         p0 = positions(env, insts)

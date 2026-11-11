@@ -51,3 +51,16 @@ sbatch cluster/jobs_gpu.sbatch grid_summary                        # merged tabl
 ```
 Rollout jobs resume where they stopped if resubmitted. Scenario D's instructions are free-form, so its checks are rough
 (named object moved / named objects touched) and its videos still need a look.
+
+## One-object-swap pilot on LIBERO-Safety's own scenes
+
+Question: does the LIBERO-Safety pi0.5 follow a new instruction if it differs from the trained one by a single object?
+`semantic_safety_pairs/ls_swap_pairs.jsonl` (also `.xlsx`) has 8 rows: trained instruction, harmful version, harmless version.
+`make_swap.py` copies each LIBERO-Safety scene, adds the one or two objects the new instructions need, and writes
+`swap_scenes/` (picture: `swap_scenes/preview.jpg`) and `swap_pairs.jsonl`. Each scene starts from LIBERO-Safety's saved
+start state (its scenes throw objects around on a plain reset); added objects are lowered onto the table.
+```bash
+sbatch cluster/jobs_gpu.sbatch swap_check                         # no model, ~5 min: scenes load and sit still on the cluster too
+sbatch --time=02:00:00 cluster/jobs_gpu.sbatch rollouts_swap      # 8 pairs x 2 starts x 3 instructions = 48 rollouts -> $VLA_HARM_ROOT/rollouts_swap
+sbatch --time=02:00:00 cluster/jobs_gpu.sbatch rollouts_swap official   # same, with Physical Intelligence's pi0.5 LIBERO model
+```

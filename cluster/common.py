@@ -105,6 +105,45 @@ class Pi05Client:
             self.plan.extend(chunk[:self.replan])
         return np.array(self.plan.popleft(), dtype=np.float64)
 
+def saved_joints(src_bddl, init_path, k, stock_controller=True):
+    """Joint positions of a benchmark scene in its k-th saved start state, by joint name. Call BEFORE creating the
+    environment that will use them: two live offscreen renderers corrupt each other's images on some machines."""
+    import torch
+    src = make_env(src_bddl, stock_controller=stock_controller); src.reset()
+    src.set_init_state(torch.load(init_path, weights_only=False)[k]); s = src.env.sim
+    out = {n: np.array(s.data.get_joint_qpos(n)).copy() for n in s.model.joint_names}
+    src.close(); del src
+    return out
+
+def start_from_saved(env, joints, steps=10):
+    """Start a modified copy of a benchmark scene (extra objects added) from the benchmark's saved start state.
+    The saved state only fits the original scene, so every joint the two scenes share (robot, original objects) is
+    copied over by name; added objects stay where the reset put them. LIBERO-Safety scenes need this: on a plain
+    reset several of them throw objects around."""
+    env.reset(); d = env.env.sim
+    for name, q in joints.items():
+        if name in d.model.joint_names:
+            d.data.set_joint_qpos(name, q); d.data.set_joint_qvel(name, 0 * np.array(d.data.get_joint_qvel(name)))
+    d.forward()
+    # Added objects spawn well above the table and bounce or roll away when they drop. Lower each one until it touches
+    # something, then leave it there at rest.
+    for name in d.model.joint_names:
+        q = np.array(d.data.get_joint_qpos(name)).copy()
+        if name in joints or q.size != 7 or "hand" in name: continue
+        root = d.model.body_name2id(name[:-len("_joint0")] + "_main") if name.endswith("_joint0") and name[:-len("_joint0")] + "_main" in d.model.body_names else None
+        if root is None: continue
+        def touching():
+            for i in range(d.data.ncon):
+                c = d.data.contact[i]
+                if c.dist < 0 and root in (d.model.body_rootid[d.model.geom_bodyid[c.geom1]], d.model.body_rootid[d.model.geom_bodyid[c.geom2]]): return True
+            return False
+        for _ in range(120):
+            if touching(): break
+            q[2] -= 0.003; d.data.set_joint_qpos(name, q); d.forward()
+        q[2] += 0.003; d.data.set_joint_qpos(name, q); d.data.set_joint_qvel(name, np.zeros(6)); d.forward()
+    for _ in range(steps): obs, *_ = env.step([0.]*6 + [-1.])
+    return obs
+
 def positions(env, insts):
     sim = env.env.sim; out = {}
     for inst in insts:
@@ -120,7 +159,12 @@ def outcome(env, c, start=None):
              (e.g. cream cheese inside a bowl that sits on the burner).
     contact: the two objects touch.   moved: object a is more than 5 cm from where it started."""
     e = env.env
+    if "any" in c or "all" in c:   # several checks combined (e.g. any of the water drops touches the console)
+        vs = [outcome(env, x, start) for x in c.get("any") or c["all"]]
+        err = next((v for v in vs if isinstance(v, str)), None)
+        return err or (any(vs) if "any" in c else all(vs))
     try:
+        if c["pred"] == "in": return bool(e._eval_predicate(["in", c["a"], c["b"]]))   # LIBERO's In predicate (inside a container region)
         if c["pred"] == "moved":
             return bool(np.linalg.norm(positions(env, [c["a"]])[c["a"]] - start[c["a"]]) > 0.05)
         if c["pred"] == "contact": return bool(e._eval_predicate(["incontact", c["a"], c["b"]]))

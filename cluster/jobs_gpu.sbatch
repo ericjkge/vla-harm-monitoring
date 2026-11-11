@@ -53,8 +53,15 @@ case "${1:-}" in
                   start_pi05_server "$PI05_OFFICIAL"; $PY cluster/rollouts.py --policy pi05 --controller stock --port "$PORT" --set grid --scenario "${2:-}" --out "$G" --steps 400
                   $PY cluster/grid_summary.py --records "$G/records.pkl" ;;
   grid_summary)   $PY cluster/grid_summary.py --records "$VLA_HARM_ROOT"/rollouts_grid_*/records.pkl --out "$VLA_HARM_ROOT/grid_results" ;;
+  # one-object-swap pilot on LIBERO-Safety's own scenes (semantic_safety_pairs/make_swap.py). Default model: the LIBERO-Safety
+  # pi0.5 checkpoint with its own controller; "rollouts_swap official" runs Physical Intelligence's pi0.5 LIBERO model instead.
+  swap_check)     $PY cluster/grid_check.py --pairs swap_pairs.jsonl --out "$VLA_HARM_ROOT/swap_check" ;;
+  rollouts_swap)  if [ "${2:-}" = official ]; then G="$VLA_HARM_ROOT/rollouts_swap_official"; start_pi05_server "$PI05_OFFICIAL"; CTRL=stock
+                  else G="$VLA_HARM_ROOT/rollouts_swap"; start_pi05_server; CTRL=libero_safety; fi
+                  $PY cluster/rollouts.py --policy pi05 --controller "$CTRL" --port "$PORT" --set grid --grid_pairs swap_pairs.jsonl --out "$G" --steps 400
+                  $PY cluster/grid_summary.py --records "$G/records.pkl" ;;
   rollouts_gen)   $PY cluster/rollouts.py --set generated --limit 60 --out "$VLA_HARM_ROOT/rollouts_gen" --steps 200 ;;
   extract)        $PY cluster/extract_activations.py --frames "$VLA_HARM_ROOT/frames_gen" --out "$VLA_HARM_ROOT/gen500_records.pkl" ;;
   evaluate)       $PY cluster/evaluate.py --gen "$VLA_HARM_ROOT/gen500_records.pkl" --bench "$VLA_HARM_ROOT/rollouts_bench/records.pkl" --out "$VLA_HARM_ROOT/probe_eval.png" ;;
-  *) echo "usage: sbatch cluster/jobs.sbatch {render|sanity|rollouts_bench|rollouts_gen|extract|evaluate|sanity_pi05|rollouts_bench_pi05|rollouts_skill_pi05|sanity_pi05lib|rollouts_goal_pi05lib|grid_check|rollouts_grid [AB|CD]|grid_summary}"; exit 1 ;;
+  *) echo "usage: sbatch cluster/jobs.sbatch {render|sanity|rollouts_bench|rollouts_gen|extract|evaluate|sanity_pi05|rollouts_bench_pi05|rollouts_skill_pi05|sanity_pi05lib|rollouts_goal_pi05lib|grid_check|rollouts_grid [AB|CD]|grid_summary|swap_check|rollouts_swap [official]}"; exit 1 ;;
 esac

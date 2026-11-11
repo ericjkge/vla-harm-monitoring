@@ -27,7 +27,7 @@ instruction, so the summary can say both "the harmful end state was reached when
 when the harmless twin was asked". --scenario picks one of A B C D.
 """
 import argparse, json, os, pickle, numpy as np, imageio
-from common import SSP, BENCH_BDDL, make_env, settle, frame, view, env_action, positions, load_vla, predict_action, hidden_states, load_jsonl, Pi05Client, outcome
+from common import SSP, BENCH_BDDL, make_env, settle, frame, view, env_action, positions, load_vla, predict_action, hidden_states, load_jsonl, Pi05Client, outcome, start_from_saved, saved_joints
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--set", choices=["benchmark", "generated", "sanity", "skill", "grid"], required=True)
@@ -40,6 +40,7 @@ ap.add_argument("--controller", choices=["auto", "stock", "libero_safety"], defa
                      "(the LIBERO-Safety pi0.5 checkpoint). auto = stock for openvla, libero_safety for pi05")
 ap.add_argument("--pairs", default="pi05_skill_pairs.jsonl", help="pair file (in semantic_safety_pairs/) for --set skill")
 ap.add_argument("--scenario", default="", help="for --set grid: run only these scenarios, e.g. AB")
+ap.add_argument("--grid_pairs", default="grid_pairs.jsonl", help="pair file (in semantic_safety_pairs/) for --set grid, e.g. swap_pairs.jsonl")
 ap.add_argument("--host", default="127.0.0.1"); ap.add_argument("--port", type=int, default=8000); ap.add_argument("--replan", type=int, default=5)
 a = ap.parse_args(); os.makedirs(f"{a.out}/videos", exist_ok=True)
 STOCK = a.policy == "openvla" if a.controller == "auto" else a.controller == "stock"
@@ -71,12 +72,13 @@ elif a.set == "skill":
                   init=os.path.join(INIT, r["bddl"][:-5] + ".pruned_init")) for r in load_jsonl(os.path.join(SSP, a.pairs))]
 elif a.set == "grid":
     INIT = os.path.join(os.path.dirname(BENCH_BDDL), "init_files"); pairs = []
-    for r in load_jsonl(os.path.join(SSP, "grid_pairs.jsonl")):
+    for r in load_jsonl(os.path.join(SSP, a.grid_pairs)):
         if a.scenario and r["scenario"] not in a.scenario: continue
         for k in range(r["n_starts"]):   # start k: the k-th saved LIBERO start state (A), or simulator seed k (B-D)
             pairs.append(dict(pair_id=f"{r['pair_id']}_s{k}", base=r["pair_id"], scenario=r["scenario"], start=k, bddl=os.path.join(BENCH_BDDL if r["root"] == "bench" else SSP, r["bddl"]),
                               trained=r["trained"], safe=r["safe"], unsafe=r["unsafe"], tier=r.get("tier", "grid"), category=r["category"], instances=r.get("instances"),
-                              init=os.path.join(INIT, r["init"]) if r["init"] else None, checks=r["checks"]))
+                              init=os.path.join(INIT, r["init"]) if r["init"] else None, checks=r["checks"],
+                              source=(os.path.join(BENCH_BDDL, r["source_scene"]), os.path.join(INIT, r["source_init"])) if r.get("source_init") else None))
 elif a.set == "benchmark":
     pairs = [dict(pair_id=r["task_id"], bddl=os.path.join(BENCH_BDDL, r["bddl"]), safe=r["safe_instruction"],
                   unsafe=r["unsafe_instruction"], tier=r["tier"], category=r["category"], instances=None)
@@ -100,11 +102,13 @@ for p in pairs:
     for cond in {"sanity": ("task",), "skill": ("trained", "safe", "unsafe"), "grid": ("trained", "safe", "unsafe")}.get(a.set, ("safe", "unsafe")):
         if (p["pair_id"], cond) in done or p.get(cond) is None: continue
         instr = p[cond]
+        joints = saved_joints(p["source"][0], p["source"][1], p.get("start", 0), stock_controller=STOCK) if p.get("source") else None
         env = make_env(p["bddl"], seed=p.get("start", 0) if not p.get("init") else 0, stock_controller=STOCK)
         if p.get("init"):  # standard LIBERO tasks start from the benchmark's saved initial state
             import torch
             env.reset(); obs = env.set_init_state(torch.load(p["init"], weights_only=False)[p.get("start", 0)])
             for _ in range(10): obs, *_ = env.step([0.]*6 + [-1.])
+        elif p.get("source"): obs = start_from_saved(env, joints)   # benchmark scene + added objects
         else: obs = settle(env)
         insts = p["instances"] or [b[:-5] for b in env.env.sim.model.body_names if b.endswith("_main")]
         obj0 = positions(env, insts)
