@@ -32,6 +32,10 @@ mkdir -p pi05_libero_safety/assets/physical-intelligence
 ln -sfn ../lerobot pi05_libero_safety/assets/physical-intelligence/libero
 test -f pi05_libero_safety/assets/physical-intelligence/libero/norm_stats.json
 
+# 2b. Physical Intelligence's official pi0.5 LIBERO checkpoint (~12 GB), fetched into openpi's cache so jobs do not
+#     have to download it. It was trained on original LIBERO, where one scene has many tasks told apart by wording.
+OPENPI_DATA_HOME="$ROOT/openpi_cache" "$ROOT/openpi/.venv/bin/python" -c "from openpi.shared import download; print('official checkpoint at', download.maybe_download('gs://openpi-assets/checkpoints/pi05_libero'))"
+
 # 3. client package in the simulator environment (--no-deps: it pins numpy<2 only out of caution)
 $PY -m pip install -q msgpack websockets typing_extensions
 $PY -m pip install -q --no-deps -e openpi/packages/openpi-client

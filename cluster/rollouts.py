@@ -30,17 +30,31 @@ ap.add_argument("--out", required=True); ap.add_argument("--steps", type=int, de
 ap.add_argument("--limit", type=int, default=0); ap.add_argument("--model", default="openvla/openvla-7b-finetuned-libero-10")
 ap.add_argument("--unnorm_key", default="libero_10"); ap.add_argument("--four_bit", action="store_true")
 ap.add_argument("--policy", choices=["openvla", "pi05"], default="openvla")
+ap.add_argument("--controller", choices=["auto", "stock", "libero_safety"], default="auto",
+                help="arm controller: stock robosuite (models trained on original LIBERO) or LIBERO-Safety's 40x-scaled one "
+                     "(the LIBERO-Safety pi0.5 checkpoint). auto = stock for openvla, libero_safety for pi05")
+ap.add_argument("--pairs", default="pi05_skill_pairs.jsonl", help="pair file (in semantic_safety_pairs/) for --set skill")
 ap.add_argument("--host", default="127.0.0.1"); ap.add_argument("--port", type=int, default=8000); ap.add_argument("--replan", type=int, default=5)
 a = ap.parse_args(); os.makedirs(f"{a.out}/videos", exist_ok=True)
-STOCK = a.policy == "openvla"   # OpenVLA was trained with stock robosuite control; pi0.5 with LIBERO-Safety's
+STOCK = a.policy == "openvla" if a.controller == "auto" else a.controller == "stock"
 TAG = f"{a.policy}:{'stock' if STOCK else 'libero_safety'}_osc_pose"
 
 if a.set == "sanity":
     import glob, re
     pairs = []
-    suites = ["libero_10"] if STOCK else ["affordance/L0", "obstacle_avoidance/L0"]
-    for b in [f for su in suites for f in sorted(glob.glob(os.path.join(BENCH_BDDL, su, "*.bddl")))]:
-        lang = re.search(r"\(:language ([^)]*)\)", open(b).read()).group(1).strip()
+    # tasks the model in use was trained on: LIBERO-Safety's own level-0 suites for its checkpoint, otherwise original
+    # LIBERO (libero_10 for the OpenVLA fine-tune; the 10 canonical libero_goal tasks for the official pi0.5 LIBERO model)
+    GOAL10 = ["open_the_middle_drawer_of_the_cabinet", "open_the_top_drawer_and_put_the_bowl_inside", "push_the_plate_to_the_front_of_the_stove",
+              "put_the_bowl_on_the_plate", "put_the_bowl_on_the_stove", "put_the_bowl_on_top_of_the_cabinet", "put_the_cream_cheese_in_the_bowl",
+              "put_the_wine_bottle_on_the_rack", "put_the_wine_bottle_on_top_of_the_cabinet", "turn_on_the_stove"]
+    if not STOCK: files = [f for su in ("affordance/L0", "obstacle_avoidance/L0") for f in sorted(glob.glob(os.path.join(BENCH_BDDL, su, "*.bddl")))]
+    elif a.policy == "openvla": files = sorted(glob.glob(os.path.join(BENCH_BDDL, "libero_10", "*.bddl")))
+    else: files = [os.path.join(BENCH_BDDL, "libero_goal", n + ".bddl") for n in GOAL10]
+    for b in files:
+        name = os.path.basename(b)[:-5]
+        # original LIBERO takes the instruction from the file name (after any SCENE prefix), not from the :language field
+        if STOCK: lang = (name.split("_", name.split("_").index(next(w for w in name.split("_") if w.startswith("SCENE"))) + 1)[-1] if "SCENE" in name else name).replace("_", " ")
+        else: lang = re.search(r"\(:language ([^)]*)\)", open(b).read()).group(1).strip()
         init = b.replace(BENCH_BDDL, os.path.join(os.path.dirname(BENCH_BDDL), "init_files"))[:-5] + ".pruned_init"
         if not os.path.exists(init): continue  # the repo has stray duplicates ("... copy 2.bddl") with no initial state
         pairs.append(dict(pair_id=os.path.basename(b)[:-5][:60], bddl=b, task=lang, tier="sanity", category=os.path.relpath(os.path.dirname(b), BENCH_BDDL), instances=None, init=init))
@@ -48,7 +62,7 @@ elif a.set == "skill":
     INIT = os.path.join(os.path.dirname(BENCH_BDDL), "init_files")
     pairs = [dict(pair_id=r["pair_id"], bddl=os.path.join(BENCH_BDDL, r["bddl"]), trained=r["trained_instruction"], safe=r["safe_instruction"],
                   unsafe=r["unsafe_instruction"], tier="skill", category=r["category"], instances=None,
-                  init=os.path.join(INIT, r["bddl"][:-5] + ".pruned_init")) for r in load_jsonl(os.path.join(SSP, "pi05_skill_pairs.jsonl"))]
+                  init=os.path.join(INIT, r["bddl"][:-5] + ".pruned_init")) for r in load_jsonl(os.path.join(SSP, a.pairs))]
 elif a.set == "benchmark":
     pairs = [dict(pair_id=r["task_id"], bddl=os.path.join(BENCH_BDDL, r["bddl"]), safe=r["safe_instruction"],
                   unsafe=r["unsafe_instruction"], tier=r["tier"], category=r["category"], instances=None)
