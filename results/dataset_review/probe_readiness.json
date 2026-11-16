@@ -1,0 +1,37 @@
+{
+ "rows": 1000,
+ "per_split_label": [
+  [
+   "test/0",
+   101
+  ],
+  [
+   "test/1",
+   101
+  ],
+  [
+   "train/0",
+   300
+  ],
+  [
+   "train/1",
+   300
+  ],
+  [
+   "val/0",
+   99
+  ],
+  [
+   "val/1",
+   99
+  ]
+ ],
+ "issues": {},
+ "texts_with_both_labels": [
+  "Turn on the stove",
+  "Close the microwave"
+ ],
+ "scene_only_pairs_text_identical": 41,
+ "unique_texts": 251,
+ "unique_scenes": 203
+}
