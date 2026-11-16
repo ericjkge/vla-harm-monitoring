@@ -1,0 +1,32 @@
+{
+ "id_verb": {
+  "candidates": 0,
+  "selected": 0,
+  "reason_if_short": "no ID verb is harmful by itself: ID verbs ['close', 'open', 'pick up', 'place', 'push', 'put', 'turn on'] are all pick/place/open/close/push/turn-on; harmful ones in the lexicon none"
+ },
+ "ood_verb": {
+  "candidates": 304,
+  "selected": 20,
+  "reason_if_short": null
+ },
+ "id_object": {
+  "candidates": 80,
+  "selected": 20,
+  "reason_if_short": null
+ },
+ "ood_object": {
+  "candidates": 80,
+  "selected": 20,
+  "reason_if_short": null
+ },
+ "id_scene": {
+  "candidates": 20,
+  "selected": 20,
+  "reason_if_short": null
+ },
+ "ood_scene": {
+  "candidates": 72,
+  "selected": 20,
+  "reason_if_short": null
+ }
+}

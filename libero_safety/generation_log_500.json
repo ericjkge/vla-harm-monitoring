@@ -1,0 +1,244 @@
+{
+ "caps": {
+  "smash": 26,
+  "push_off": 10,
+  "stove_verb": 5,
+  "pour_onto": 14,
+  "hand_tools": 8,
+  "stove_obj": 12,
+  "micro_obj": 8,
+  "candle_obj": 4,
+  "stove_scene": 18,
+  "stove_scene_xlayout": 4,
+  "micro_scene": 10,
+  "cut_scene": 2
+ },
+ "phases": {
+  "pilot/verb": {
+   "explicit_target": 30,
+   "implied_target": 10,
+   "explicit": 30,
+   "implied": 10,
+   "total_target": 40
+  },
+  "pilot/object": {
+   "explicit_target": 30,
+   "implied_target": 10,
+   "explicit": 22,
+   "implied": 18,
+   "total_target": 40
+  },
+  "pilot/scene": {
+   "explicit_target": 30,
+   "implied_target": 10,
+   "explicit": 0,
+   "implied": 34,
+   "total_target": 40
+  },
+  "expansion/verb": {
+   "explicit_target": 10,
+   "implied_target": 0,
+   "explicit": 6,
+   "implied": 3,
+   "total_target": 10
+  },
+  "expansion/object": {
+   "explicit_target": 10,
+   "implied_target": 0,
+   "explicit": 0,
+   "implied": 6,
+   "total_target": 10
+  },
+  "expansion/scene": {
+   "explicit_target": 0,
+   "implied_target": 10,
+   "explicit": 0,
+   "implied": 0,
+   "total_target": 10
+  }
+ },
+ "dropped_original": [
+  {
+   "pair_id": "pair_0008",
+   "reasons": [
+    "harmless: v0: fell off ['milk_1']",
+    "harmless: v1: fell off ['milk_1']",
+    "harmless: v2: fell off ['milk_1']",
+    "harmful: v0: fell off ['milk_1']",
+    "harmful: v1: fell off ['milk_1']",
+    "harmful: v2: fell off ['milk_1']"
+   ]
+  },
+  {
+   "pair_id": "pair_0013",
+   "reasons": [
+    "harmless: v0: fell off ['akita_black_bowl_1']",
+    "harmless: v1: fell off ['akita_black_bowl_1']",
+    "harmless: v2: fell off ['akita_black_bowl_1']",
+    "harmful: v0: fell off ['akita_black_bowl_1']",
+    "harmful: v1: fell off ['akita_black_bowl_1']",
+    "harmful: v2: fell off ['akita_black_bowl_1']"
+   ]
+  },
+  {
+   "pair_id": "pair_0081",
+   "reasons": [
+    "harmful: v0: placement failed ['can_of_soda__6_1->microwave_1_heating_region']",
+    "harmful: v1: placement failed ['can_of_soda__6_1->microwave_1_heating_region']",
+    "harmful: v2: placement failed ['can_of_soda__6_1->microwave_1_heating_region']"
+   ]
+  },
+  {
+   "pair_id": "pair_0083",
+   "reasons": [
+    "harmless: v0: placement failed ['apple__7_1->cutting_board__1_1']",
+    "harmless: v1: placement failed ['apple__7_1->cutting_board__1_1']",
+    "harmless: v2: placement failed ['apple__7_1->cutting_board__1_1']"
+   ]
+  },
+  {
+   "pair_id": "pair_0087",
+   "reasons": [
+    "harmful: v0: placement failed ['dish_towel_1->flat_stove_1_cook_region']",
+    "harmful: v1: placement failed ['dish_towel_1->flat_stove_1_cook_region']",
+    "harmful: v2: placement failed ['dish_towel_1->flat_stove_1_cook_region']"
+   ]
+  },
+  {
+   "pair_id": "pair_0088",
+   "reasons": [
+    "harmful: v0: placement failed ['lemon_1->black_book_1']",
+    "harmful: v1: placement failed ['lemon_1->black_book_1']",
+    "harmful: v2: placement failed ['lemon_1->black_book_1']"
+   ]
+  },
+  {
+   "pair_id": "pair_0092",
+   "reasons": [
+    "harmful: v0: placement failed ['can_of_soda__6_1->microwave_1_heating_region']",
+    "harmful: v1: placement failed ['can_of_soda__6_1->microwave_1_heating_region']",
+    "harmful: v2: placement failed ['can_of_soda__6_1->microwave_1_heating_region']"
+   ]
+  },
+  {
+   "pair_id": "pair_0099",
+   "reasons": [
+    "harmful: v0: placement failed ['can_of_soda__6_1->microwave_1_heating_region']",
+    "harmful: v1: placement failed ['can_of_soda__6_1->microwave_1_heating_region']",
+    "harmful: v2: placement failed ['can_of_soda__6_1->microwave_1_heating_region']"
+   ]
+  },
+  {
+   "pair_id": "pair_0107",
+   "reasons": [
+    "harmless: render failed"
+   ]
+  },
+  {
+   "pair_id": "pair_0117",
+   "reasons": [
+    "harmless: v0: fell off ['milk_1']",
+    "harmless: v1: fell off ['milk_1']",
+    "harmless: v2: fell off ['milk_1']",
+    "harmful: v0: fell off ['milk_1']",
+    "harmful: v1: fell off ['milk_1']",
+    "harmful: v2: fell off ['milk_1']"
+   ]
+  },
+  {
+   "pair_id": "pair_0119",
+   "reasons": [
+    "harmless: v0: fell off ['akita_black_bowl_1']",
+    "harmless: v1: fell off ['akita_black_bowl_1']",
+    "harmless: v2: fell off ['akita_black_bowl_1']",
+    "harmful: v0: fell off ['akita_black_bowl_1']",
+    "harmful: v1: fell off ['akita_black_bowl_1']",
+    "harmful: v2: fell off ['akita_black_bowl_1']"
+   ]
+  },
+  {
+   "pair_id": "pair_0127",
+   "reasons": [
+    "harmless: v0: fell off ['akita_black_bowl_1', 'dish_towel_1', 'wine_bottle_1', 'plate_1', 'porcelain_bowl_1', 'wood_bowl_1']",
+    "harmless: v1: fell off ['akita_black_bowl_1', 'dish_towel_1', 'wine_bottle_1', 'plate_1', 'porcelain_bowl_1', 'wood_bowl_1']",
+    "harmless: v2: fell off ['akita_black_bowl_1', 'dish_towel_1', 'wine_bottle_1', 'plate_1', 'porcelain_bowl_1', 'wood_bowl_1']",
+    "harmful: v0: fell off ['akita_black_bowl_1', 'dish_towel_1', 'wine_bottle_1', 'plate_1', 'porcelain_bowl_1', 'wood_bowl_1']",
+    "harmful: v1: fell off ['akita_black_bowl_1', 'dish_towel_1', 'wine_bottle_1', 'plate_1', 'porcelain_bowl_1', 'wood_bowl_1']",
+    "harmful: v2: fell off ['akita_black_bowl_1', 'dish_towel_1', 'wine_bottle_1', 'plate_1', 'porcelain_bowl_1', 'wood_bowl_1']"
+   ]
+  }
+ ],
+ "explicit_candidates_unrendered": 0,
+ "target": 500,
+ "requested_explicit": 325,
+ "explicit": 325,
+ "implied": 175,
+ "n_original": 117,
+ "n_expansion": 383,
+ "n_total": 500,
+ "explicit_shortfall": 0,
+ "caps_target": {
+  "smash": 1,
+  "push_off": 1,
+  "pour_onto": 1,
+  "hand_tools": 1,
+  "stove_obj": 90,
+  "micro_obj": 32,
+  "candle_obj": 9,
+  "stove_verb": 36,
+  "flip_water": 1,
+  "cut_on_book": 1,
+  "towel_stove": 1,
+  "frypan_egg": 1,
+  "book_vase": 1,
+  "milk_keyboard": 1,
+  "egg_microwave": 1,
+  "bowl_candle": 1,
+  "stove_scene": 45,
+  "stove_scene_xlayout": 45,
+  "micro_scene": 12,
+  "cut_scene": 2
+ },
+ "pool_pairs_on_bad_scenes": 99,
+ "selection": {
+  "rendered_ok_pool": 702
+ },
+ "needs_render": 0,
+ "n_unrendered_scene_pairs": 0,
+ "split_table": {
+  "expansion/test/explicit_harm": 46,
+  "expansion/test/implied_harm": 17,
+  "expansion/train/explicit_harm": 171,
+  "expansion/train/implied_harm": 75,
+  "expansion/val/explicit_harm": 54,
+  "expansion/val/implied_harm": 20,
+  "original/test/explicit_harm": 20,
+  "original/test/implied_harm": 18,
+  "original/train/explicit_harm": 24,
+  "original/train/implied_harm": 30,
+  "original/val/explicit_harm": 10,
+  "original/val/implied_harm": 15
+ },
+ "pairs_by_family": {
+  "smash": 262,
+  "push_off": 30,
+  "cut_on_book": 1,
+  "stove_verb": 21,
+  "book_vase": 1,
+  "flip_water": 1,
+  "towel_stove": 1,
+  "bowl_candle": 1,
+  "frypan_egg": 1,
+  "milk_keyboard": 1,
+  "egg_microwave": 1,
+  "hand_tools": 9,
+  "pour_onto": 24,
+  "stove_obj": 65,
+  "micro_obj": 31,
+  "candle_obj": 9,
+  "stove_scene": 16,
+  "micro_scene": 8,
+  "stove_scene_xlayout": 17
+ },
+ "distinct_harmful_instructions": 83
+}

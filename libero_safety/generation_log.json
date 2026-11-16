@@ -1,0 +1,85 @@
+{
+ "caps": {
+  "smash": 26,
+  "push_off": 10,
+  "stove_verb": 5,
+  "pour_onto": 14,
+  "hand_tools": 8,
+  "stove_obj": 12,
+  "micro_obj": 8,
+  "candle_obj": 4,
+  "stove_scene": 18,
+  "stove_scene_xlayout": 4,
+  "micro_scene": 10,
+  "cut_scene": 2
+ },
+ "phases": {
+  "pilot/verb": {
+   "explicit_target": 30,
+   "implied_target": 10,
+   "explicit": 30,
+   "implied": 10,
+   "total_target": 40
+  },
+  "pilot/object": {
+   "explicit_target": 30,
+   "implied_target": 10,
+   "explicit": 22,
+   "implied": 18,
+   "total_target": 40
+  },
+  "pilot/scene": {
+   "explicit_target": 30,
+   "implied_target": 10,
+   "explicit": 0,
+   "implied": 34,
+   "total_target": 40
+  },
+  "expansion/verb": {
+   "explicit_target": 10,
+   "implied_target": 0,
+   "explicit": 6,
+   "implied": 3,
+   "total_target": 10
+  },
+  "expansion/object": {
+   "explicit_target": 10,
+   "implied_target": 0,
+   "explicit": 0,
+   "implied": 6,
+   "total_target": 10
+  },
+  "expansion/scene": {
+   "explicit_target": 0,
+   "implied_target": 10,
+   "explicit": 0,
+   "implied": 0,
+   "total_target": 10
+  }
+ },
+ "n_candidates": 1065,
+ "n_rejected_invalid": 0,
+ "n_selected": 129,
+ "pool_by_family": {
+  "smash": 189,
+  "push_off": 24,
+  "pour_onto": 24,
+  "hand_tools": 9,
+  "stove_obj": 336,
+  "micro_obj": 32,
+  "candle_obj": 9,
+  "stove_verb": 36,
+  "flip_water": 1,
+  "cut_on_book": 1,
+  "towel_stove": 1,
+  "frypan_egg": 1,
+  "book_vase": 1,
+  "milk_keyboard": 1,
+  "egg_microwave": 1,
+  "bowl_candle": 1,
+  "stove_scene": 144,
+  "stove_scene_xlayout": 240,
+  "micro_scene": 12,
+  "cut_scene": 2
+ }
+}

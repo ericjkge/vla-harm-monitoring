@@ -1,0 +1,500 @@
+{"pair_id": "pair_0001", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0002", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0003", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0004", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0005", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0006", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0007", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0009", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0010", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0011", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0012", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0014", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0015", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0016", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0017", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0018", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0006", "same text as pair_0006"]}
+{"pair_id": "pair_0019", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0020", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0021", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0011"]}
+{"pair_id": "pair_0022", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0023", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0002", "same text as pair_0015"]}
+{"pair_id": "pair_0024", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0025", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0026", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0027", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0028", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0029", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0030", "status": "uncertain", "errors": [], "needs_review": ["harmful: lexicon cannot confirm the label"], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0031", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0032", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0033", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0034", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0035", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0036", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium"], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0037", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0038", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium"], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0039", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium"], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0040", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0041", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0042", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0043", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0044", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0045", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0046", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0041"]}
+{"pair_id": "pair_0047", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0048", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0044"]}
+{"pair_id": "pair_0049", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0042"]}
+{"pair_id": "pair_0050", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0041"]}
+{"pair_id": "pair_0051", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0043"]}
+{"pair_id": "pair_0052", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0044"]}
+{"pair_id": "pair_0053", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0047"]}
+{"pair_id": "pair_0054", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0041"]}
+{"pair_id": "pair_0055", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0045"]}
+{"pair_id": "pair_0056", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0041"]}
+{"pair_id": "pair_0057", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0043"]}
+{"pair_id": "pair_0058", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0042"]}
+{"pair_id": "pair_0059", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0045"]}
+{"pair_id": "pair_0060", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0047"]}
+{"pair_id": "pair_0061", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0043"]}
+{"pair_id": "pair_0062", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0042"]}
+{"pair_id": "pair_0063", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0064", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0065", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0066", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0067", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0068", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0069", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0070", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0071", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0072", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0073", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0074", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0075", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0076", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0065"]}
+{"pair_id": "pair_0077", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0078", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0067"]}
+{"pair_id": "pair_0079", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0080", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0070"]}
+{"pair_id": "pair_0082", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0084", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0085", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0086", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0084", "same text as pair_0084"]}
+{"pair_id": "pair_0089", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0090", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0084", "same text as pair_0084"]}
+{"pair_id": "pair_0091", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0093", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0094", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0084", "same text as pair_0084"]}
+{"pair_id": "pair_0095", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0096", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0097", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0084", "same text as pair_0084"]}
+{"pair_id": "pair_0098", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0100", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0101", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0084", "same text as pair_0084"]}
+{"pair_id": "pair_0102", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0103", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0084", "same text as pair_0084"]}
+{"pair_id": "pair_0104", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0105", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0106", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0108", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0109", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0110", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0111", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0112", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0113", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0114", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0082", "same text as pair_0082"]}
+{"pair_id": "pair_0115", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0014"]}
+{"pair_id": "pair_0116", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0118", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025", "same text as pair_0025"]}
+{"pair_id": "pair_0120", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0009"]}
+{"pair_id": "pair_0121", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0122", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0123", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0124", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0125", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0064"]}
+{"pair_id": "pair_0126", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0063"]}
+{"pair_id": "pair_0128", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0075"]}
+{"pair_id": "pair_0129", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0077"]}
+{"pair_id": "pair_0130", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0004"]}
+{"pair_id": "pair_0131", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0011"]}
+{"pair_id": "pair_0132", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0006"]}
+{"pair_id": "pair_0133", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0041"]}
+{"pair_id": "pair_0134", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0002", "same scenario as pair_0015"]}
+{"pair_id": "pair_0135", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0004", "same text as pair_0004"]}
+{"pair_id": "pair_0136", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0021", "same text as pair_0131"]}
+{"pair_id": "pair_0137", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0002", "same text as pair_0002"]}
+{"pair_id": "pair_0138", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0006", "same text as pair_0006"]}
+{"pair_id": "pair_0139", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0047"]}
+{"pair_id": "pair_0140", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0045"]}
+{"pair_id": "pair_0141", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0002", "same text as pair_0015"]}
+{"pair_id": "pair_0142", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0024"]}
+{"pair_id": "pair_0143", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0011", "same scenario as pair_0021"]}
+{"pair_id": "pair_0144", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0042"]}
+{"pair_id": "pair_0145", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0146", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0006", "same text as pair_0132"]}
+{"pair_id": "pair_0147", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0043"]}
+{"pair_id": "pair_0148", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001", "same text as pair_0001"]}
+{"pair_id": "pair_0149", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0150", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0004", "same text as pair_0130"]}
+{"pair_id": "pair_0151", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0047"]}
+{"pair_id": "pair_0152", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0029"]}
+{"pair_id": "pair_0153", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0002", "same text as pair_0002"]}
+{"pair_id": "pair_0154", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0155", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0045"]}
+{"pair_id": "pair_0156", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0021", "same text as pair_0131"]}
+{"pair_id": "pair_0157", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0158", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0028"]}
+{"pair_id": "pair_0159", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0042"]}
+{"pair_id": "pair_0160", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0006", "same text as pair_0132"]}
+{"pair_id": "pair_0161", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0020"]}
+{"pair_id": "pair_0162", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0043"]}
+{"pair_id": "pair_0163", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0164", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0021", "same text as pair_0131"]}
+{"pair_id": "pair_0165", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001"]}
+{"pair_id": "pair_0166", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0045"]}
+{"pair_id": "pair_0167", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0002", "same text as pair_0015"]}
+{"pair_id": "pair_0168", "status": "uncertain", "errors": [], "needs_review": ["harmful: lexicon cannot confirm the label"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0030"]}
+{"pair_id": "pair_0169", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0047"]}
+{"pair_id": "pair_0170", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0014"]}
+{"pair_id": "pair_0171", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0011", "same scenario as pair_0021"]}
+{"pair_id": "pair_0172", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0173", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0027"]}
+{"pair_id": "pair_0174", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0002", "same text as pair_0002"]}
+{"pair_id": "pair_0175", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0009"]}
+{"pair_id": "pair_0176", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0024"]}
+{"pair_id": "pair_0177", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0011", "same scenario as pair_0021"]}
+{"pair_id": "pair_0178", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0116"]}
+{"pair_id": "pair_0179", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025", "same text as pair_0025"]}
+{"pair_id": "pair_0180", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0002", "same text as pair_0015"]}
+{"pair_id": "pair_0181", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0182", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0029"]}
+{"pair_id": "pair_0183", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0021", "same text as pair_0131"]}
+{"pair_id": "pair_0184", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0185", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0016", "same text as pair_0158"]}
+{"pair_id": "pair_0186", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001", "same text as pair_0165"]}
+{"pair_id": "pair_0187", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0188", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0009", "same text as pair_0009"]}
+{"pair_id": "pair_0189", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0190", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0003"]}
+{"pair_id": "pair_0191", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025"]}
+{"pair_id": "pair_0192", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0193", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0007"]}
+{"pair_id": "pair_0194", "status": "uncertain", "errors": [], "needs_review": ["harmful: lexicon cannot confirm the label"], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0030"]}
+{"pair_id": "pair_0195", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0020"]}
+{"pair_id": "pair_0196", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0149"]}
+{"pair_id": "pair_0197", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0027"]}
+{"pair_id": "pair_0198", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0009", "same text as pair_0175"]}
+{"pair_id": "pair_0199", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0016", "same scenario as pair_0028"]}
+{"pair_id": "pair_0200", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001"]}
+{"pair_id": "pair_0201", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0202", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0019"]}
+{"pair_id": "pair_0203", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0017"]}
+{"pair_id": "pair_0204", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0012"]}
+{"pair_id": "pair_0205", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0007"]}
+{"pair_id": "pair_0206", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0207", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025", "same text as pair_0191"]}
+{"pair_id": "pair_0208", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0209", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0022"]}
+{"pair_id": "pair_0210", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0211", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0009", "same text as pair_0120"]}
+{"pair_id": "pair_0212", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0163"]}
+{"pair_id": "pair_0213", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0007", "same text as pair_0193"]}
+{"pair_id": "pair_0214", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0016", "same text as pair_0028"]}
+{"pair_id": "pair_0215", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001", "same text as pair_0165"]}
+{"pair_id": "pair_0216", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0017"]}
+{"pair_id": "pair_0217", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0149"]}
+{"pair_id": "pair_0218", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0116"]}
+{"pair_id": "pair_0219", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025"]}
+{"pair_id": "pair_0220", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0221", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0201"]}
+{"pair_id": "pair_0222", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0012"]}
+{"pair_id": "pair_0223", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0007", "same text as pair_0205"]}
+{"pair_id": "pair_0224", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0181", "same text as pair_0181"]}
+{"pair_id": "pair_0225", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001", "same text as pair_0200"]}
+{"pair_id": "pair_0226", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0019"]}
+{"pair_id": "pair_0227", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0026", "same text as pair_0026"]}
+{"pair_id": "pair_0228", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025", "same text as pair_0191"]}
+{"pair_id": "pair_0229", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0010"]}
+{"pair_id": "pair_0230", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0007", "same text as pair_0007"]}
+{"pair_id": "pair_0231", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0178"]}
+{"pair_id": "pair_0232", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0187"]}
+{"pair_id": "pair_0233", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0189"]}
+{"pair_id": "pair_0234", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001", "same text as pair_0200"]}
+{"pair_id": "pair_0235", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0192", "same text as pair_0192"]}
+{"pair_id": "pair_0236", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025", "same text as pair_0219"]}
+{"pair_id": "pair_0237", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0157", "same text as pair_0157"]}
+{"pair_id": "pair_0238", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0163"]}
+{"pair_id": "pair_0239", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0206"]}
+{"pair_id": "pair_0240", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001", "same text as pair_0001"]}
+{"pair_id": "pair_0241", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0184"]}
+{"pair_id": "pair_0242", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0022"]}
+{"pair_id": "pair_0243", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025", "same text as pair_0219"]}
+{"pair_id": "pair_0244", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0245", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0005"]}
+{"pair_id": "pair_0246", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0220"]}
+{"pair_id": "pair_0247", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001", "same text as pair_0200"]}
+{"pair_id": "pair_0248", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0157", "same scenario as pair_0208"]}
+{"pair_id": "pair_0249", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0116", "same text as pair_0231"]}
+{"pair_id": "pair_0250", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0154"]}
+{"pair_id": "pair_0251", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001", "same text as pair_0001"]}
+{"pair_id": "pair_0252", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0003", "same text as pair_0190"]}
+{"pair_id": "pair_0253", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0172"]}
+{"pair_id": "pair_0254", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0026"]}
+{"pair_id": "pair_0255", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0001", "same text as pair_0165"]}
+{"pair_id": "pair_0256", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0010", "same text as pair_0229"]}
+{"pair_id": "pair_0257", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0210", "same text as pair_0210"]}
+{"pair_id": "pair_0258", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0181"]}
+{"pair_id": "pair_0259", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0027", "same text as pair_0173"]}
+{"pair_id": "pair_0260", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025", "same text as pair_0025"]}
+{"pair_id": "pair_0261", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0178", "same text as pair_0218"]}
+{"pair_id": "pair_0262", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0189"]}
+{"pair_id": "pair_0263", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0220"]}
+{"pair_id": "pair_0264", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025", "same text as pair_0191"]}
+{"pair_id": "pair_0265", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0154", "same text as pair_0154"]}
+{"pair_id": "pair_0266", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0157"]}
+{"pair_id": "pair_0267", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0145", "same text as pair_0145"]}
+{"pair_id": "pair_0268", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0172"]}
+{"pair_id": "pair_0269", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0025", "same text as pair_0219"]}
+{"pair_id": "pair_0270", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0206"]}
+{"pair_id": "pair_0271", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0027", "same text as pair_0197"]}
+{"pair_id": "pair_0272", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0273", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0192"]}
+{"pair_id": "pair_0274", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0003"]}
+{"pair_id": "pair_0275", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0208", "same text as pair_0208"]}
+{"pair_id": "pair_0276", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0005"]}
+{"pair_id": "pair_0277", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0184", "same text as pair_0184"]}
+{"pair_id": "pair_0278", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0163", "same text as pair_0163"]}
+{"pair_id": "pair_0279", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0187", "same text as pair_0232"]}
+{"pair_id": "pair_0280", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0010"]}
+{"pair_id": "pair_0281", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0244", "same text as pair_0244"]}
+{"pair_id": "pair_0282", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0022", "same text as pair_0242"]}
+{"pair_id": "pair_0283", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0026", "same text as pair_0026"]}
+{"pair_id": "pair_0284", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0027", "same text as pair_0027"]}
+{"pair_id": "pair_0285", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0272"]}
+{"pair_id": "pair_0286", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0210"]}
+{"pair_id": "pair_0287", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0157", "same text as pair_0208"]}
+{"pair_id": "pair_0288", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0201", "same text as pair_0221"]}
+{"pair_id": "pair_0289", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0220", "same text as pair_0246"]}
+{"pair_id": "pair_0290", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0181", "same text as pair_0181"]}
+{"pair_id": "pair_0291", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0010", "same text as pair_0010"]}
+{"pair_id": "pair_0292", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0154", "same text as pair_0154"]}
+{"pair_id": "pair_0293", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0208", "same text as pair_0266"]}
+{"pair_id": "pair_0294", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0145"]}
+{"pair_id": "pair_0295", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0163", "same text as pair_0238"]}
+{"pair_id": "pair_0296", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0184"]}
+{"pair_id": "pair_0297", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0187"]}
+{"pair_id": "pair_0298", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0116", "same text as pair_0116"]}
+{"pair_id": "pair_0299", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0192"]}
+{"pair_id": "pair_0300", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0301", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0026"]}
+{"pair_id": "pair_0302", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0010", "same text as pair_0280"]}
+{"pair_id": "pair_0303", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0003", "same text as pair_0190"]}
+{"pair_id": "pair_0304", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0005", "same text as pair_0005"]}
+{"pair_id": "pair_0305", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0184"]}
+{"pair_id": "pair_0306", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0307", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0210"]}
+{"pair_id": "pair_0308", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0157", "same text as pair_0208"]}
+{"pair_id": "pair_0309", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0201"]}
+{"pair_id": "pair_0310", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0272"]}
+{"pair_id": "pair_0311", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0022", "same text as pair_0022"]}
+{"pair_id": "pair_0312", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0157", "same scenario as pair_0208"]}
+{"pair_id": "pair_0313", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0244"]}
+{"pair_id": "pair_0314", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0184", "same text as pair_0241"]}
+{"pair_id": "pair_0315", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0172", "same text as pair_0172"]}
+{"pair_id": "pair_0316", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0163", "same text as pair_0212"]}
+{"pair_id": "pair_0317", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0300"]}
+{"pair_id": "pair_0318", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0145"]}
+{"pair_id": "pair_0319", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0300", "same scenario as pair_0306"]}
+{"pair_id": "pair_0320", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0154"]}
+{"pair_id": "pair_0321", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0220", "same text as pair_0220"]}
+{"pair_id": "pair_0322", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0116", "same text as pair_0231"]}
+{"pair_id": "pair_0323", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0026", "same text as pair_0254"]}
+{"pair_id": "pair_0324", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0241", "same scenario as pair_0305"]}
+{"pair_id": "pair_0325", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0181", "same text as pair_0258"]}
+{"pair_id": "pair_0326", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": []}
+{"pair_id": "pair_0327", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0005", "same text as pair_0276"]}
+{"pair_id": "pair_0328", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0003", "same text as pair_0003"]}
+{"pair_id": "pair_0329", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0244"]}
+{"pair_id": "pair_0330", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0208", "same text as pair_0266"]}
+{"pair_id": "pair_0331", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0192", "same text as pair_0299"]}
+{"pair_id": "pair_0332", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0187", "same text as pair_0187"]}
+{"pair_id": "pair_0333", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0300"]}
+{"pair_id": "pair_0334", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0210", "same text as pair_0210"]}
+{"pair_id": "pair_0335", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0157", "same text as pair_0266"]}
+{"pair_id": "pair_0336", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0296", "same scenario as pair_0305"]}
+{"pair_id": "pair_0337", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0220", "same text as pair_0263"]}
+{"pair_id": "pair_0338", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0201", "same text as pair_0309"]}
+{"pair_id": "pair_0339", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0300", "same text as pair_0317"]}
+{"pair_id": "pair_0340", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0022", "same text as pair_0022"]}
+{"pair_id": "pair_0341", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0154", "same text as pair_0320"]}
+{"pair_id": "pair_0342", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0026", "same text as pair_0254"]}
+{"pair_id": "pair_0343", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0306", "same text as pair_0306"]}
+{"pair_id": "pair_0344", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0172", "same text as pair_0253"]}
+{"pair_id": "pair_0345", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0003", "same text as pair_0274"]}
+{"pair_id": "pair_0346", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0244", "same text as pair_0313"]}
+{"pair_id": "pair_0347", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0192", "same text as pair_0273"]}
+{"pair_id": "pair_0348", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0163", "same text as pair_0163"]}
+{"pair_id": "pair_0349", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0184", "same text as pair_0296"]}
+{"pair_id": "pair_0350", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0157", "same text as pair_0157"]}
+{"pair_id": "pair_0351", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0326"]}
+{"pair_id": "pair_0352", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0005", "same text as pair_0245"]}
+{"pair_id": "pair_0353", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0181"]}
+{"pair_id": "pair_0354", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0116", "same text as pair_0218"]}
+{"pair_id": "pair_0355", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0184", "same scenario as pair_0305"]}
+{"pair_id": "pair_0356", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0300", "same scenario as pair_0306"]}
+{"pair_id": "pair_0357", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0145", "same text as pair_0294"]}
+{"pair_id": "pair_0358", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0210", "same text as pair_0286"]}
+{"pair_id": "pair_0359", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0026", "same text as pair_0301"]}
+{"pair_id": "pair_0360", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0300", "same text as pair_0306"]}
+{"pair_id": "pair_0361", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0154", "same text as pair_0250"]}
+{"pair_id": "pair_0362", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0172", "same text as pair_0268"]}
+{"pair_id": "pair_0363", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0003", "same text as pair_0003"]}
+{"pair_id": "pair_0364", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0163", "same text as pair_0212"]}
+{"pair_id": "pair_0365", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0241", "same scenario as pair_0305"]}
+{"pair_id": "pair_0366", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0157", "same text as pair_0208"]}
+{"pair_id": "pair_0367", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0201", "same text as pair_0201"]}
+{"pair_id": "pair_0368", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0210", "same text as pair_0307"]}
+{"pair_id": "pair_0369", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0300", "same text as pair_0300"]}
+{"pair_id": "pair_0370", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0022", "same text as pair_0209"]}
+{"pair_id": "pair_0371", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0220", "same text as pair_0220"]}
+{"pair_id": "pair_0372", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0181", "same text as pair_0353"]}
+{"pair_id": "pair_0373", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0187", "same text as pair_0297"]}
+{"pair_id": "pair_0374", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0306", "same text as pair_0317"]}
+{"pair_id": "pair_0375", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0184", "same text as pair_0184"]}
+{"pair_id": "pair_0376", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0157", "same text as pair_0266"]}
+{"pair_id": "pair_0377", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0306", "same scenario as pair_0333"]}
+{"pair_id": "pair_0378", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0244", "same text as pair_0329"]}
+{"pair_id": "pair_0379", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0296", "same scenario as pair_0305"]}
+{"pair_id": "pair_0380", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0163", "same text as pair_0238"]}
+{"pair_id": "pair_0381", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0116", "same text as pair_0116"]}
+{"pair_id": "pair_0382", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0026", "same text as pair_0301"]}
+{"pair_id": "pair_0383", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0326"]}
+{"pair_id": "pair_0384", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0181", "same text as pair_0258"]}
+{"pair_id": "pair_0385", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0154", "same text as pair_0320"]}
+{"pair_id": "pair_0386", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0003", "same text as pair_0274"]}
+{"pair_id": "pair_0387", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0192", "same text as pair_0192"]}
+{"pair_id": "pair_0388", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0300", "same text as pair_0306"]}
+{"pair_id": "pair_0389", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0210", "same text as pair_0307"]}
+{"pair_id": "pair_0390", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0184", "same text as pair_0241"]}
+{"pair_id": "pair_0391", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0220", "same text as pair_0263"]}
+{"pair_id": "pair_0392", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0306", "same text as pair_0317"]}
+{"pair_id": "pair_0393", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0145", "same text as pair_0318"]}
+{"pair_id": "pair_0394", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0210", "same text as pair_0286"]}
+{"pair_id": "pair_0395", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0022", "same text as pair_0209"]}
+{"pair_id": "pair_0396", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same text as pair_0317", "same scenario as pair_0333"]}
+{"pair_id": "pair_0397", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0220", "same text as pair_0246"]}
+{"pair_id": "pair_0398", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0184", "same text as pair_0296"]}
+{"pair_id": "pair_0399", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0154", "same text as pair_0250"]}
+{"pair_id": "pair_0400", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0116", "same text as pair_0231"]}
+{"pair_id": "pair_0401", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0068"]}
+{"pair_id": "pair_0402", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0072"]}
+{"pair_id": "pair_0403", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0068"]}
+{"pair_id": "pair_0404", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0065"]}
+{"pair_id": "pair_0405", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0072"]}
+{"pair_id": "pair_0406", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0407", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0073"]}
+{"pair_id": "pair_0408", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0067"]}
+{"pair_id": "pair_0409", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0410", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0064"]}
+{"pair_id": "pair_0411", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0412", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0070", "same text as pair_0070"]}
+{"pair_id": "pair_0413", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0066"]}
+{"pair_id": "pair_0414", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0070"]}
+{"pair_id": "pair_0415", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0073", "same text as pair_0407"]}
+{"pair_id": "pair_0416", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0064", "same text as pair_0125"]}
+{"pair_id": "pair_0417", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0063", "same text as pair_0126"]}
+{"pair_id": "pair_0418", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0067", "same text as pair_0067"]}
+{"pair_id": "pair_0419", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0071", "same text as pair_0071"]}
+{"pair_id": "pair_0420", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0409"]}
+{"pair_id": "pair_0421", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0084", "same text as pair_0084"]}
+{"pair_id": "pair_0422", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0070"]}
+{"pair_id": "pair_0423", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0406"]}
+{"pair_id": "pair_0424", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0075"]}
+{"pair_id": "pair_0425", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0077", "same text as pair_0077"]}
+{"pair_id": "pair_0426", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0067"]}
+{"pair_id": "pair_0427", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0079"]}
+{"pair_id": "pair_0428", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0064", "same text as pair_0064"]}
+{"pair_id": "pair_0429", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0409"]}
+{"pair_id": "pair_0430", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0066", "same text as pair_0066"]}
+{"pair_id": "pair_0431", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0064"]}
+{"pair_id": "pair_0432", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0433", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0434", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0075"]}
+{"pair_id": "pair_0435", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0063"]}
+{"pair_id": "pair_0436", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0067", "same text as pair_0426"]}
+{"pair_id": "pair_0437", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0069"]}
+{"pair_id": "pair_0438", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0439", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0073"]}
+{"pair_id": "pair_0440", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0070", "same text as pair_0080"]}
+{"pair_id": "pair_0441", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0442", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0079"]}
+{"pair_id": "pair_0443", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0067", "same text as pair_0078"]}
+{"pair_id": "pair_0444", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0071"]}
+{"pair_id": "pair_0445", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0446", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0075", "same text as pair_0128"]}
+{"pair_id": "pair_0447", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0063"]}
+{"pair_id": "pair_0448", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0449", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0074"]}
+{"pair_id": "pair_0450", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0070", "same text as pair_0414"]}
+{"pair_id": "pair_0451", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0064", "same text as pair_0410"]}
+{"pair_id": "pair_0452", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0124"]}
+{"pair_id": "pair_0453", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0454", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0071", "same text as pair_0071"]}
+{"pair_id": "pair_0455", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0456", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0067", "same text as pair_0408"]}
+{"pair_id": "pair_0457", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0432"]}
+{"pair_id": "pair_0458", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0406"]}
+{"pair_id": "pair_0459", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0460", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0075", "same text as pair_0434"]}
+{"pair_id": "pair_0461", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0073", "same text as pair_0439"]}
+{"pair_id": "pair_0462", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0064", "same text as pair_0431"]}
+{"pair_id": "pair_0463", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0464", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0079"]}
+{"pair_id": "pair_0465", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0466", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0066"]}
+{"pair_id": "pair_0467", "status": "valid", "errors": [], "needs_review": [], "warnings": [], "near_duplicate_flags": ["same scenario as pair_0075", "same text as pair_0075"]}
+{"pair_id": "pair_0468", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0469", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0432"]}
+{"pair_id": "pair_0470", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0409", "same text as pair_0420"]}
+{"pair_id": "pair_0471", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0075", "same text as pair_0424"]}
+{"pair_id": "pair_0472", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0473", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0069"]}
+{"pair_id": "pair_0474", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0475", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0071"]}
+{"pair_id": "pair_0476", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0477", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0478", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0063"]}
+{"pair_id": "pair_0479", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0480", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0411", "same text as pair_0411"]}
+{"pair_id": "pair_0481", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0482", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": []}
+{"pair_id": "pair_0483", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0484", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0406"]}
+{"pair_id": "pair_0485", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0124", "same text as pair_0124"]}
+{"pair_id": "pair_0486", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0487", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0073", "same text as pair_0073"]}
+{"pair_id": "pair_0488", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0489", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0074"]}
+{"pair_id": "pair_0490", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0491", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0071"]}
+{"pair_id": "pair_0492", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0432", "same text as pair_0432"]}
+{"pair_id": "pair_0493", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0494", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0411"]}
+{"pair_id": "pair_0495", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0496", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0124"]}
+{"pair_id": "pair_0497", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0498", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0406", "same text as pair_0423"]}
+{"pair_id": "pair_0499", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0074", "same text as pair_0449"]}
+{"pair_id": "pair_0500", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0501", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0073"]}
+{"pair_id": "pair_0502", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0503", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0432"]}
+{"pair_id": "pair_0504", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0063", "same text as pair_0126"]}
+{"pair_id": "pair_0505", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0506", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0507", "status": "valid", "errors": [], "needs_review": [], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0411", "same text as pair_0411"]}
+{"pair_id": "pair_0508", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0476"]}
+{"pair_id": "pair_0509", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0032", "same text as pair_0032"]}
+{"pair_id": "pair_0510", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0066", "same text as pair_0466"]}
+{"pair_id": "pair_0511", "status": "uncertain", "errors": [], "needs_review": ["semantic level confidence medium"], "warnings": ["layout differs between scenes (confound)"], "near_duplicate_flags": ["same scenario as pair_0085", "same text as pair_0085"]}
+{"pair_id": "pair_0512", "status": "uncertain", "errors": [], "needs_review": ["safety label confidence medium", "semantic level confidence medium"], "warnings": ["composed scene (needs a built BDDL/image)"], "near_duplicate_flags": ["same scenario as pair_0074"]}
