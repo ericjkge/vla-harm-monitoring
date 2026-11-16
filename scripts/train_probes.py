@@ -4,6 +4,10 @@ For each layer: standardise on train, fit L2 logistic regression, pick C on val 
 Reported per layer: accuracy, AUROC, pairwise accuracy (score(harmful) > score(harmless) within a pair),
 with group-bootstrap 95% CIs on test accuracy. Controls: shuffled train labels, pair-difference probe,
 and subset breakdowns (non-smash, scene-only, text-distinct, high label confidence).
+Leak filter: some exact (scene, instruction) inputs occur in more than one split (the dataset's split groups are
+hazard-based). Val/test rows whose exact input is also in train (test: or val) are flagged "seen"; every test metric is
+also reported on the unseen rows only (`*_unseen`, `test_acc[unseen_inputs]`). `--drop-seen` removes seen rows from
+val/test entirely, so C selection and every test number use only unseen inputs.
 
   python scripts/train_probes.py --acts paligemma=cache/acts/paligemma.npz --feature last_instr
   python scripts/train_probes.py --acts pg=cache/acts/paligemma.npz base=cache/acts/pi05_base.npz \
@@ -54,6 +58,13 @@ def pair_index(pair_ids, label):
     return np.array([idx.get((p, 1 - l), -1) for p, l in zip(pair_ids, label)])
 
 
+def seen_inputs(meta, split):
+    """True for val rows whose exact (scene, instruction) input also occurs in train, and test rows whose input occurs in train or val."""
+    key = np.array([f"{m['scene_key']}||{m['instruction']}" for m in meta])
+    tr, va = set(key[split == "train"]), set(key[split == "val"])
+    return np.array([(s == "val" and k in tr) or (s == "test" and (k in tr or k in va)) for k, s in zip(key, split)])
+
+
 def boot_ci(correct, groups, rng, B=1000):
     ug = np.unique(groups)
     by = {g: correct[groups == g] for g in ug}
@@ -101,6 +112,7 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "results/probes"))
     ap.add_argument("--no-controls", action="store_true", help="skip shuffled-label and diff probes (faster)")
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--drop-seen", action="store_true", help="drop val/test rows whose exact input also occurs in an earlier split")
     a = ap.parse_args()
     rng = np.random.default_rng(a.seed)
     pairs, tab = load_meta()
@@ -119,9 +131,17 @@ def main():
         smash = np.array(["smash" in t for t in text])
         scene_only = np.array([m["changed"] == "scene" for m in meta])
         high = np.array([pairs[p]["safety_label_confidence"] == "high" for p in pid])
+        seen = seen_inputs(meta, split)
+        n_seen = {"val": int((seen & (split == "val")).sum()), "test": int((seen & (split == "test")).sum())}
+        if a.drop_seen: split = np.where(seen, "dropped", split)
         tr, va, te = split == "train", split == "val", split == "test"
-        subsets = {"all": te, "non_smash_pairs": te & ~smash & ~(smash[partner]),
+        unseen = te & ~seen
+        subsets = {"all": te, "unseen_inputs": unseen, "non_smash_pairs": te & ~smash & ~(smash[partner]),
                    "no_scene_only": te & ~scene_only, "scene_only": te & scene_only, "high_confidence": te & high}
+        for fld, short in (("harm_type", "harm"), ("semantic_level", "level")):  # e.g. harm=explicit_harm, level=L0
+            v = np.array([pairs[p][fld] for p in pid])
+            for u in sorted(set(v)): subsets[f"{short}={u}"] = te & (v == u)
+            for u in sorted(set(v)): subsets[f"{short}={u}&unseen"] = unseen & (v == u)
         layers = [int(x) for x in a.layers.split(",")] if a.layers else list(range(nL))
         L = {}
         for l in layers:
@@ -133,23 +153,36 @@ def main():
                    "test_auroc": float(auroc(s_te, y[te])), "test_acc_ci": boot_ci(ok[te], group[te], rng)}
             hm = te & (y == 1)
             row["test_pairwise_acc"] = float((score[hm] > score[partner[hm]]).mean())
+            hu = hm & unseen & unseen[partner]  # pairs with both members unseen
+            row.update(test_acc_unseen=float(ok[unseen].mean()), test_auroc_unseen=float(auroc(score[unseen], y[unseen])),
+                       test_acc_unseen_ci=boot_ci(ok[unseen], group[unseen], rng),
+                       test_pairwise_acc_unseen=float((score[hu] > score[partner[hu]]).mean()) if hu.any() else float("nan"))
             for k, m in subsets.items():
-                if k != "all" and m.sum() > 0: row[f"test_acc[{k}]"] = float(ok[m].mean()); row[f"n[{k}]"] = int(m.sum())
+                if k != "all" and m.sum() > 0:
+                    row[f"test_acc[{k}]"] = float(ok[m].mean()); row[f"n[{k}]"] = int(m.sum())
+                    row[f"test_auroc[{k}]"] = float(auroc(score[m], y[m]))
+                    hk = m & (y == 1) & m[partner]  # pairs with both members in the subset
+                    if hk.any(): row[f"test_pairwise_acc[{k}]"] = float((score[hk] > score[partner[hk]]).mean())
             if not a.no_controls:
                 _, s_sh, _ = probe_layer(X[tr, l], y[tr], X[va, l], y[va], X[te, l], shuffle_rng=rng)
                 row["test_acc_shuffled_labels"] = float(((s_sh > 0).astype(int) == y[te]).mean())
                 row["test_pairwise_acc_diff_probe"] = diff_probe_layer(X[:, l], y, pid, split, None, rng)
             L[l] = row
             print(f"{name} layer {l:2d}  acc {row['test_acc']:.3f} {tuple(round(c, 3) for c in row['test_acc_ci'])}  "
-                  f"auroc {row['test_auroc']:.3f}  pair {row['test_pairwise_acc']:.3f}", flush=True)
+                  f"auroc {row['test_auroc']:.3f}  pair {row['test_pairwise_acc']:.3f}  |  unseen acc {row['test_acc_unseen']:.3f} "
+                  f"auroc {row['test_auroc_unseen']:.3f}", flush=True)
         best = max(L, key=lambda k: L[k]["val_auroc"])
         res[name] = {"feature": a.feature, "best_layer_by_val": best, "layers": L,
                      "baseline_smash_keyword_test_acc": float(((smash[te]).astype(int) == y[te]).mean()),
-                     "n_train_val_test": [int(tr.sum()), int(va.sum()), int(te.sum())]}
+                     "baseline_smash_keyword_test_acc_unseen": float(((smash[unseen]).astype(int) == y[unseen]).mean()),
+                     "n_train_val_test": [int(tr.sum()), int(va.sum()), int(te.sum())], "n_test_unseen": int(unseen.sum()),
+                     "n_seen_rows": n_seen, "drop_seen": a.drop_seen}
         print(f"== {name}: best layer by val = {best}, test acc {L[best]['test_acc']:.3f}, "
-              f"smash-keyword baseline {res[name]['baseline_smash_keyword_test_acc']:.3f}")
+              f"smash-keyword baseline {res[name]['baseline_smash_keyword_test_acc']:.3f} | unseen ({int(unseen.sum())} rows): "
+              f"acc {L[best]['test_acc_unseen']:.3f}, smash baseline {res[name]['baseline_smash_keyword_test_acc_unseen']:.3f}")
 
-    json.dump(res, open(out / f"{a.feature}.json", "w"), indent=1)
+    tag = a.feature + ("_dropseen" if a.drop_seen else "")
+    json.dump(res, open(out / f"{tag}.json", "w"), indent=1)
     import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
     fig, ax = plt.subplots(figsize=(7, 4))
     for name, r in res.items():
@@ -160,7 +193,7 @@ def main():
             ax.plot(ls, [r["layers"][l]["test_acc_shuffled_labels"] for l in ls], ":", color="gray", lw=0.8)
     ax.axhline(0.5, color="gray", ls="--", lw=0.8); ax.axhline(next(iter(res.values()))["baseline_smash_keyword_test_acc"], color="red", ls="--", lw=0.8, label="smash-keyword rule")
     ax.set_xlabel("layer"); ax.set_ylabel("test accuracy"); ax.set_title(f"Linear probe, feature={a.feature}"); ax.legend(); fig.tight_layout()
-    fig.savefig(out / f"{a.feature}_layers.png", dpi=150)
+    fig.savefig(out / f"{tag}_layers.png", dpi=150)
     print("wrote", out)
 
 
